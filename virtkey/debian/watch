@@ -1,0 +1,2 @@
+version=3
+http://launchpad.net/virtkey/+download https://launchpad.net/virtkey/.*/virtkey-(.+).tar.gz

@@ -1,0 +1,1669 @@
+# Japanese translation for onboard
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the onboard package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: onboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-11 22:24+0100\n"
+"PO-Revision-Date: 2012-06-30 17:11+0000\n"
+"Last-Translator: Francesco Fumanti <francesco.fumanti@gmx.net>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2012-12-11 21:04+0000\n"
+"X-Generator: Launchpad (build 16361)\n"
+
+#: ../Onboard/Indicator.py:67
+msgid "_Show Onboard"
+msgstr "Onboard を表示(_S)"
+
+#: ../Onboard/Indicator.py:68
+msgid "_Hide Onboard"
+msgstr "Onboard を非表示に(_H)"
+
+#: ../Onboard/Indicator.py:113
+msgid "Onboard on-screen keyboard"
+msgstr "Onboard オンスクリーンキーボード"
+
+#: ../Onboard/Config.py:176
+msgid "Layout file ({}) or name"
+msgstr "レイアウトファイル({})もしくはレイアウト名"
+
+#: ../Onboard/Config.py:179
+msgid "Theme file (.theme) or name"
+msgstr "テーマファイル(.theme)もしくはテーマ名"
+
+#: ../Onboard/Config.py:180
+msgid "Window x position"
+msgstr "ウィンドウのX座標"
+
+#: ../Onboard/Config.py:181
+msgid "Window y position"
+msgstr "ウィンドウのY座標"
+
+#: ../Onboard/Config.py:183
+msgid "Window size, widthxheight"
+msgstr "「幅x高さ」で指定するウィンドウサイズ"
+
+#: ../Onboard/Config.py:185
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr "例えばgnome-screensaver用に、XEmbedモードで起動する"
+
+#: ../Onboard/Config.py:188
+msgid "Keep aspect ratio when resizing the window"
+msgstr "ウィンドウリサイズ時もアスペクト比を保つ"
+
+#: ../Onboard/Config.py:193
+msgid "Allow multiple Onboard instances"
+msgstr "複数のOnboardインスタンスの起動を許可する"
+
+#: ../Onboard/Config.py:195
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+"ウィンドウマネージャーを手動で指定し、自動判定を上書きする\n"
+"QUIRKS={metacity|compiz|mutter}"
+
+#: ../Onboard/Config.py:199
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+"指定のデスクトップ環境で起動しないようにする。DESKTOPSには、XDGのデスクトップ"
+"名をコンマ区切りのリストで指定する。 例えばGNOME Shellの場合はGNOME。"
+
+#: ../Onboard/Config.py:252
+msgid "Migrating user directory '{}' to '{}'."
+msgstr "ユーザーディレクトリを'{}'から'{}'に移動します。"
+
+#. python >2.5
+#: ../Onboard/Config.py:257
+msgid "Failed to migrate user directory. "
+msgstr "ユーザーディレクトリの移行に失敗しました。 "
+
+#: ../Onboard/Config.py:513
+msgid "layout '{filename}' does not exist"
+msgstr "レイアウトファイル '{filename}' は存在しません。"
+
+#: ../Onboard/Config.py:553
+msgid "theme '{filename}' does not exist"
+msgstr "テーマファイル '{filename}' は存在しません。"
+
+#: ../Onboard/Config.py:567
+msgid "Loading theme from '{}'"
+msgstr "'{}' からテーマを読み込み中"
+
+#: ../Onboard/Config.py:571
+msgid "Unable to read theme '{}'"
+msgstr "テーマファイル '{}' を読み込むことができません"
+
+#: ../Onboard/Config.py:669
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+"Gnomeアクセシビリティを必要とするauto-showを有効にしています\n"
+"\n"
+"オンボードでアクセシビリティを今有効にできますが、あなたがログアウトした後"
+"に、その潜在能力を最大限に発揮するためにすることをお勧めします。\n"
+"\n"
+"それでもアクセシビリティを今有効にしますか？"
+
+#: ../Onboard/Config.py:1151
+msgid "color scheme '{filename}' does not exist"
+msgstr "カラースキーム '{filename}' は存在しません"
+
+#: ../data/onboard-settings.desktop.in.h:1
+msgid "Onboard Settings"
+msgstr "Onboard の設定"
+
+#: ../data/onboard-settings.desktop.in.h:2
+msgid "Onboard onscreen keyboard settings"
+msgstr "Onboard オンスクリーンキーボード設定"
+
+#: ../data/onboard-settings.desktop.in.h:3
+msgid "Change Onboard settings"
+msgstr "Onboard 設定の変更"
+
+#: ../Onboard/OnboardGtk.py:313
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However the system is not configured anymore to use Onboard to unlock the "
+"screen. A possible reason can be that another application configured the "
+"system to use something else.\n"
+"\n"
+"Would you like to reconfigure the system to show Onboard when unlocking the "
+"screen?"
+msgstr ""
+"Onboardは画面のアンロックダイアログ（例えばスクリーンセーバーのパスワード解除"
+"画面）で表示される設定になっています。\n"
+"\n"
+"しかしながらシステム自体は画面のアンロックでOnboardを使う設定になっていませ"
+"ん。何か別のアプリケーションを使ってシステムの設定を変更した可能性がありま"
+"す。\n"
+"\n"
+"画面のアンロック時にOnboardを使うようシステムを設定しなおしますか？"
+
+#: ../Onboard/OnboardGtk.py:329
+msgid ""
+"Onboard is configured to appear with the dialog to unlock the screen; for "
+"example to dismiss the password-protected screensaver.\n"
+"\n"
+"However this function is disabled in the system.\n"
+"\n"
+"Would you like to activate it?"
+msgstr ""
+"Onboardは画面のアンロックダイアログ（例えばスクリーンセーバーのパスワード解除"
+"画面）で表示される設定になっています。\n"
+"\n"
+"しかしながらシステムでこの機能が無効化されています。\n"
+"\n"
+"有効化しますか？"
+
+#: ../Onboard/AtspiAutoShow.py:21 ../Onboard/KeyboardWidget.py:39
+msgid "Atspi unavailable, auto-hide won't be available"
+msgstr "Atspiが利用できないため、「自動的に隠す」は機能しません。"
+
+#: ../Onboard/utils.py:317
+msgid "New Input Device"
+msgstr "新しい入力デバイス"
+
+#: ../Onboard/utils.py:318
+msgid "Onboard has detected a new input device"
+msgstr "Onboardは新しい入力デバイスを検出しました。"
+
+#: ../Onboard/utils.py:327
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr "キーボードスキャンにこのデバイスを使用しますか？"
+
+#: ../Onboard/utils.py:331
+msgid "Use device"
+msgstr "デバイスを使う"
+
+#: ../Onboard/utils.py:992
+msgid "Failed to execute '{}', {}"
+msgstr "実行に失敗しました　'{}', {}"
+
+#: ../Onboard/KbdWindow.py:70 ../data/onboard.desktop.in.h:1
+msgid "Onboard"
+msgstr "Onboard"
+
+#: ../Onboard/KbdWindow.py:158
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr ""
+"画面がアルファチャンネルに対応していないため、透過ウィンドウは利用できませ"
+"ん。"
+
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Scanner Settings"
+msgstr "スキャンの設定"
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Select a scanning _profile:"
+msgstr "スキャンのプロファイルを選んでください(_P)"
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "_Step interval:"
+msgstr "ステップする間隔:(_S)"
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Sc_an cycles:"
+msgstr "スキャンサイクル:(_A)"
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr "次のキーやグループに移動するまでの待ち時間（単位：秒）を指定します。"
+
+#: ../settings_scanner_dialog.ui.h:6
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr "停止するまでにキーボード全体をスキャンする回数です。"
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "Step _only during switch down"
+msgstr "スイッチが押されている時のみステップ(_O)"
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "Progress the highlight only while the switch is held down."
+msgstr "スイッチが押されている時のみハイライトを移動"
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid "_Forward interval:"
+msgstr "前方の間隔(_F):"
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid "_Backtrack interval:"
+msgstr "さかのぼる間隔(_B):"
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr "キーが次に移動するまでの待ち時間（単位：秒）"
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr "キーやグループが後方に移動するまでの待ち時間（単位：秒）"
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "Backtrack _steps:"
+msgstr "さかのぼるステップ(_S):"
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr "再び前方へ移動を開始する前にさかのぼるキーの数を指定します。"
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid "_Alternate switch actions"
+msgstr "拡張スイッチアクション(_A)"
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+"キー確定後にスキャンアクションを切り替えます。ステップは確定になり、 確定はス"
+"テップになります。"
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid "Profiles"
+msgstr "プロファイル"
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "_Select an input device:"
+msgstr "入力デバイスを選んでください:(_S)"
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "_Use this device only for scanning"
+msgstr "このデバイスをスキャンにのみ使用する(_U)"
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr ""
+"選択したデバイスがマウスカーソルもしくはキーボードキャレットを操作すべきでな"
+"い時に設定します。"
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid "Input Device"
+msgstr "入力デバイス"
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "Automatic scan for 1 switch"
+msgstr "1スイッチで自動スキャン"
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "Critical overscan for 1 switch"
+msgstr "1スイッチの重要なオーバースキャン"
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid "Step scan for 2 switches"
+msgstr "2スイッチでステップスキャン"
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid "Directed scan for 3 or 5 switches"
+msgstr "3または5スイッチで直接スキャン"
+
+#: ../Onboard/LayoutLoaderSVG.py:117
+msgid ""
+"Loading legacy layout, format '{}'. Please consider upgrading to current "
+"format '{}'"
+msgstr ""
+
+#: ../Onboard/LayoutLoaderSVG.py:288
+msgid "Ignoring key '{}'. No svg filename defined."
+msgstr "キー'{}'は無視されます。SVGファイル名が定義されていません。"
+
+#: ../Onboard/LayoutLoaderSVG.py:297
+msgid "Ignoring key '{}'. Not found in '{}'."
+msgstr "キー'{}'は無視されます。'{}'に見つかりませんでした。"
+
+#: ../Onboard/LayoutLoaderSVG.py:467
+msgid "Snippet {}"
+msgstr "スニペット {}"
+
+#. i18n: full string is "Snippet n, unassigned"
+#: ../Onboard/LayoutLoaderSVG.py:471
+msgid ", unassigned"
+msgstr "、未設定"
+
+#: ../Onboard/LayoutLoaderSVG.py:542
+msgid "Error loading "
+msgstr "読み込みエラー "
+
+#: ../Onboard/LayoutLoaderSVG.py:754
+msgid "copying layout '{}' to '{}'"
+msgstr "'{}'を'{}'のレイアウトにコピーする"
+
+#: ../Onboard/LayoutLoaderSVG.py:773
+msgid "copy_layouts failed, unsupported layout format '{}'."
+msgstr ""
+"コピーレイアウトは、サポートされていないレイアウト形式''{}'に失敗しました。"
+"(_L)"
+
+#: ../Onboard/LayoutLoaderSVG.py:814
+msgid "copying svg file '{}' to '{}'"
+msgstr "SVGファイル{}'を'{}' にコピーする"
+
+#: ../Onboard/Appearance.py:106
+msgid "Color scheme for theme '{filename}' not found"
+msgstr "テーマ'{filename}'用カラースキームが見つかりません"
+
+#: ../Onboard/Appearance.py:321
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr ""
+"テーマファイル'{filename}'を読み込む時にエラーが発生しました。{exception}: "
+"{cause}"
+
+#: ../Onboard/Appearance.py:393
+msgid "Error saving "
+msgstr "保存エラー "
+
+#: ../Onboard/Appearance.py:768
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+"古い形式のカラースキーム '{old_format}' を読み込んでいます。最新のフォーマッ"
+"ト '{new_format}': '{filename}' に更新することを検討してください。"
+
+#: ../Onboard/Appearance.py:788
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr ""
+"カラースキーマファイル'{filename}'を読み込む時にエラーが発生しました。"
+"{exception}: {cause}"
+
+#: ../Onboard/Appearance.py:863 ../Onboard/Appearance.py:995
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
+msgstr ""
+"カラースキーマファイルの中でkey_id '{}'の重複が見つかりました。key_idは一意で"
+"ある必要があります。"
+
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:3
+msgid "Docking settings"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:4
+msgid "Shrink workarea"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:5
+msgid "Shrink the available space for maximized windows."
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:6
+msgid "Expand on landscape screens"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:7
+msgid "Expand keyboard to the width of the workarea."
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:8
+msgid "Expand on portrait screens"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:9
+msgid "Dock to screen edge:"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Settings"
+msgstr "設定"
+
+#: ../Onboard/KeyboardWidget.py:1257
+msgid "New snippet"
+msgstr "新しいスニペット"
+
+#: ../Onboard/KeyboardWidget.py:1261
+msgid "_Save snippet"
+msgstr "保存(_S)"
+
+#: ../Onboard/KeyboardWidget.py:1274
+msgid "Enter a new snippet for this button:"
+msgstr "新しいスニペットを入力するボタン:"
+
+#: ../Onboard/KeyboardWidget.py:1280
+msgid "_Button label:"
+msgstr "ボタンラベル(_B):"
+
+#: ../Onboard/KeyboardWidget.py:1284
+msgid "S_nippet:"
+msgstr "スニペット(_N)"
+
+#: ../Onboard/settings.py:162
+msgid "Onboard Preferences"
+msgstr "Onboard の設定"
+
+#: ../Onboard/settings.py:523
+msgid "No file manager to open layout folder"
+msgstr "レイアウトフォルダーを開くファイルマネージャーがありません"
+
+#: ../Onboard/settings.py:530
+msgid "Enter name for personalised layout"
+msgstr "個人用レイアウトの名前を入力"
+
+#: ../Onboard/settings.py:556
+msgid "System settings not found ({}): {}"
+msgstr "システム設定は見つかりませんでした({}): {}"
+
+#. Frame resize handles: None
+#: ../Onboard/settings.py:569 ../settings.ui.h:17
+msgid "None"
+msgstr "None"
+
+#. Frame resize handles: Corners only
+#: ../Onboard/settings.py:571
+msgid "Corners only"
+msgstr "コーナーのみ"
+
+#. Frame resize handles: All
+#: ../Onboard/settings.py:573
+msgid "All corners and edges"
+msgstr "すべてのコーナーやエッジ"
+
+#: ../Onboard/settings.py:609
+msgid "Add Layout"
+msgstr "レイアウトの追加"
+
+#: ../Onboard/settings.py:619
+msgid "Onboard layout files"
+msgstr "Onboard レイアウトファイル"
+
+#: ../Onboard/settings.py:624
+msgid "All files"
+msgstr "すべてのファイル"
+
+#: ../Onboard/settings.py:721
+msgid "Enter a name for the new theme:"
+msgstr "新しいテーマ名を入力:"
+
+#: ../Onboard/settings.py:729
+msgid ""
+"This theme file already exists.\n"
+"'{filename}'\n"
+"\n"
+"Overwrite it?"
+msgstr ""
+"このテーマファイルはすでに存在します。\n"
+"'{filename}'\n"
+"\n"
+"上書きしますか？"
+
+#: ../Onboard/settings.py:746
+msgid "Reset selected theme to Onboard defaults?"
+msgstr "オンボードのデフォルトに選択したテーマをリセットしますか？"
+
+#: ../Onboard/settings.py:748
+msgid "Delete selected theme?"
+msgstr "選択したテーマを削除しますか？"
+
+#: ../Onboard/settings.py:870
+msgid "Reset"
+msgstr "リセット"
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1057
+msgid "Flat"
+msgstr "フラット"
+
+#. Key style with simple gradients
+#: ../Onboard/settings.py:1059 ../settings_theme_dialog.ui.h:4
+msgid "Gradient"
+msgstr "グラデーション"
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1061
+msgid "Dish"
+msgstr "Dish"
+
+#: ../Onboard/settings.py:1110 ../Onboard/settings.py:1167
+msgid "Default"
+msgstr "デフォルト"
+
+#: ../Onboard/settings.py:1151
+msgid "Bold"
+msgstr "太字"
+
+#: ../Onboard/settings.py:1153
+msgid "Italic"
+msgstr "斜体"
+
+#: ../Onboard/settings.py:1155
+msgid "Condensed"
+msgstr "Condensed"
+
+#: ../Onboard/settings.py:1168
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1168
+msgid "Ubuntu Logo"
+msgstr "Ubuntu ロゴ"
+
+#: ../Onboard/settings.py:1302
+msgid "Step"
+msgstr "ステップ"
+
+#: ../Onboard/settings.py:1303
+msgid "Left"
+msgstr "左"
+
+#: ../Onboard/settings.py:1304
+msgid "Right"
+msgstr "右"
+
+#: ../Onboard/settings.py:1305
+msgid "Up"
+msgstr "上"
+
+#: ../Onboard/settings.py:1306
+msgid "Down"
+msgstr "下"
+
+#: ../Onboard/settings.py:1307
+msgid "Activate"
+msgstr "確定"
+
+#: ../Onboard/settings.py:1472
+msgid "Action:"
+msgstr "アクション:"
+
+#: ../Onboard/settings.py:1652
+msgid "Disabled"
+msgstr "非アクティブ"
+
+#: ../Onboard/settings.py:1658
+msgid "Button"
+msgstr "ボタン"
+
+#: ../Onboard/settings.py:1713 ../Onboard/settings.py:1755
+msgid "Press a button..."
+msgstr "ボタンを押してください..."
+
+#: ../Onboard/settings.py:1757
+msgid "Press a key..."
+msgstr "キーを押してください..."
+
+#: ../data/layoutstrings.py:15
+msgid "Activate Hover Click"
+msgstr "ホバークリックをアクティブにする"
+
+#: ../data/layoutstrings.py:16
+msgid "Alphanumeric keys"
+msgstr "英数字キー"
+
+#. translators: very short label of the left Alt key
+#: ../data/layoutstrings.py:18
+msgid "Alt"
+msgstr "Alt"
+
+#. translators: very short label of the Alt Gr key
+#: ../data/layoutstrings.py:20
+msgid "Alt Gr"
+msgstr "Alt Gr"
+
+#. translators: very short label of the CAPS LOCK key
+#: ../data/layoutstrings.py:22
+msgid "CAPS"
+msgstr "CAPS"
+
+#. translators: very short label of the Ctrl key
+#: ../data/layoutstrings.py:24
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#. translators: very short label of the DELETE key
+#: ../data/layoutstrings.py:26
+msgid "Del"
+msgstr "Del"
+
+#: ../data/layoutstrings.py:27
+msgid "Double click"
+msgstr "ダブルクリック"
+
+#: ../data/layoutstrings.py:28
+msgid "Drag click"
+msgstr "ドラッグクリック"
+
+#. translators: very short label of the numpad END key
+#: ../data/layoutstrings.py:30
+msgid "End"
+msgstr "End"
+
+#. translators: very short label of the numpad ENTER key
+#: ../data/layoutstrings.py:32
+msgid "Ent"
+msgstr "Enter"
+
+#. translators: very short label of the ESCAPE key
+#: ../data/layoutstrings.py:34
+msgid "Esc"
+msgstr "Esc"
+
+#: ../data/layoutstrings.py:35
+msgid "Function keys"
+msgstr "ファンクションキー"
+
+#: ../data/layoutstrings.py:36
+msgid "Number block and function keys"
+msgstr "ナンバーブロックとファンクションキー"
+
+#: ../data/layoutstrings.py:37
+msgid "Hide Onboard"
+msgstr "Onboardを隠す"
+
+#. translators: very short label of the HOME key
+#: ../data/layoutstrings.py:39
+msgid "Hm"
+msgstr "Home"
+
+#. translators: very short label of the INSERT key
+#: ../data/layoutstrings.py:41
+msgid "Ins"
+msgstr "Ins"
+
+#: ../data/layoutstrings.py:42
+msgid "Main keyboard"
+msgstr "メインキーボード"
+
+#. translators: very short label of the Menu key
+#: ../data/layoutstrings.py:44
+msgid "Menu"
+msgstr "Menu"
+
+#: ../data/layoutstrings.py:45
+msgid "Middle click"
+msgstr "中ボタンクリック"
+
+#: ../data/layoutstrings.py:46
+msgid "Move Onboard"
+msgstr "Onboardを動かす"
+
+#. translators: very short label of the NUMLOCK key
+#: ../data/layoutstrings.py:48
+msgid "Nm&#10;Lk"
+msgstr "Nm&#10;Lk"
+
+#: ../data/layoutstrings.py:49
+msgid "Number block and snippets"
+msgstr "ナンバーブロックとスニペット"
+
+#. translators: very short label of the PAUSE key
+#: ../data/layoutstrings.py:51
+msgid "Pause"
+msgstr "Pause"
+
+#. translators: very short label of the PAGE DOWN key
+#: ../data/layoutstrings.py:53
+msgid "Pg&#10;Dn"
+msgstr "Pg&#10;Dn"
+
+#. translators: very short label of the PAGE UP key
+#: ../data/layoutstrings.py:55
+msgid "Pg&#10;Up"
+msgstr "Pg&#10;Up"
+
+#. translators: very short label of the Preferences button
+#: ../data/layoutstrings.py:57
+msgid "Preferences"
+msgstr "設定"
+
+#. translators: very short label of the PRINT key
+#: ../data/layoutstrings.py:59
+msgid "Prnt"
+msgstr "PrintScreen"
+
+#. translators: very short label of the Quit button
+#: ../data/layoutstrings.py:61
+msgid "Quit"
+msgstr "終了する"
+
+#. translators: very short label of the RETURN key
+#: ../data/layoutstrings.py:63
+msgid "Return"
+msgstr "Return"
+
+#: ../data/layoutstrings.py:64
+msgid "Right click"
+msgstr "右クリック"
+
+#. translators: very short label of the SCROLL key
+#: ../data/layoutstrings.py:66
+msgid "Scroll"
+msgstr "Scroll"
+
+#: ../data/layoutstrings.py:67 ../settings.ui.h:10
+msgid "Snippets"
+msgstr "スニペット"
+
+#: ../data/layoutstrings.py:68
+msgid "Space"
+msgstr "Space"
+
+#: ../data/layoutstrings.py:69
+msgid "Toggle click helpers"
+msgstr "クリックしてヘルパーを切り替える"
+
+#. translators: very short label of the TAB key
+#: ../data/layoutstrings.py:71
+msgid "Tab"
+msgstr "Tab"
+
+#. translators: very short label of the default SUPER key
+#: ../data/layoutstrings.py:73
+msgid "Win"
+msgstr "Win"
+
+#: ../Onboard/ConfigUtils.py:61
+msgid "gsettings schema for '{}' is not installed"
+msgstr "'{}'のgsettingsスキーマがインストールされていません"
+
+#. assume filename is just a basename instead of a full file path
+#: ../Onboard/ConfigUtils.py:391
+msgid "{description} '{filename}' not found yet, retrying in default paths"
+msgstr ""
+"{description} '{filename}'が見つかりません、デフォルトのパスで再試行していま"
+"す。"
+
+#: ../Onboard/ConfigUtils.py:406
+msgid "unable to locate '{filename}', loading default {description} instead"
+msgstr ""
+"'{filename}'を見つけることができません、デフォルトの{description}を読み込んで"
+"います。"
+
+#: ../Onboard/ConfigUtils.py:414
+msgid "failed to find {description} '{filename}'"
+msgstr "{description} '{filename}'が見つかりません"
+
+#: ../Onboard/ConfigUtils.py:418
+msgid "{description} '{filepath}' found."
+msgstr "{description} '{filepath}'が見つかりました。"
+
+#: ../Onboard/ConfigUtils.py:485
+msgid "Looking for system defaults in {paths}"
+msgstr "{paths}からシステムデフォルトを探しています"
+
+#: ../Onboard/ConfigUtils.py:496
+msgid "Failed to read system defaults. "
+msgstr "システムデフォルトの読み込みに失敗しました。 "
+
+#: ../Onboard/ConfigUtils.py:500
+msgid "No system defaults found."
+msgstr "システムデフォルトが見つかりませんでした。"
+
+#: ../Onboard/ConfigUtils.py:502
+msgid "Loading system defaults from {filename}"
+msgstr "{filename}からシステムデフォルトを読み込んでいます"
+
+#: ../Onboard/ConfigUtils.py:526
+msgid "Found system default '[{}] {}={}'"
+msgstr "システムデフォルト'[{}] {}={}'が見つかりました"
+
+#: ../Onboard/ConfigUtils.py:544
+msgid "System defaults: Unknown key '{}' in section '{}'"
+msgstr "システムデフォルト: '{}'のセクションにおいて'{}'は不明なキーです"
+
+#: ../Onboard/ConfigUtils.py:551
+msgid "System defaults: Invalid enum value for key '{}' in section '{}': {}"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:564
+msgid ""
+"System defaults: Invalid value for key '{}' in section '{}'\n"
+"  {}"
+msgstr ""
+"システムデフォルト: '{}'のセクションにおいて'{}'のキーに対して無効な値です\n"
+"  {}"
+
+#: ../Onboard/ConfigUtils.py:626
+msgid "Failed to get gsettings value. "
+msgstr "gsettingsの値の取得に失敗しました。 "
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr "テーマのカスタマイズ"
+
+#: ../settings_theme_dialog.ui.h:2
+msgid "Color Sche_me"
+msgstr "カラースキーム(_M)"
+
+#: ../settings_theme_dialog.ui.h:3 ../settings.ui.h:56
+msgid "_Background:"
+msgstr "背景(_B):"
+
+#: ../settings_theme_dialog.ui.h:5
+msgid "_Angle:"
+msgstr "角度(_A):"
+
+#: ../settings_theme_dialog.ui.h:6
+msgid "Light Direction"
+msgstr "光源の方向"
+
+#: ../settings_theme_dialog.ui.h:7
+msgid "Keyboard"
+msgstr "キーボード"
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "_Style:"
+msgstr "スタイル(_S):"
+
+#: ../settings_theme_dialog.ui.h:9
+msgid "R_oundness:"
+msgstr "丸み(_O):"
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "S_ize:"
+msgstr "大きさ(_I):"
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "B_order width:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "Key Style"
+msgstr "キースタイル"
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "_Key:"
+msgstr "キー(_K):"
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "_Border:"
+msgstr "縁(_B):"
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "Gradients"
+msgstr "グラデーション"
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Strength:"
+msgstr "濃さ(_S):"
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Shadow"
+msgstr "影"
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "Keys"
+msgstr "キー"
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "_Font:"
+msgstr "フォント(_F):"
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "_Attributes:"
+msgstr "スタイル属性(_A):"
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "Font"
+msgstr "フォント"
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "I_ndependent size"
+msgstr "独立したサイズ(_N)"
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "_Super key:"
+msgstr "Superキー(_S):"
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "Label Override"
+msgstr "ラベルの上書き"
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "Labels"
+msgstr "ラベル"
+
+#: ../settings.ui.h:1
+msgid "Press & release - hold for key-repeat"
+msgstr ""
+
+#: ../settings.ui.h:2
+msgid "Release - hold for long press"
+msgstr ""
+
+#: ../settings.ui.h:3
+msgid "XTest"
+msgstr ""
+
+#: ../settings.ui.h:4
+msgid "1"
+msgstr ""
+
+#: ../settings.ui.h:5
+msgid "AT-SPI"
+msgstr ""
+
+#: ../settings.ui.h:6
+msgid "General"
+msgstr "全般"
+
+#: ../settings.ui.h:7
+msgid "Window"
+msgstr "ウィンドウ"
+
+#: ../settings.ui.h:8
+msgid "Layout"
+msgstr "レイアウト"
+
+#: ../settings.ui.h:9
+msgid "Theme"
+msgstr "テーマ"
+
+#: ../settings.ui.h:11
+msgid "Universal Access"
+msgstr "ユニバーサルアクセス"
+
+#: ../settings.ui.h:12
+msgid "Advanced"
+msgstr ""
+
+#: ../settings.ui.h:13
+msgid "Cycle"
+msgstr ""
+
+#: ../settings.ui.h:14
+msgid "Double-click to lock"
+msgstr ""
+
+#: ../settings.ui.h:15
+msgid "Latch"
+msgstr ""
+
+#: ../settings.ui.h:16
+msgid "Lock"
+msgstr ""
+
+#: ../settings.ui.h:18
+msgid "Single-touch"
+msgstr ""
+
+#: ../settings.ui.h:19
+msgid "Multi-touch"
+msgstr ""
+
+#: ../settings.ui.h:20
+msgid "column"
+msgstr ""
+
+#: ../settings.ui.h:21
+msgid "_Auto-show when editing text"
+msgstr "テキスト編集時に自動的に表示(_A)"
+
+#: ../settings.ui.h:22
+msgid ""
+"Show Onboard when there is a recognized text window in focus. Requires Gnome "
+"Accessibility."
+msgstr ""
+"フォーカスされたテキストウィンドウがあるときにOnboardを表示します。ただし"
+"Gnomeアクセシビリティを必要とします。"
+
+#: ../settings.ui.h:23
+msgid "Start Onboard _hidden"
+msgstr "Onboard を隠した状態で起動(_H)"
+
+#: ../settings.ui.h:24
+msgid "Start Onboard hidden."
+msgstr "Onboard を隠した状態で起動します。"
+
+#: ../settings.ui.h:25
+msgid "Show floating _icon when Onboard is hidden"
+msgstr "Onboard が隠れている時にフローティングアイコンを表示(_I)"
+
+#: ../settings.ui.h:26
+msgid ""
+"Show a floating icon on the desktop when Onboard is hidden. A click on the "
+"icon makes Onboard reappear."
+msgstr ""
+"Onboard が隠れている時にフローティングアイコンを表示します。アイコンをクリッ"
+"クすると Onboard が表示されます。"
+
+#: ../settings.ui.h:27
+msgid "Show/Hide Options"
+msgstr "表示オプション"
+
+#: ../settings.ui.h:28
+msgid "_Show status icon"
+msgstr "ステータスアイコンを表示(_S)"
+
+#: ../settings.ui.h:29
+msgid "Show the status item. A click on that icon hides or shows Onboard."
+msgstr ""
+"状態アイテムを表示します。アイコンをクリックして Onboard を隠したり表示させた"
+"りできます。"
+
+#: ../settings.ui.h:30
+msgid "Show when _unlocking the screen"
+msgstr "画面のロック解除時に表示(_U)"
+
+#: ../settings.ui.h:31
+msgid ""
+"Show Onboard when the dialog to unlock the screen appears; this way Onboard "
+"can be used for example to enter the password to dismiss the screensaver "
+"when it is set to ask for it."
+msgstr ""
+"画面のロックを解除するためのダイアログが表示されたときにOnboardを表示します。"
+"これにより、スクリーンセーバーの解除にパスワードが必要となるよう設定されてい"
+"る場合に、Onboard を使ってパスワードを入力することができます。"
+
+#: ../settings.ui.h:32
+msgid "Show _tooltips"
+msgstr "ツールチップを表示(_T)"
+
+#: ../settings.ui.h:33
+msgid "Show tooltips for the keyboard&apos;s buttons."
+msgstr "キーボードのボタンにツールチップを表示します。"
+
+#: ../settings.ui.h:34
+msgid "Show tooltips for the keyboard's buttons."
+msgstr "キーボードのボタンにツールチップを表示します。"
+
+#: ../settings.ui.h:35
+msgid "Desktop Integration"
+msgstr "デスクトップの統合"
+
+#: ../settings.ui.h:36
+msgid "Show window _decoration"
+msgstr "ウィンドウの装飾を表示(_D)"
+
+#: ../settings.ui.h:37
+msgid "Show window caption and frame."
+msgstr "ウィンドウのタイトルとフレームを表示します。"
+
+#: ../settings.ui.h:38
+msgid "Show always on visible _workspace"
+msgstr "表示中のワークスペースに常に表示(_W)"
+
+#: ../settings.ui.h:39
+msgid "&quot;Sticky&quot; mode for keyboard and floating icon."
+msgstr "&quot;Sticky&quot;キーボードと浮いているアイコンのためのモード。"
+
+#: ../settings.ui.h:40
+msgid "\"Sticky\" mode for keyboard and floating icon."
+msgstr "キーボードと浮いているアイコンのための「Sticky」モード。"
+
+#: ../settings.ui.h:41
+msgid "_Force window to top"
+msgstr "ウィンドウを強制的に前面に表示(_F)"
+
+#: ../settings.ui.h:42
+msgid "Try harder to keep Onboard above anything on-screen."
+msgstr "Onboard をできる限り画面上のすべてのウィンドウより上に表示します。"
+
+#: ../settings.ui.h:43
+msgid "Keep _aspect ratio"
+msgstr "アスペクト比を保つ(_A)"
+
+#: ../settings.ui.h:44
+msgid "Constrain window size to the layout&apos;s aspect ratio."
+msgstr ""
+
+#: ../settings.ui.h:45
+msgid "Constrain window size to the layout's aspect ratio."
+msgstr "レイアウトのアスペクト比をウィンドウサイズに制限します。"
+
+#: ../settings.ui.h:46
+msgid "Window Options"
+msgstr "ウィンドウオプション"
+
+#: ../settings.ui.h:47
+msgid "Enable docking"
+msgstr ""
+
+#: ../settings.ui.h:48
+msgid "Dock the keyboard to the edge of the screen."
+msgstr ""
+
+#: ../settings.ui.h:49
+msgid "_Docking settings"
+msgstr ""
+
+#: ../settings.ui.h:50
+msgid "Docking"
+msgstr ""
+
+#: ../settings.ui.h:51
+msgid "_Frame resize handles:"
+msgstr "フレームのリサイズの取り扱い(_F):"
+
+#: ../settings.ui.h:52
+msgid "Resize Protection"
+msgstr "リサイズ抑制"
+
+#: ../settings.ui.h:53
+msgid "Window management"
+msgstr ""
+
+#: ../settings.ui.h:54
+msgid "Wind_ow:"
+msgstr "ウィンドウ(_O):"
+
+#: ../settings.ui.h:55
+msgid "Transparency of the whole keyboard window. Requires compositing."
+msgstr "キーボードウィンドウ全体の透明度。コンポジットが必要です。"
+
+#: ../settings.ui.h:57
+msgid "Transparency of the keyboard background"
+msgstr "キーボードの背景の透明度"
+
+#: ../settings.ui.h:58
+msgid "_No background"
+msgstr "背景なし(_N)"
+
+#: ../settings.ui.h:59
+msgid "Show the desktop through the gaps between keys."
+msgstr "キーとキーの間にデスクトップを表示します。"
+
+#: ../settings.ui.h:60
+msgid "Transparency"
+msgstr "透明度"
+
+#: ../settings.ui.h:61
+msgid "Set _transparency to"
+msgstr "透明度を(_T)"
+
+#: ../settings.ui.h:62
+msgid "Enable inactive transparency. Requires compositing."
+msgstr "非アクティブ時の透明度設定を有効にします。コンポジットが必要です。"
+
+#: ../settings.ui.h:63
+msgid ""
+"Transparency when the pointer leaves the keyboard. Requires compositing."
+msgstr "ポインターがキーボードから離れた時の透明度。コンポジットが必要です。"
+
+#: ../settings.ui.h:64
+msgid "after"
+msgstr "に設定する ("
+
+#: ../settings.ui.h:65
+msgid "Delay in seconds until the inactive transparency takes effect."
+msgstr "非アクティブ時の透明度に変化させるまでの遅延時間。"
+
+#: ../settings.ui.h:66
+msgid "seconds"
+msgstr "秒後)"
+
+#: ../settings.ui.h:67
+msgid "When Inactive"
+msgstr "非アクティブ時"
+
+#: ../settings.ui.h:68
+msgid "_Personalize"
+msgstr "カスタマイズ(_P)"
+
+#: ../settings.ui.h:69
+msgid "_Open layouts folder"
+msgstr "レイアウトフォルダーを開く(_O)"
+
+#: ../settings.ui.h:70
+msgid "C_ustomize theme"
+msgstr "テーマのカスタマイズ(_U)"
+
+#: ../settings.ui.h:71
+msgid "Follow _system theme"
+msgstr "システムテーマを許可する(_S)"
+
+#: ../settings.ui.h:72
+msgid "Remember what Onboard theme was last used for every system theme."
+msgstr "システムテーマごとに、最後に使われたOnboardのテーマを保存します。"
+
+#: ../settings.ui.h:73
+msgid ""
+"Snippets are pieces of text which are entered when the corresponding button "
+"in Onboard is pressed."
+msgstr ""
+"スニペットとは、Onboard で該当するボタンが押された時に入力されるひとまとまり"
+"のテキストです。"
+
+#: ../settings.ui.h:74
+msgid "_Delay:"
+msgstr ""
+
+#: ../settings.ui.h:75
+msgid "_Motion threshold:"
+msgstr ""
+
+#: ../settings.ui.h:76
+msgid "Time in seconds before a click is triggered."
+msgstr ""
+
+#: ../settings.ui.h:77
+msgid "Distance in pixels before movement will be recognized."
+msgstr ""
+
+#: ../settings.ui.h:78
+msgid "Hide hover click window"
+msgstr ""
+
+#: ../settings.ui.h:79
+msgid "Hide the system-provided hover click window while Onboard is running."
+msgstr ""
+"Onboardの実行中は、システムが提供するホバークリックウィンドウを隠します。"
+
+#: ../settings.ui.h:80
+msgid "Enable click type window on exit"
+msgstr ""
+
+#: ../settings.ui.h:81
+msgid ""
+"Always enable the system-provided hover click window when exiting Onboard."
+msgstr ""
+"システムで提供されるホバークリックウィンドウをOnboardの終了時に常に有効にしま"
+"す。"
+
+#: ../settings.ui.h:82
+msgid "Hover Click"
+msgstr "ホバークリック"
+
+#: ../settings.ui.h:83
+msgid "Enable  keyboard _scanning"
+msgstr "キーボードスキャンを有効にする(_S)"
+
+#: ../settings.ui.h:84
+msgid "Sc_anner Settings"
+msgstr "スキャンの設定(_A)"
+
+#: ../settings.ui.h:85
+msgid "Keyboard Scanning"
+msgstr "キーボードの設定"
+
+#: ../settings.ui.h:86
+msgid "Send _key strokes on:"
+msgstr ""
+
+#: ../settings.ui.h:87
+msgid ""
+"Choose between key-repeat or long-press menus. Only affects alpha-numeric "
+"keys."
+msgstr ""
+
+#: ../settings.ui.h:88
+msgid "Key-stroke _generation:"
+msgstr ""
+
+#: ../settings.ui.h:89
+msgid "Modifier _behavior:"
+msgstr ""
+
+#: ../settings.ui.h:90
+msgid "Behavior of modifier and layer keys."
+msgstr ""
+
+#: ../settings.ui.h:91
+msgid "Modifier auto-_release delay:"
+msgstr ""
+
+#: ../settings.ui.h:92
+msgid ""
+"Seconds of inactivity until active modifiers and layer keys are released. 0 "
+"to disable."
+msgstr ""
+
+#: ../settings.ui.h:93
+msgid "_Touch input (requires restart):"
+msgstr ""
+
+#: ../settings.ui.h:94
+msgid "Keyboard options"
+msgstr ""
+
+#: ../data/onboard.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr "Onboard オンスクリーンキーボード"
+
+#: ../data/onboard.desktop.in.h:3
+msgid "Flexible onscreen keyboard for GNOME"
+msgstr "GNOME 向けの柔軟なオンスクリーン・キーボード"
+
+#. ##############
+#: ../Onboard/SnippetView.py:20
+msgid "<Enter label>"
+msgstr "<ラベルを入力してください>"
+
+#: ../Onboard/SnippetView.py:21
+msgid "<Enter text>"
+msgstr "<テキストを入力してください>"
+
+#: ../Onboard/SnippetView.py:33
+msgid "Button Number"
+msgstr "ボタン番号"
+
+#: ../Onboard/SnippetView.py:40
+msgid "Button Label"
+msgstr "ボタンのラベル"
+
+#: ../Onboard/SnippetView.py:49
+msgid "Snippet Text"
+msgstr "スニペットテキスト"
+
+#: ../Onboard/SnippetView.py:94
+msgid "Must be an integer number"
+msgstr "整数を入力してください"
+
+#: ../Onboard/SnippetView.py:103
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr "スニペット%dはすでに使われています。"
+
+#~ msgid "Change onBoard settings"
+#~ msgstr "onBoard の設定を変更します"
+
+#~ msgid "onBoard Settings"
+#~ msgstr "onBoard の設定"
+
+#~ msgid "Enter text for snippet"
+#~ msgstr "スニペットを入力"
+
+#~ msgid "Start onboard _minimized"
+#~ msgstr "onboard を最小化して起動(_M)"
+
+#~ msgid "onBoard onscreen keyboard"
+#~ msgstr "onBoard オンスクリーン・キーボード"
+
+#~ msgid "onBoard"
+#~ msgstr "onBoard"
+
+#~ msgid "onBoard onscreen keyboard settings"
+#~ msgstr "onBoard オンスクリーンキーボードの設定"
+
+#~ msgid "Show onboard when _unlocking the screen"
+#~ msgstr "画面のロックを解除するときに onBoard を表示する(_U)"
+
+#~ msgid "Show floating _icon when onboard is hidden"
+#~ msgstr "onBoard が隠れているときにフローティングアイコンを表示する(_I)"
+
+#~ msgid ""
+#~ "<b><i>Scanning mode only works with layouts which are designed for the "
+#~ "purpose.</i></b>"
+#~ msgstr ""
+#~ "<b><i>スキャンモードは、それ用にデザインされたレイアウトでのみ有効です。</"
+#~ "i></b>"
+
+#~ msgid "Interval"
+#~ msgstr "間隔"
+
+#~ msgid "Scanning mode"
+#~ msgstr "スキャンモード"
+
+#~ msgid "Personalise _current layout"
+#~ msgstr "現在のレイアウトを個人用にする(_C)"
+
+#~ msgid "Startup Option"
+#~ msgstr "開始時のオプション"
+
+#~ msgid "_Open custom layouts folder"
+#~ msgstr "カスタムレイアウト・フォルダを開く(_O)"
+
+#~ msgid " - middle/right click buttons disabled"
+#~ msgstr " - 中/右クリックボタンを無効にする"
+
+#~ msgid "Xlib unavailable%s\n"
+#~ msgstr "Xlib が利用できません %s\n"
+
+#~ msgid "XInput extension unavailable%s\n"
+#~ msgstr "XInput 拡張が利用できません %s\n"
+
+#~ msgid "Please enter a new snippet for this button."
+#~ msgstr "このボタンの新しいスニペットを入力してください。"
+
+#~ msgid "Button label"
+#~ msgstr "ボタンのラベル"
+
+#~ msgid "Snippet assigned to button %d"
+#~ msgstr "ボタン %d は別のスニペットが割り当てずみです"
+
+#~ msgid "<enter label>"
+#~ msgstr "<ラベルを入力>"
+
+#~ msgid "<enter text>"
+#~ msgstr "<テキストを入力>"
+
+#~ msgid "Customize theme"
+#~ msgstr "テーマのカスタマイズ"
+
+#~ msgid "    "
+#~ msgstr "    "
+
+#~ msgid "Please enter a name for the new theme"
+#~ msgstr "新しいテーマの名前を入力してください"
+
+#~ msgid "Delete"
+#~ msgstr "削除"
+
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "Color Scheme"
+#~ msgstr "カラースキーム"
+
+#~ msgid "Attributes"
+#~ msgstr "属性"
+
+#~ msgid "Border"
+#~ msgstr "枠線"
+
+#~ msgid "Roundness"
+#~ msgstr "丸み"
+
+#~ msgid "Super key label"
+#~ msgstr "Super キーのラベル"
+
+#~ msgid "Key"
+#~ msgstr "キー"
+
+#~ msgid "Label font"
+#~ msgstr "ラベルフォント"
+
+#~ msgid "Label override"
+#~ msgstr "ラベルの上書き"
+
+#~ msgid "Key style"
+#~ msgstr "キースタイル"
+
+#~ msgid "Direction"
+#~ msgstr "方向"
+
+#~ msgid "Failed to load Onboard icon"
+#~ msgstr "Onboard アイコンの読み込みに失敗しました"
+
+#~ msgid "Units for canvas height and width must currently be px (pixels)."
+#~ msgstr "キャンバスの高さと幅の単位は px (ピクセル) でなければなりません。"
+
+#~ msgid "Layouts"
+#~ msgstr "レイアウト"
+
+#~ msgid "Scanning"
+#~ msgstr "スキャン"
+
+#~ msgid ""
+#~ "Show a floating icon on the desktop when onboard is hidden. A click on "
+#~ "the icon makes onboard reappear."
+#~ msgstr ""
+#~ "onboard が隠れているときにフローティングアイコンをデスクトップに表示しま"
+#~ "す。アイコンをクリックすると onboard が表示されます。"
+
+#~ msgid "Start onboard hidden."
+#~ msgstr "onboard を非表示で起動"
+
+#~ msgid "Snippet"
+#~ msgstr "スニペット"
+
+#~ msgid ""
+#~ "Pg\n"
+#~ "Up"
+#~ msgstr ""
+#~ "Page\n"
+#~ "Up"
+
+#~ msgid ""
+#~ "Pg\n"
+#~ "Dn"
+#~ msgstr ""
+#~ "Page\n"
+#~ "Down"
+
+#~ msgid ""
+#~ "Nm\n"
+#~ "Lk"
+#~ msgstr ""
+#~ "Num\n"
+#~ "Lock"
+
+#~ msgid "ESC"
+#~ msgstr "ESC"
+
+#~ msgid "%s appears in scanning definition only"
+#~ msgstr "%s はスキャン定義でのみ表示されます"
+
+#~ msgid "Show the status item. A click on that icon hides or shows onboard."
+#~ msgstr ""
+#~ "ステータス項目を表示する。アイコンの上でクリックすると onboard を表示/隠し"
+#~ "ます。"
+
+#~ msgid ""
+#~ "Middle\n"
+#~ "Click"
+#~ msgstr ""
+#~ "中\n"
+#~ "クリック"
+
+#~ msgid ""
+#~ "Right\n"
+#~ "Click"
+#~ msgstr ""
+#~ "右\n"
+#~ "クリック"
+
+#~ msgid ""
+#~ "Show onboard when the dialog to unlock the screen appears; this way "
+#~ "onboard can be used for example to enter the password to dismiss the "
+#~ "screensaver when it is set to ask for it."
+#~ msgstr ""
+#~ "ロック解除するダイアログが表示された時に onBoard を表示します。この方法で"
+#~ "は、例えばスクリーンセーバを解除するのにパスワードを尋ねるよう設定していた"
+#~ "場合に onBoard が利用できます。"
+
+#~ msgid ""
+#~ "Some password dialogs disable the area around them, making it impossible "
+#~ "to click on onboard. By activating this option, these dialogs behave as "
+#~ "normal windows and the area around the dialog remains active. This option "
+#~ "is also available in the Assistive Technologies control panel."
+#~ msgstr ""
+#~ "一部のパスワードダイアログは周囲のエリアを無効にするため、onboard でクリッ"
+#~ "クできなくなります。このオプションを有効にすると、これらのダイアログは通常"
+#~ "のウインドウとして振る舞い、ダイアログの周囲をアクティブなままにします。こ"
+#~ "のオプションはコントロールパネルの「支援機能」からも設定できます。"
+
+#~ msgid "_Password dialogs as normal windows"
+#~ msgstr "標準ウィンドウのパスワードダイアログ(_P)"
+
+#~ msgid "Option When Hidden"
+#~ msgstr "非表示時のオプション"
+
+#~ msgid "Loading system defaults from %s."
+#~ msgstr "%s からシステムデフォルトを読み込んでいます"
+
+#~ msgid "Show Onboard when _unlocking the screen"
+#~ msgstr "画面のロックを解除するときに Onboard を表示する(_U)"
+
+#~ msgid "Start Onboard _minimized"
+#~ msgstr "Onboard を最小化して起動する(_M)"
+
+#~ msgid "Themes"
+#~ msgstr "テーマ"
+
+#~ msgid ""
+#~ "The theme file already exists.\n"
+#~ "'%s'\n"
+#~ "\n"
+#~ "Overwrite it anyway?"
+#~ msgstr ""
+#~ "テーマファイルが既に存在します。\n"
+#~ "'%s'\n"
+#~ "\n"
+#~ "それでも上書きしますか？"
+
+#~ msgid "Delete selected theme file?"
+#~ msgstr "選択されたテーマファイルを削除しますか？"
+
+#~ msgid "Color scheme for theme '%s' not found"
+#~ msgstr "テーマ '%s' のカラースキームが見つかりませんでした"
+
+#~ msgid "Startup Options"
+#~ msgstr "起動オプション"
+
+#~ msgid "Show tool-tips for the keyboard's buttons."
+#~ msgstr "キーボードのボタンでツールチップを表示します。"
+
+#~ msgid "Show _tool-tips"
+#~ msgstr "ツールチップを表示(_T)"
+
+#~ msgid "Background"
+#~ msgstr "背景"
+
+#~ msgid "Universal Access Settings"
+#~ msgstr "ユニバーサルアクセスの設定"
+
+#~ msgid "_Direction:"
+#~ msgstr "向き(_D):"
+
+#~ msgid "Style"
+#~ msgstr "スタイル"
+
+#~ msgid ""
+#~ "Loading legacy layout format '{}'. Please consider upgrading to current "
+#~ "format '{}'"
+#~ msgstr ""
+#~ "レガシーレイアウト形式'{}'をロードしています。現在の形式'{}'へのアップグ"
+#~ "レードを検討してください"
+
+#~ msgid "Releasing still pressed key '{}'"
+#~ msgstr "押されているキーを離す'{}'"
+
+#~ msgid "launching '{}'"
+#~ msgstr "'{}'を起動しています"
+
+#~ msgid "screen changed, supports_alpha={}"
+#~ msgstr "スクリーンが変更されました: supports_alpha={}"
+
+#~ msgid ""
+#~ "The time the scanner rests on a key or group  before moving to the next. "
+#~ "(in seconds)"
+#~ msgstr "キーやグループが次に移動するまでの待ち時間（単位：秒）"
+
+#~ msgid "_Universal Access Panel"
+#~ msgstr "ユニバーサルアクセスパネル(_U)"
+
+#~ msgid "Enable Hover Click window on _exit"
+#~ msgstr "ホバークリックウィンドウを終了するときに有効にする(_E)"
+
+#~ msgid "_Hide Hover Click window"
+#~ msgstr "ホバークリックウインドウを隠す(_H)"

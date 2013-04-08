@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<keyboard format="3" id="Mylayout">
+  <box border="1" spacing="1.5">
+    <panel>
+
+      <panel filename="Mylayout-Main.svg" layer="main">
+       	<key button="true" group="bottomrow" id="layer1" label="ABC"/>        
+	<key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
+ 	<key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
+     </panel>
+    
+ 
+
+
+        <panel filename="Mylayout-Alpha.svg" layer="alpha">
+	<key button="true" group="bottomrow" id="layer0" label="Main" />  
+	<key button="true" group="bottomrow" id="layer2" label="123" />  
+	<key button="true" group="bottomrow" id="layer3" label="@#$" />  
+	<key button="true" group="bottomrow" id="layer4" label="Function"/>  
+	<key id='RST1' button='true' label='Reset' scan_no_activation='true'/>
+    	<key id='RST2' button='true' label='Reset' scan_no_activation='true'/>
+    	<key id='RST3' button='true' label='Reset' scan_no_activation='true'/>
+    	<key id='RST4' button='true' label='Reset' scan_no_activation='true'/>
+	<key id='RST5' button='true' label='Reset' scan_no_activation='true'/>	
+        <key group="alphanumeric" id="AD01" keycode="24" name="q" sticky="false"/>
+        <key group="alphanumeric" id="AD02" keycode="25" name="w" sticky="false"/>
+        <key group="alphanumeric" id="AD03" keycode="26" name="e" sticky="false"/>
+        <key group="alphanumeric" id="AD04" keycode="27" name="r" sticky="false"/>
+        <key group="alphanumeric" id="AD05" keycode="28" name="t" sticky="false"/>
+        <key group="alphanumeric" id="AD06" keycode="29" name="y" sticky="false"/>
+        <key group="alphanumeric" id="AD07" keycode="30" name="u" sticky="false"/>
+        <key group="alphanumeric" id="AD08" keycode="31" name="i" sticky="false"/>
+        <key group="alphanumeric" id="AD09" keycode="32" name="o" sticky="false"/>
+        <key group="alphanumeric" id="AD10" keycode="33" name="p" sticky="false"/>
+        <key group="alphanumeric" id="AC01" keycode="38" name="a" sticky="false"/>
+        <key group="alphanumeric" id="AC02" keycode="39" name="s" sticky="false"/>
+        <key group="alphanumeric" id="AC03" keycode="40" name="d" sticky="false"/>
+        <key group="alphanumeric" id="AC04" keycode="41" name="f" sticky="false"/>
+        <key group="alphanumeric" id="AC05" keycode="42" name="g" sticky="false"/>
+        <key group="alphanumeric" id="AC06" keycode="43" name="h" sticky="false"/>
+        <key group="alphanumeric" id="AC07" keycode="44" name="j" sticky="false"/>
+        <key group="alphanumeric" id="AC08" keycode="45" name="k" sticky="false"/>
+        <key group="alphanumeric" id="AC09" keycode="46" name="l" sticky="false"/>
+        <key group="shifts" id="LFSH" label="⇧" modifier="shift" sticky="true"/>                                                                                      
+        <key group="alphanumeric" id="AB01" keycode="52" name="z" sticky="false"/>
+        <key group="alphanumeric" id="AB02" keycode="53" name="x" sticky="false"/>
+        <key group="alphanumeric" id="AB03" keycode="54" name="c" sticky="false"/>
+        <key group="alphanumeric" id="AB04" keycode="55" name="v" sticky="false"/>
+        <key group="alphanumeric" id="AB05" keycode="56" name="b" sticky="false"/>
+        <key group="alphanumeric" id="AB06" keycode="57" name="n" sticky="false"/>
+        <key group="alphanumeric" id="AB07" keycode="58" name="m" sticky="false"/>
+        <key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false"/>
+        <key group="alphanumeric" id="AB08" keycode="59" name="," sticky="false"/>
+        <key group="bottomrow" id="SPCE" keycode="65" sticky="false"/>
+        <key group="misc" id="RTRN" keycode="36" label="⏎Enter" sticky="false"/>
+      </panel>
+   
+
+      <panel filename="Mylayout-Numbers.svg" layer="numbers" >
+	<key id='RST1' button='true' label='Reset' scan_no_activation='true'/>
+    	<key id='RST2' button='true' label='Reset' scan_no_activation='true'/>
+    	<key id='RST3' button='true' label='Reset' scan_no_activation='true'/>
+    	<key id='RST4' button='true' label='Reset' scan_no_activation='true'/>
+	<key id='RST5' button='true' label='Reset' scan_no_activation='true'/>	
+	<key group="alphanumeric" id="AD01" keycode="10" name="1" sticky="false"/>
+        <key group="alphanumeric" id="AD02" keycode="11" name="2" sticky="false"/>
+        <key group="alphanumeric" id="AD03" keycode="12" name="3" sticky="false"/>
+        <key group="alphanumeric" id="AD04" keycode="13" name="4" sticky="false"/>
+        <key group="alphanumeric" id="AD05" keycode="14" name="5" sticky="false"/>
+        <key group="alphanumeric" id="AD06" keycode="15" name="6" sticky="false"/>
+        <key group="alphanumeric" id="AD07" keycode="16" name="7" sticky="false"/>
+        <key group="alphanumeric" id="AD08" keycode="17" name="8" sticky="false"/>
+        <key group="alphanumeric" id="AD09" keycode="18" name="9" sticky="false"/>
+        <key group="alphanumeric" id="AD10" keycode="19" name="0" sticky="false"/>		 
+        <key group="alphanumeric" id="AC01" keysym="64" label="@" sticky="false"/>
+        <key group="alphanumeric" id="AC02" keycode="51" name="#" sticky="false"/>
+        <key group="alphanumeric" id="AC03" keysym="163" label="£" sticky="false"/>
+        <key group="alphanumeric" id="AC04" keysym="37" label="%" sticky="false"/>
+        <key group="alphanumeric" id="AC05" keycode="63" name="*" sticky="false"/>
+        <key group="alphanumeric" id="AC06" keysym="38" label="&amp;" sticky="false"/>
+        <key group="alphanumeric" id="AC07" keycode="20" name="-" sticky="false"/>
+        <key group="alphanumeric" id="AC08" keycode="86" name="+" sticky="false"/>
+        <key group="alphanumeric" id="AC09" keysym="40" label="(" sticky="false"/>
+        <key group="alphanumeric" id="AC10" keysym="41" label=")" sticky="false"/>
+	<key group="alphanumeric" id="AC11" keysym="61" label="=" sticky="false"/>
+	<key group="misc" id="RTRN" keycode="36" label="⏎Enter" sticky="false"/>
+	<key group="bottomrow" id="SPCE" keycode="65" label="Space" sticky="false"/>
+        <key group="alphanumeric" id="AB01" keysym="33" label="!" sticky="false"/>
+        <key group="alphanumeric" id="AB02" keysym="34" label="&quot;" sticky="false"/>
+        <key group="alphanumeric" id="AB03" keycode="48" name="'" sticky="false"/>
+        <key group="alphanumeric" id="AB04" keysym="58" label=":" sticky="false"/>
+        <key group="alphanumeric" id="AB05" keycode="47" name=";" sticky="false"/>
+        <key group="alphanumeric" id="AB06" keycode="61" name="/" sticky="false"/>
+        <key group="alphanumeric" id="AB07" keysym="63" label="?" sticky="false"/>
+	<key group="alphanumeric" id="AB09" keycode="60" name="." sticky="false"/>
+        <key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false"/>
+        <key button="true" group="bottomrow" id="layer1" label="Abc" />
+	<key button="true" group="bottomrow" id="layer0" label="Main" />
+ 	<key button="true" group="bottomrow" id="layer3" label="@#$"/>
+	<key button="true" group="bottomrow" id="layer4" label="Function"/>
+        <key group="alphanumeric" id="LWIN" keycode="133" label="Win" sticky="false"/>
+        <key group="bottomrow" id="SPCE" keycode="65" sticky="false"/>
+        <key button="true" group="click" id="secondaryclick" image="right-click.svg" scannable="false" tooltip="Right click"/>
+        <key button="true" expand="false" group="bottomrow" id="hide" image="hide.svg" scannable="false" tooltip="Hide Onboard"/>
+      </panel>
+
+
+
+      <panel filename="Mylayout-Utils.svg" layer="utils">
+        <key group="alphanumeric" id="AD01" keysym="126" label="~" sticky="false"/>
+        <key group="alphanumeric" id="AD02" keysym="96" label="`" sticky="false"/>
+        <key group="alphanumeric" id="AD03" keysym="124" label="|" sticky="false"/>
+        <key group="alphanumeric" id="AD04" keysym="183" label="·" sticky="false"/>
+        <key group="alphanumeric" id="AD05" keysym="2262" label="√" sticky="false"/>
+        <key group="alphanumeric" id="AD06" keysym="2000" label="π" sticky="false"/>
+        <key group="alphanumeric" id="AD07" keysym="247" label="÷" sticky="false"/>
+        <key group="alphanumeric" id="AD08" keysym="215" label="×" sticky="false"/>
+        <key group="alphanumeric" id="AD09" keysym="123" label="{" sticky="false"/>
+        <key group="alphanumeric" id="AD10" keysym="125" label="}" sticky="false"/>
+        <key group="alphanumeric" id="AC01" keysym="65289" label="⇥" sticky="false"/>
+        <key group="alphanumeric" id="AC02" keysym="8364" label="€" sticky="false"/>
+        <key group="alphanumeric" id="AC03" keysym="165" label="¥" sticky="false"/>
+        <key group="alphanumeric" id="AC04" keysym="36" label="$" sticky="false"/>
+        <key group="alphanumeric" id="AC05" keysym="176" label="°" sticky="false"/>
+        <key group="alphanumeric" id="AC06" keysym="94" label="^" sticky="false"/>
+        <key group="alphanumeric" id="AC07" keysym="95" label="_" sticky="false"/>
+        <key group="alphanumeric" id="AC08" keysym="61" label="=" sticky="false"/>
+        <key group="alphanumeric" id="AC09" keysym="91" label="[" sticky="false"/>
+        <key group="alphanumeric" id="AC10" keysym="93" label="]" sticky="false"/>
+        <key button="true" group="bottomrow" id="layer1" label="?123" />
+        <key group="alphanumeric" id="AB01" keysym="2761" label="™" sticky="false"/>
+        <key group="alphanumeric" id="AB02" keysym="174" label="®" sticky="false"/>
+        <key group="alphanumeric" id="AB03" keysym="169" label="©" stidcky="false"/>
+        <key group="alphanumeric" id="AB04" keysym="182" label="¶" sticky="false"/>
+        <key group="alphanumeric" id="AB05" keysym="92" label="\" sticky="false"/>
+        <key group="alphanumeric" id="AB06" keysym="60" label="&lt;" sticky="false"/>
+        <key group="alphanumeric" id="AB07" keysym="62" label="&gt;" sticky="false"/>
+        <key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false"/>
+        <key button="true" group="bottomrow" id="layer0" label="Main" tooltip="Alphanumeric keys"/>
+        <key group="alphanumeric" id="AB08" keycode="59" name="," sticky="false"/>
+        <key group="bottomrow" id="SPCE" keycode="65" sticky="false"/>
+        <key button="true" group="bottomrow" id="settings" image="preferences.svg" tooltip="Onboard Preferences"/>
+        <key button="true" expand="false" group="bottomrow" id="hide" image="hide.svg" scannable="false" tooltip="Hide Onboard"/>
+      </panel>
+
+      <panel filename="Mylayout-Functions.svg" layer="function">
+   
+
+ 	    <key group="fkey s" id="F1" keysym='65470' label="F1" />
+ 	    <key group="fkeys" id="F2" keysym='65471' label="F2" />
+ 	    <key group="fkeys" id="F3" keysym='65472' label="F3" />
+ 	    <key group="fkeys" id="F4" keysym='65473' label="F4" />
+ 	    <key group="fkeys" id="F5" keysym='65474' label="F5" />
+ 	    <key group="fkeys" id="F6" keysym='65475' label="F6" />
+ 	    <key group="fkeys" id="F7" keysym='65476' label="F7" />
+ 	    <key group="fkeys" id="F8" keysym='65477' label="F8" />
+ 	    <key group="fkeys" id="F9" keysym='65478' label="F9" />
+ 	    <key group="fkeys" id="F10" keysym='65479' label="F10" />
+ 	    <key group="fkeys" id="F11" keysym='65480' label="F11" />
+ 	    <key group="fkeys" id="F12" keysym='65481' label="F12" />
+
+  	    <key id='LCTL' keycode='37'  label="Ctrl"    sticky='true' />
+   	    <key id='LALT' keycode='64'  label="Alt"     sticky='true' />
+    	    <key group="alphanumeric" id="LWIN" keycode="133" label="Win" sticky="false"/>
+    	    <key button="true" group="bottomrow" id="layer1" label="ABC"/>        
+   	    <key button="true" group="bottomrow" id="layer2" label="123"/>
+   	    <key button="true" group="bottomrow" id="layer3" label="@#$"/>
+
+
+
+          
+
+  </panel>
+ 
+
+    </panel>
+  </box>
+</keyboard>

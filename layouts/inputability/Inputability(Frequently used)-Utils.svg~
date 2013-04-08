@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created for Onboard -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="105" width="330" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata3346">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <rect id="AA01" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="0.5"/>
+ <rect id="AA02" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="46"/>
+ <rect id="AA03" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="92"/>
+ <rect id="AA04" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="138"/>
+ <rect id="AA05" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="184"/>
+ <rect id="AA06" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="230"/>
+ <rect id="AA07" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="0.5" x="276"/>
+ 
+ <rect id="AA08" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="0.5"/>
+ <rect id="AA09" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="46"/>
+ <rect id="AA10" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="92"/>
+ <rect id="AA11" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="138"/>
+ <rect id="AA12" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="184"/>
+ <rect id="AA13" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="230"/>
+ <rect id="AA14" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="26.5" x="276"/>
+ 
+ <rect id="AA15" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="52.5" x="0.5"/>
+ <rect id="AA16" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="52.5" x="46"/>
+ <rect id="AA17" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="52.5" x="92"/>
+ <rect id="AA18" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="52.5" x="138"/>
+ <rect id="AA19" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="52.5" x="184"/>
+ <rect id="AA20" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="52.5" x="230"/>
+ <rect id="AA21" style="stroke:#000;fill:#f2e5d8" height="25" width="44" y="52.5" x="276"/>
+ 
+ <rect id="AA22" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="0.5"/>
+ <rect id="AA23" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="46"/>
+ <rect id="AA24" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="92"/>
+ <rect id="AA25" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="138"/>
+ <rect id="AA26" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="184"/>
+ <rect id="AA27" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="230"/>
+ <rect id="AA28" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="78.5" x="276"/>
+ 
+ <rect id="BKSP" style="stroke:#000;fill:#d8cca5" height="25" width="44" y="104.5" x="0.5"/>
+ <rect id="SPCE" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="46"/>
+ <rect id="layer0" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="92"/>
+ <rect id="layer1" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="138"/>
+ <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="184"/>
+ <rect id="layer4" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="230"/>
+ <rect id="layer5" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="276"/>
+ <rect id="AB08" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="92"/>
+
+ <rect id="settings" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="184"/>
+ <rect id="hide" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="230"/>
+ <rect id="hide" style="stroke:#000;fill:#e5d8b2" height="25" width="44" y="104.5" x="276"/>
+</svg>

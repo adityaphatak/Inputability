@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created for Onboard -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="105" width="330" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata3346">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ 
+ <rect id="AD03" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="0"/>e
+ <rect id="AC01" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="40"/>a
+ <rect id="AD04" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="80"/> r
+ <rect id="AD08" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="120"/>i
+ <rect id="AD09" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="160"/>o
+ <rect id="AD05" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="200"/>t
+ <rect id="AB06" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="240"/>n
+ <rect id="AC02" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="0.5" x="280"/>s
+
+ <rect id="AC09" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="0"/>l
+ <rect id="AB03" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="40"/>c
+ <rect id="AD07" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="80"/>u
+ <rect id="AC03" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="120"/>d
+ <rect id="AD10" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="160"/>p
+ <rect id="AB07" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="200"/>m
+ <rect id="AC06" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="240"/>h
+ <rect id="AC05" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="26.5" x="280"/>g
+
+ 
+ <rect id="AB05" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="0"/>b
+ <rect id="AC04" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="40"/>f
+ <rect id="AD06" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="80"/>y
+ <rect id="AD02" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="120"/>w
+ <rect id="AC08" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="160"/>k
+ <rect id="AB04" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="200"/>v
+ <rect id="AB02" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="240"/>x
+ <rect id="AB01" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="52.5" x="280"/>z
+
+
+ <rect id="AC07" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="0"/>j
+ <rect id="AD01" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="40"/> q
+ <rect id="SPCE" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="80"/>
+ <rect id="CAPS" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="120"/>
+ <rect id="layer0" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="160"/>
+ <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="200"/>
+ <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="240"/>
+ <rect id="layer4" style="stroke:#000;fill:#e5d8b2" height="25" width="39" y="78.5" x="280"/>
+
+ <rect id="RST1" style="stroke:#000;fill:#e5d8b2" height="25" width="78" y="104.5" x="0"/> <!-- SKIP Button -->
+ <rect id="RST2" style="stroke:#000;fill:#e5d8b2" height="25" width="78" y="104.5" x="80"/> <!-- SKIP Button -->
+ <rect id="RST3" style="stroke:#000;fill:#e5d8b2" height="25" width="78" y="104.5" x="160"/> <!-- SKIP Button -->
+ <rect id="RST4" style="stroke:#000;fill:#e5d8b2" height="25" width="78" y="104.5" x="240"/> <!-- SKIP Button -->
+
+
+
+
+</svg>

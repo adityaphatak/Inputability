@@ -1,0 +1,75 @@
+= Documentation for virtkey =
+
+virtkey is a extension python and python3 to emulate keypresses and
+to get the keyboard geometry from the xserver.
+
+The documentation below is brief and incomplete.  I will finish it when I
+get time.
+
+== Methods of the virtkey.virtkey object ==
+
+=== __init__ ===
+ v = virtkey.virtkey()
+
+=== get_layouts ===
+
+ @rtype:  List of strings.
+
+ @return: List of layouts.
+
+=== labels_from_keycode ===
+
+ @type  keycode: Integer number
+
+ @param keycode: Keycode of a keyboard key.
+
+ @rtype:  List of strings.
+
+ @return: Tuple of the labels for the key in the format (normal, shift, caps, altgr, altgr+shift).
+
+=== latch_mod ===
+
+Latches a combination of modifiers, modifiers affect next keypress.
+Mask is of the order ShiftMask LockMask ControlMask Mod1Mask Mod2Mask Mod3Mask Mod4Mask Mod5Mask.
+So for control+alt latchmod(1+8).
+
+ @type  mask: Integer number
+
+ @param mask: Mask of the combination of modifiers to be latched.
+
+
+=== layout_get_keys ===
+
+=== layout_get_section_size ===
+
+=== layout_get_sections ===
+
+=== lock_mod ===
+
+Lock a combination of modifiers, modifiers affect until unlocked.
+Mask is of the order ShiftMask LockMask ControlMask Mod1Mask Mod2Mask Mod3Mask Mod4Mask Mod5Mask.
+So for control+alt latchmod(1+8).
+
+ @type  mask: Integer number
+
+ @param mask: Mask of the combination of modifiers to be locked.
+
+=== press_keycode ===
+
+=== press_keysym ===
+
+=== press_unicode ===
+
+=== release_keycode ===
+
+=== release_keysym ===
+
+=== release_unicode ===
+
+=== reload ===
+
+=== unlatch_mod ===
+
+=== unlock_mod ===
+Reverses the affect of lock_mod.
+

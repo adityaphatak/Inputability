@@ -1,0 +1,3 @@
+include AUTHORS COPYING COPYING.LESSER NEWS README
+recursive-include docs *
+recursive-include src *

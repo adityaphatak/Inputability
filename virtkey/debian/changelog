@@ -1,0 +1,166 @@
+virtkey (0.62.0-0ubuntu1) raring; urgency=low
+
+  [ Francesco Fumanti ]
+  * New upstream release.  (LP: #1077041)
+  * debian/rules: Override clean target to get build directory removed
+  
+  [ Barry Warsaw ]
+  * debian/watch: Updated to working URLs.
+
+ -- Barry Warsaw <barry@ubuntu.com>  Tue, 13 Nov 2012 17:26:42 -0500
+
+virtkey (0.61.0-0ubuntu3) raring; urgency=low
+
+  * Rebuild to drop python3.2 extension.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 08 Nov 2012 11:16:54 +0000
+
+virtkey (0.61.0-0ubuntu2) raring; urgency=low
+
+  * No-change upload to build for python3.3
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 22 Oct 2012 17:10:35 +0200
+
+virtkey (0.61.0-0ubuntu1) quantal; urgency=low
+
+  * Request for quantal to update virtkey to this release (LP: #1018828)
+  * debian/control, debian/rules: Add support for python3. Create two binary
+    packages now: python-virtkey, python3-virtkey
+    - debian/: Add python-virtkey.install and python3-virtkey.install
+    - debian/control: Remove cdbs build-dependency, raise debhelper
+      build-dependency to (>= 7.0.50~)
+    - debian/rules: have dh_python2 create the puthon2 and python3 packages,
+      and override dh_auto_install
+  * Reduce the number of unnecessarily linked libraries
+  * Make XkbGetKeyboard use correct constants (thanks Gerd Kohlberger)
+  * Switch to debian source format to 3.0 (quilt)
+  * debian/control:
+    - Homepage: Change the name of the source from python-virtkey to virtkey
+    - update Standards-Version to 3.9.3
+  * debian/copyright:
+    - adjust hosting site to use virtkey instead of python-virtkey
+    - add the copyright information for the year 2012
+  * debian/watch: replace python-virtkey with virtkey in the urls
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Wed, 27 Jun 2012 21:28:33 +0200
+
+virtkey (0.60.0-0ubuntu5) precise; urgency=low
+
+  * Rebuild to drop python2.6 dependencies.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 31 Dec 2011 02:15:22 +0000
+
+virtkey (0.60.0-0ubuntu4) oneiric; urgency=low
+
+  [ Evan Broder ]
+  * debian/rules, debian/control: Transition from pycentral to dh_python2
+    (LP: #788514)
+
+  [ Steve Langasek ]
+  * Drop the Vcs-Bzr field pointing to lp:python-virtkey, since that's the
+    upstream repository which doesn't correspond to where the packaging is
+    maintained.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 23 Jun 2011 16:16:59 -0700
+
+virtkey (0.60.0-0ubuntu3) natty; urgency=low
+
+  * Rebuild to add support for python 2.7.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 03 Dec 2010 00:15:57 +0000
+
+virtkey (0.60.0-0ubuntu2) maverick; urgency=low
+
+  * Prevent include-links from being set in the DH_PYCENTRAL variable
+    before the build, this is not needed in this package and generates
+    broken symlinks, hence preventing the package from installing properly.
+    (LP: #648695)
+
+ -- Bilal Akhtar <bilalakhtar@ubuntu.com>  Mon, 27 Sep 2010 17:23:47 +0300
+
+virtkey (0.60.0-0ubuntu1) maverick; urgency=low
+
+    * Feature freeze exception request to update to new release (LP: #619809)
+    * Add methods to get the active layout symbols and group (LP: #65626)
+    * Add python error exit in getKbd (LP: 526791)
+    * Fix potential X resource leaks
+    * Add test code to simulate missing X keyboard
+    * Some code cleanup
+    * Reorganize source directory and add AUTHORS, NEWS and README files
+    * Add MANIFEST.in file
+    * Use patch by Vincent Untz to use pkg-config instead of hardcoded paths
+    * Update license to LGPL 3
+    * Change source version format to major.minor.micro
+    * Add some API documentation
+    * debian/control:
+        - Add homepage
+        - Improve long description
+    * debian/copyright:
+        - Add hosting site
+        - Add marmuta and myself
+        - Update license information
+    * debian/watch:
+        - Add watch file
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Fri, 13 Aug 2010 16:06:09 +0200
+
+virtkey (0.50ubuntu3) lucid; urgency=low
+
+  * rebuild rest of main for armel armv7/thumb2 optimization;
+    UbuntuSpec:mobile-lucid-arm-gcc-v7-thumb2
+
+ -- Alexander Sack <asac@ubuntu.com>  Sun, 07 Mar 2010 01:10:54 +0100
+
+virtkey (0.50ubuntu2) jaunty; urgency=low
+
+  * Build for python2.6, include symlinks in the package.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 21 Feb 2009 23:20:30 +0000
+
+virtkey (0.50ubuntu1) intrepid; urgency=low
+
+  [ Chris Jones ]
+  * Work round broken xkb. (LP: #220475)
+
+  [ Luke Yelavich ]
+  * Modify Maintainer value to match the DebianMaintainerField
+    specification.
+
+ -- Luke Yelavich <luke.yelavich@canonical.com>  Wed, 30 Apr 2008 09:59:52 +1000
+
+virtkey (0.50build1) hardy; urgency=low
+
+  * Rebuild with recent python-central.
+
+ -- Matthias Klose <doko@ubuntu.com>  Mon, 10 Mar 2008 12:48:18 +0000
+
+virtkey (0.50) hardy; urgency=low
+
+  * Sync to latest bzr as requested by the upstream author.
+  * Import debian packaging into bzr.
+  * debian/control:
+    - Move homepage to dedicated field.
+    - Add Vcs-Bzr field.
+
+ -- Luke Yelavich <luke.yelavich@canonical.com>  Tue, 19 Feb 2008 12:38:18 +1100
+
+virtkey (0.42) gutsy; urgency=low
+
+  * New Upstream Release
+  * Cleaned up debian/control
+
+ -- Sarah Hobbs <hobbsee@ubuntu.com>  Thu, 16 Aug 2007 17:43:08 +1000
+
+virtkey (0.41ubuntu1) edgy; urgency=low
+
+  * fix FTBFS by depending on python-all, python-all-dev (lp: #65850)
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Fri, 13 Oct 2006 14:35:22 +0200
+
+virtkey (0.41) edgy; urgency=low
+
+   * Initial packaging.
+   * Added layout getting functions.
+   * Fixed labels with altgr combinations
+
+ -- Chris Jones <cej105@soton.ac.uk>  Tue, 18 Jul 2006 19:47:14 +0100

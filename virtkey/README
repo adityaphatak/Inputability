@@ -1,0 +1,33 @@
+virtkey 0.63.0
+--------------
+
+Description:
+
+    virtkey is a python and python3 extension to emulate keypresses and
+    to get the keyboard geometry from the xserver.
+
+    It uses ideas from Fontconfig, libvirtkeys.c, keysym2ucs.c and
+    dasher.
+
+Homepage:
+
+    https://launchpad.net/virtkey
+
+Source Code:
+
+    https://code.launchpad.net/virtkey
+
+Reporting Bugs:
+
+    https://bugs.launchpad.net/virtkey
+
+Questions:
+
+    https://answers.launchpad.net/virtkey
+
+License:
+
+    This program is released under the terms of the GNU Lesser General
+    Public License as published by the Free Software Foundation, either
+    version 3 of the License, or (at your option) any later version.
+    Please, see the file COPYING and COPYING.LESSER for details.

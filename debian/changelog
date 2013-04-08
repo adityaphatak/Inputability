@@ -1,0 +1,537 @@
+onboard (0.98.2-0ubuntu1) raring; urgency=low
+
+  * Sponsorship request for Ubuntu Raring (LP: #1071888)
+  * Fix keys with operators (+,-,*,/) on the number keypad of Onboard
+  * Fix failure to instantiate Config singleton with python 3.3
+  * Fix distutils-extra build with python3.3
+  * Sync translations files with the 0.98 branch in rosetta as of 2012-10-26
+  * debian/control: demote mousetweaks from Recommends to Suggests
+  * debian/rules: build for all python3 versions, by Matthias Klose
+  * debian/patches: add defaults file with values appropriate for Ubuntu
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Fri, 26 Oct 2012 22:06:50 +0200
+
+onboard (0.98.1-0ubuntu1) quantal; urgency=low
+
+  * Sponsorship request for Ubuntu Quantal (LP: #1057518)
+  * Try to raise Onboard on top of full-screen windows (LP: #1035578)
+  * Don't auto-start Onboard in GNOME Shell when a11y key is set (LP: #879942)
+  * Fix status icon showing in MATE, Xfce and others (LP: #1044918)
+  * Do not have the mono icons appear in Unity Launcher
+  * Do not abort startup if dconf key migration fails
+  * Hide preferences button if g-c-c isn't in PATH (LP: #1053194)
+  * Give --not-show-in less chance to cause D-Bus timeouts in GNOME Shell
+  * Also add stack traces to file logging
+  * Lighten up shadows in Ambiance theme
+  * Fix configuring of Direct Scan
+  * Fix vendor/product id lookup of input devices
+  * Fix input device listing in the Preferences dialog
+  * Remove redundant code from the Preferences dialog
+  * Fix opening SVG files when used in python2 mode
+  * Sync with translations of 0.98 in rosetta as of 2012-09-27
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Thu, 27 Sep 2012 15:15:58 +0200
+
+onboard (0.98.0-0ubuntu6) raring; urgency=low
+
+  * Rebuild to drop python3.2 extension.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 08 Nov 2012 11:15:48 +0000
+
+onboard (0.98.0-0ubuntu5) raring; urgency=low
+
+  * Fix shebang.
+
+ -- Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>  Tue, 06 Nov 2012 17:58:41 +0000
+
+onboard (0.98.0-0ubuntu4) raring; urgency=low
+
+  * Backport from upstream: Fix failure to instantiate Config singleton with
+    Python 3.3.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 01 Nov 2012 14:27:53 +0000
+
+onboard (0.98.0-0ubuntu3) raring; urgency=low
+
+  * Fix getpreferredencoding hack.
+  * Build for all python version.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 26 Oct 2012 12:17:02 +0200
+
+onboard (0.98.0-0ubuntu2) quantal; urgency=low
+
+  * debian/control: Demote mousetweaks to suggests, to prevent undesired GNOME
+    infrastructure from being pulled onto Xubuntu images.
+
+ -- Luke Yelavich <themuso@ubuntu.com>  Wed, 19 Sep 2012 12:45:19 +1000
+
+onboard (0.98.0-0ubuntu1) quantal; urgency=low
+
+  * Freeze exception request for new upstream release (LP: #1041303)
+  * debian/pycompat: removed as not used anymore
+  * debian/control:
+    - Build-Depends:
+      + replace python and python-all-dev with python3-all-dev
+      + replace python-distutils-extra with python3-distutils-extra
+      + remove libxi-dev as libgtk-3-dev pulls it in
+    - remove X-Python-Version and set X-Python3-Version: >= 3.2
+    - Depends:
+      + remove ${python:Depends}, python-cairo, python-dbus,
+        python-virtkey (>= 0.60.0) and gir1.2-wnck-3.0
+      + add ${python3:Depends}, python3-cairo, python3-gi-cairo,
+        python3-dbus and python3-virtkey (>= 0.61.0)
+  * debian/rules:
+    - enhance it to work with python2 and python3
+    - add procedure to switch between python2 and python3
+    - add --without python-support to appease lintian
+  * debian/onboard.lintian-override:
+    - override missing manual message
+    - override extra-license-file message
+  * Move gsettings path to /org/onboard (LP: #982699); thanks R. Ancell
+  * Various visual improvements: 
+    - push down effect on keys
+    - keys now have shadows
+    - smaller touch handles
+    - tweak images used by click buttons and other keys
+    - smoother transparency transitions
+  * Detect window manager to care for its specificities
+  * Add command line option to override automatic environment detection
+  * Mark command line help as translatable
+  * Add middle click in hover click mode; requires mousetweaks >= 3.3.90
+  * Various auto-show fixes
+  * Stop endless loop of auto-show on top of unity dash
+  * Fix some show/hide problems
+  * Stop wiggling of launcher icons on show/hide of keyboard window
+  * Various python3 adaptions, trying to keep python2 compatibility
+  * Move to python3 needs virtkey version >= 0.61.0
+  * Switch all translated strings to unicode (LP: #933030)
+  * Make python3 the default
+  * Don't show disabled buttons when XEmbedding (LP: #1019593)
+  * Don't create the icon palette when XEmbedding
+  * Add new color scheme to follow the HighContrastInverse theme update
+  * Stayon top of full-screen windows in force-to-top mode (LP: #1035578)
+  * Fix keyboard and icon palette not always above dash
+  * Add lockdown key to disable all dwell-activation
+  * Adapt to WM_NAMEs of Unity version 6
+  * Write message listing dependencies when sdist fails
+  * Add tests to check translations for errors, uses python-nose
+  * Make Onboard more robust against translation errors
+  * Make icon palette dwellable
+  * Add dconf version detection, thanks Robert Ancell
+  * Fix Super key (LP: #900191)
+  * Make menu key pop up context menu
+  * Separate layout loading from the keyboard widget
+  * Improve exception handling for theme and color files
+  * Limit keyboard size when it doesn't fit on screen (LP: #991318)
+  * Trap various X BadWindow errors (LP: #1016980)
+  * Work around regression of configure event in quantal
+  * Remove wnck dependency as gtk3's window-state-event reports iconification
+  * Prevent zombie process when launching preferences (LP: #936332)
+  * Only appear in gnome-screen-saver if onboard was running (LP: #938302)
+  * Don't check for running Onboard if "Typing Assistant" is on (LP: #938302)
+  * Fix some problems when compositing is enabled
+  * Switch window property to type XA_CARDINAL for compiz
+  * Fix keyboard window not moving when the gsettings keys are changed
+  * Fix regression when starting in unity-greeter
+  * Suppress python error messages in unity-greeter
+  * Catch SIGTERM and make sure all keys are released when exiting (LP: #978430)
+  * Don't hide the keyboard when switching themes in unity-greeter
+  * Fix saving of keyboard window and icon palette after first start
+  * Fix theme not being remembered between launches
+  * Make active modifier keys visible in scanning mode
+  * Fix init of scanning mode with Xinput 2.2 and GTK 3.5.12-0ubuntu1
+  * Fix python3 encoding errors in non-Unicode locales
+  * Fix python3 encoding error when trying to personalize a layout
+  * Fix python3 backtrace on adding a new snippet
+  * Fix migration of gsettings values of icon palette
+  * Fix startup of Onboard for some tablet users
+  * Don't get resized by compiz grid plugin
+  * Fix saving of home-rect in GNOME Shell when decoration is active
+  * Fix keyboard window resizing when rotating screen in GNOME Shell
+  * Inform unity that this is an on-screen keyboard, cf LP: #739812
+  * Fix idle transparency kicking in while typing into firefox awesomebar
+  * Exit cleanly on Ctrl-c
+  * Fix typos in tooltips
+  * Some code and comments cleanup
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Thu, 23 Aug 2012 22:41:24 +0200
+
+onboard (0.97.0-0ubuntu1) oneiric; urgency=low
+
+  * Request for sponsorship: New release available (LP: #932855)
+  * debian/control:
+      Build-Depends: add libdconf-dev
+      Depends: add gir1.2-wnck-3.0, libdconf0
+      Recommends: add gir1.2-atspi-2.0
+  * debian/copyright: add year 2012
+  * debian/patches: update onboard-defaults.conf file
+  * Add improved scanning feature to osk extension
+    - scanning works with all official layouts
+    - different scan modes are available
+    - support for 1, 2, 3 and 5 switches
+    - devices can be configured to be used exclusively for scanning
+  * Port osk extension to GTK3
+  * Add auto-show with auto-move feature; requires at-spi2 (LP: #443986)
+    - confirm activation of at-spi2 with a dialog
+    - automatically move Onboard when it covers the input focus
+    - no auto-move when the keyboard is manually shown
+    - logging of focused at-spi accessibles through 'onboard -ddebug'
+  * Hide and show Onboard with a middle click on the indicator icon
+  * Add new icons for appindicator matching Ambiance and Radiance themes
+  * Add lockdown options for kiosk mode (LP: #879944)
+  * Silently embed into gnome-screen-saver if no app did so (LP: #857813)
+  * Make Onboard aware of screen rotation (LP: 911821)
+  * Protect against accidental resize/move of Onboard's windows (LP: #893644)
+  * Add option to disable resize handles (LP: #930373)
+  * Allow resizing with all mouse buttons
+  * Show menu entry for Xubuntu/Xfce (LP: #833862)
+  * Extend force-to-top mode to the Icon Palette
+  * Allow /user/local/share/onboard as an alternative installation directory
+  * Support starting onboard-settings in cli with non default language
+  * Don't start more than one instance under normal usage
+  * Fix onboard-settings crash in get_selected_layout_filename (LP: #913484)
+  * Add double click and drag click also for non dwelling mode
+  * Adjust category of the onboard-settings.desktop file (LP: #833873)
+  * Add more modifier behaviors: cycle (default), dblclick, latch, lock
+  * Add option to always show on visible workspace (LP: #803875)
+  * Add Alan Bell's themes: Typist, ModelM
+  * Add HighContrast, HighContrastInverse and LowContrast themes
+  * Option to track GTK theme to have Onboard switch to matching theme
+  * Make the colors of the icon of the Icon Palette adapt to the theme
+  * Calculate corner radius of the Icon Palette based on it's size
+  * Let Onboard draw itself the icon of Icon Palette instead of loading it
+  * Make a newly created customized theme the active one
+  * Stop selecting the default theme when resetting or deleting a theme
+  * Remove overrides for font setting and key label from themes
+  * Add format information to schemas, themes and colors files
+  * Convert sticky-key-behavior and system-theme-associations to dicts
+  * Show touch handles when activating drag click in dwell mode
+  * Show touch handles on long press of the move button
+  * Save window geometry 5 seconds after it was changed (LP: #819971)
+  * Add option to keep aspect ratio of keyboard window
+  * Update and fix system defaults example file
+  * Give the AppIndicator an accessible description (LP: #891931)
+  * Try to protect against bad accessibles
+  * Fix backtrace and ignore menu positioning with the status icon fallback
+  * Add shortcuts to the Preferences dialog
+  * Allow canceling click buttons actions at any time before the click
+  * Limit system impact of click polling (LP: #928800)
+  * Don't let the move button leave the screen (LP: 885608)
+  * Ask window manager to remove the maximize function (LP: #859288)
+  * Fix Unity 2D fighting with Onboard for the top spot
+  * Fix starting of the Preferences of Onboard on the LiveCD (LP: #877592)
+  * Block opening of Preferences when running in the Display Manager
+  * Improve handling of gsettings events (LP: #877601)
+  * Don't let compiz grid plugin resize the Icon Palette (LP: 893644)
+  * New color scheme format to better support detailed color settings
+  * Rename key attributes. "hovered" -> "prelight" and "latched" -> "active"
+  * Fix middle and right click button for 0.95 legacy layouts
+  * Fix Icon Palette flashing when unity-greeter is killed
+  * Fix Icon Palette not restoring the correct position
+  * Don't fail to start on older versions of gtk3 (3.0.11 on Mandriva 2011)
+  * Fix missing super key label on distributions without the ubuntu logo
+  * Fix almost invisibly short feedback on keypress occuring on some notebooks
+  * Fix Onboard being invisible after unlocking the screen
+  * Fix transparency bug when rapidly toggling inactivity timer
+  * Work around transparency state loss due to bug 837456
+  * Fix intltool warnings about messages being hard to translate
+  * Rename layer buttons
+  * Remove outdated hint about option for modal dialogs in AT panel
+  * Remove unused images
+  * Fix black corner issue when auto-starting in unity (LP: #877604)
+  * No fade delay when hiding Onboard and transparency is not supported
+  * Don't set inactive transparency when a text field gets focus while typing
+  * Remove redundant hook check
+  * Improve hide/show by using libwnck (LP: #917386), new runtime dependency
+  * Fix broken hide button in metacity without compositing
+  * Prevent onboard from disappearing when jammed into the lower left corner
+  * Don't allow to open multiple new snippet dialogs in force-to-top mode
+  * Don't hide new snippet dialog behind keyboard window in force-to-top mode
+  * Remove all active grabs
+  * Fix hidden window appearing as ghost in Metacity (LP: #929513)
+  * Fix showing of Icon Palette of first try in Metacity
+  * Fix typo in message about turning on accessibility (LP: #929226)
+  * Fix several backtraces
+  * Cleanup gsettings schema
+  * Rename tool-tip to tooltip (LP: #912929)
+  * Improve and fix some tooltips and key names
+  * Don't show tooltips while moving the keyboard
+  * Code cleanup, typo fixing, gui and tooltip improvements, performance fixes
+  * Replace % operator by python 3 string formatting to avoid encoding errors
+  * Begin python3 (>=3.2) conversion
+  * Add Gerd to AUTHORS file and order the names alphabetically
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Wed, 15 Feb 2012 16:42:03 +0100
+
+onboard (0.96.0-0ubuntu1) oneiric; urgency=low
+
+  * Feature Freeze exception request (LP: #872374)
+  * Uses gobject introspection (GTK3), (LP: #858988)
+  * Uses gsettings rather than gconf (LP: #801208)
+  * Show on new lock screen (LP: #857813)
+  * Make Caps Lock stick on single click, (LP: #68716)
+  * Use dh_python2 (LP: #788514)
+  * Make Caps Lock stick on single click (LP: #68716)
+  * Add a hide button (LP: #564040 , LP: #584119)
+  * Add options for transparency of the onscreen keyboard window (LP: #643204)
+  * Add option to use a window without decoration
+  * Add tooltips to some keys of Onboard
+  * Add option to force Onboard window to top (work around bug 739812)
+  * Add possibility to differentiate snippets with custom labels
+  * Add buttons to control the hover click eature provided by the system
+  * Enhance the layout creation with parts that are visible on all layer
+  * Reworked the layouts and renamed Classic Onboard layout to Compact layout
+  * Many other little fixes and adjustments (details in commits on launchpad)
+  * debian/control:
+      Build-Depends: add python-all-dev, libgtk-3-dev, libxi-dev, libxtst-dev
+                     remove libxi6
+      Depends: add ${shlibs:Depends}, python-dbus, gir1.2-gtk-3.0,
+                   gir1.2-pango-1.0 (>= 1.29.3), gir1.2-glib-2.0,
+                   gir1.2-gdkpixbuf-2.0, libgtk-3-0, libxtst6
+               remove python-gtk2, python-gconf, python-gobject, libx11-6
+  * debian/copyright: add Gerd Kohlberger to the list of authors
+  * debian/rules: uncomment clean target
+  * debian/patches: update onboard-defaults.conf file
+                    remove onboard_autostart.patch
+  * debian: remove outdated README.source file
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Tue, 11 Oct 2011 19:38:59 +0200
+
+onboard (0.95.1-0ubuntu4) oneiric; urgency=low
+
+  * Fix last update which caused onboard to always start by default
+    (LP: #858988)
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 25 Sep 2011 13:03:00 -0400
+
+onboard (0.95.1-0ubuntu3) oneiric; urgency=low
+
+  * Disable autostart in GNOME Shell so that onboard doesn't conflict
+    with the build-it onscreen keyboard
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sun, 25 Sep 2011 05:19:15 -0400
+
+onboard (0.95.1-0ubuntu2) oneiric; urgency=low
+
+  * Add autostart desktop file so onboard loads when on-screen keyboard is
+    enabled in the accessibility applet of control center
+
+ -- Luke Yelavich <themuso@ubuntu.com>  Tue, 09 Aug 2011 12:19:18 +1000
+
+onboard (0.95.1-0ubuntu1) oneiric; urgency=low
+
+    * Request for sponsorship: New release available (LP: #802027)
+    * Don't crash when the icon fails to load.
+    * Construct GtkAdjustments before the objects they are referenced in. Works
+      around regression caused by 
+      https://bugzilla.gnome.org/show_bug.cgi?id=576492
+    * Update README about themes and macros
+    * Import translations from launchpad on 25th June 2011
+    * debian/control and debian/rules:
+        Convert build system to dh7 and Python helper to dh_python2; code from
+        Barry Warsaw (LP: #788514)
+    * debian/patches:
+        Set Ambiance as default theme by using the provided configuration
+        mechanism; Ambiance is the theme designed for Ubuntu Natty
+    * debian/copyright:
+        Add the year 2011
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Sat, 25 Jun 2011 19:41:52 +0200
+
+onboard (0.95.0-0ubuntu1) natty; urgency=low
+
+  * Add support for themes supporting gradients, color schemes, round
+    corners, fonts, font styles, ... (partially Alan Bells; LP: #713466)
+  * Themes available:
+       - Ambiance (LP: #768583, Alan Bells design for Ubuntu 11.04)
+       - Blackboard
+       - Classic Onboard
+       - Darkroom
+       - Droid
+  * Use the theme for color information; not anymore the layout file
+  * Add theming to cli parameters
+  * Add configuration file for distributions to control default appearance
+  * Add possibility to name each snippet button according to its content
+  * Some cosmetic improvements by Gerd Kohlberger
+  * Move user settings from .sok to .onboard directory
+  * Rename layout files according to convention <layout name>-<pane name>.svg
+  * Make capitalisation of the name of Onboard consistent (LP: #524297)
+  * Fix and improve the "Personalize current layout" fonctionality
+  * Improve handling of deleted and invalid layout filenames
+  * Bring the height of the scan layout in line with the other layouts
+  * Fix memory leak (LP: #732179)
+  * Fix the close function of the status icon (LP: #718458)
+  * Improve mouse button emulation by increasing click polling (LP: #731642)
+  * Fix loading of default layout (LP: #769104)
+  * Import community translations from launchpad on 21st June 2011)
+  * Replace the word "Settings" with "Preferences" already used in Onboard
+  * Fix some usage of the ellipsis symbol
+  * Reduce the number of layout updates
+  * debian/control: Raise Standards-Version to 3.9.2
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Wed, 22 Jun 2011 21:29:54 +0200
+
+onboard (0.94.0-0ubuntu1) maverick; urgency=low
+
+    * Make onboard follow keyboard layout changes (LP: 526791, LP: 65626)
+    * Save onboard geometry on quit instead on configure-events (LP: #596248)
+    * Improve handling of missing dependency for the clicks (LP: #524148):
+        - Use soname instead of linker for libXi in X11.py
+        - Add dependency on libxi6 to break package build if necessary
+        - Get current version of soname for libx11 from environment
+        - Respect DISPLAY environment variable in KeyboardGTK.py
+        - Add debian/README.source with info about libxi6 and libx11
+    * Do not crash if icon of IconPalette is missing (LP: #538109)
+    * Fix Menu key, Delete key and Insert key
+    * Qualify the import of our X11 module
+    * Make strings in our X11 module translatable
+    * Some cleanup by remove trailing spaces
+    * debian/source/format:
+        - Add debian source format file and use 3.0 (quilt)
+    * debian/compat:
+        - Raise it to 7
+    * debian/control:
+        - Update Standards-Version to 3.9.1
+        - Update email address of original maintainer
+        - Set minimal required version for debhelper to 7.0.8
+        - Add quilt and libxi6 to Build-Depends
+        - Add libxi6 and libx11-6 to Depends
+    * debian/copyright:
+        - Add hosting site
+        - Add section with upstream authors
+        - Update license information to GPL 3
+    * debian/rules:
+        - Include patchsys-quilt.mk and remove simple-patchsys.mk
+        - Add clean target
+    * debian/watch:
+        - Add watch file
+    * debian/README.source
+        - Add README.source file
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Fri, 20 Aug 2010 17:11:12 +0200
+
+onboard (0.93.0-0ubuntu1) lucid; urgency=low
+
+  * New upstream release (LP: #523403)
+    - Add option to make onboard appear when unlocking the screen
+    - Add possibility to do a middle click/right click by doing a left click
+    - Fix for the translations (LP: #452897)
+    - Replace with-keyword for compatibility with python < 2.6 (LP: #460389)
+    - Do not launch settings dialog under GDM (LP: #440371)
+    - Minimize to IconPalette if running under GDM, instead of disappearing
+    - Fix capitalisation of the word GNOME (LP: #495526)
+    - Check against version of auto module and not against version of package
+    - Make it compatible to DistUtilsExtra.auto >= 2.10
+    - Adjust permissions and fix typo (LP: #461491)
+    - Fix long description in schemas file
+    - Fix keysym of Del key
+    - Fix taskbar icon visibility (LP: #456178)
+  * debian/control:
+    - Replace python-dev with python in Build-Depends
+    - Update Standards-Version
+    - Require python-distutils-extra >= 2.10
+  * debian/rules:
+    - Add simple-patchsys.mk
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Wed, 17 Feb 2010 20:54:10 +0100
+
+onboard (0.92.0-0ubuntu1) karmic; urgency=low
+
+  * New upstream release
+
+ -- Francesco Fumanti <francesco.fumanti@gmx.net>  Fri, 16 Aug 2009 17:10:21 +0100
+
+onboard (0.91.2-0ubuntu1) karmic; urgency=low
+
+  * New upstream release
+
+ -- Luke Yelavich <themuso@ubuntu.com>  Mon, 20 Jul 2009 16:19:48 +1000
+
+onboard (0.91ubuntu2) hardy; urgency=low
+
+  * Do not display the onboard and onboard settings menu items.
+
+ -- Luke Yelavich <luke.yelavich@canonical.com>  Tue, 04 Mar 2008 09:58:16 +1100
+
+onboard (0.91ubuntu1) hardy; urgency=low
+
+  * Onboard/OnboardGtk.py: Fix typo (Chris Jones). LP: #196772.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 28 Feb 2008 23:18:47 +0000
+
+onboard (0.91) hardy; urgency=low
+
+  * New upstream version (Chris Jones).
+  * Onboard/utils.py: Fix typo.
+  * Remove dependency on python-xml.
+  * Remove backup files.
+  * debian/rules: Don't set DH_PYCENTRAL=nomove.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 27 Feb 2008 21:07:35 +0000
+
+onboard (0.90) hardy; urgency=low
+
+  * Sync to latest bzr, as requested by upstream author.
+  * debian/control:
+    - Add homepage field.
+    - Add Vcs-Bzr field.
+    - Tightened dependency on python-virtkey.
+
+ -- Luke Yelavich <luke.yelavich@canonical.com>  Tue, 19 Feb 2008 13:43:33 +1100
+
+onboard (0.87) gutsy; urgency=low
+
+  * debian/control: added python-glade2 to Depends. (LP: #109783)
+
+ -- Daniel Holbach <daniel.holbach@ubuntu.com>  Mon, 18 Jun 2007 18:12:20 +0200
+
+onboard (0.86) feisty; urgency=low
+
+  * Sync from bzr as requested by upstream author. 
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri,  2 Mar 2007 12:43:10 +0200
+
+onboard (0.85) edgy; urgency=low
+
+  * Sync to r42 in bzr repo, fixes working without Nautilus
+
+ -- Jani Monoses <jani@ubuntu.com>  Fri, 13 Oct 2006 15:58:53 +0300
+
+onboard (0.84) edgy; urgency=low
+
+  * debian/onboard.desktop:
+    - no menu item by default, fix the icon to use
+  * debian/onboard-settings.desktop:
+    - no menu item by default, fix the icon to use
+
+ -- Sebastien Bacher <seb128@canonical.com>  Wed, 11 Oct 2006 16:00:37 +0200
+
+onboard (0.83) edgy; urgency=low
+
+  * Update to r40 from the bzr repo.  
+
+ -- Tollef Fog Heen <tfheen@ubuntu.com>  Mon,  9 Oct 2006 13:38:39 +0200
+
+onboard (0.82) edgy; urgency=low
+
+  [Jani Monoses]
+    - debian/control: depend on python-gconf only instead of python-gnome2 
+    - Settings.py: fall back to Thunar if Nautilus is not available
+  
+  [Michael Bienia]
+    - debian/onboard.desktop, debian/onboard-settings.desktop: fix icon path
+    in desktop files (closes LP #64384)
+      
+ -- Jani Monoses <jani@ubuntu.com>  Sat,  7 Oct 2006 10:33:49 +0300
+
+onboard (0.81) edgy; urgency=low
+
+  [Chris Jones]
+   - Rebrandinig
+   - rules and control fixes
+
+  [Daniel Holbach]
+   - packaging changes: simplify packaging, Python Policy changes, Policy
+     changes. 
+  
+ -- Chris Jones <cej105@soton.ac.uk>  Tue, 18 Jul 2006 19:47:14 +0100

@@ -1,0 +1,349 @@
+Version 0.99.0~alpha1~tr1190
+----------------------------
+
+  * Fix Onboard becoming empty when system font dpi changes
+
+Version 0.99.0~alpha1~tr1188
+----------------------------
+
+  * Onboard requires now virtkey >= 0.63.0
+  * Add example file with system defaults for the nexus7
+  * Various changes to get acceptable speeds on the nexus7 (LP: #1070760)
+  * Add docking feature (LP: #405034)
+  * Add sliding feature for docking and auto-repositioning
+  * Add multitouch support
+  * Add a toggle to stop listening to touch events in case of many problems
+  * Add popup on long press for key variants like diacritics
+  * New option to choose popup vs repeat for keys with variants
+  * New gsettings key for the popup delay
+  * Make move, frame and touch handles work on the nexus7
+  * Perform simulated clicks on correct touch position
+  * Auto-release pointer grab after timeout in case nexus7 is unresponsive
+  * Fix xserver memory leaking
+  * Improve speed when typing and moving the pointer (LP: #1055448)
+  * Fix rendering being slowed by emboss effect on keycaps (LP: #890221)
+  * Fix for not being able to move/resize Onboard on touchscreens (LP: #959035)
+  * Have Onboard respect launcher icon size (LP: #1078554)
+  * Auto-show Onboard by clicking already selected text entries (LP: #1078602)
+  * Make default shortcut for language/layout work from Onboard (LP: #1078629)
+  * New design of the Preferences dialog with more options (LP: #1053496)
+  * Disable click buttons when mousetweaks is not installed
+  * Add D-Bus service to show and hide the keyboard (LP: 1032042)
+  * Don't export dbus service for embedded instances
+  * Fix keys with operators (+,-,*,/) on the number keypad of Onboard
+  * Set NumLock's default sticky behavior to LOCK_ONLY
+  * Keep state of NumLock across restarts
+  * New attribute in layout files for sticky key behaviour
+  * New layout tags key_template and keysym_rule defining keysym-specific labels
+  * New window tag for color schemes to define border of popups
+  * New layout tag for language specific overrides in the layouts
+  * Move common key definitions into template for import by layout files
+  * Sync modifier states of Onboard with changes by hardware keyboard or tools
+  * Fix keys not re-rendered when releasing latched modifiers (LP: #1069990)
+  * Fix failure to instantiate Config singleton with python 3.3 (LP: #1065480)
+  * Fix distutils-extra build with python3.3
+  * Send key strokes for all modifiers (LP: #1067797)
+  * Blacklist Ctrl-LAlt+Fn keys by default
+  * Add alternative key generation by at-spi2
+  * Show Onboard on top of full-screen windows (LP: #1035578, LP: #1035578)
+  * Don't auto-start Onboard in GNOME Shell when a11y key is set (LP: #879942)
+  * Try to improve struts handling for metacity and mutter
+  * Fix status icon showing in MATE, Xfce and others (LP: #1044918)
+  * Fix getpreferredencoding hack, by Matthias Klose
+  * Build for all python3 versions, by Matthias Klose
+  * Add work arounds for some problems with the search box of firefox
+  * Do not abort startup if dconf key migration fails
+  * Improve startup sequence to fix Onboard showing up sometime at position 0.0
+  * Hide preferences button if g-c-c isn't in PATH (LP: #1053194)
+  * Give --not-show-in less chance to cause D-Bus timeouts in GNOME Shell
+  * Also add stack traces to file logging
+  * Fix configuring of Direct Scan
+  * Fix vendor/product id lookup of input devices
+  * Fix input device listing in the Preferences dialog
+  * Make scanning work out of the box on the nexus7
+  * Fix opening SVG files when used in python2 mode
+  * Small changes to some themes
+  * Add new Nightshade theme
+  * Add keystroke width to the theme settings
+  * Highlight pressed keys longer for better visibility on slow computers
+  * More visual tweaks
+  * Several code cleanups
+
+Version 0.98.0
+--------------
+
+  * Move gsettings path to /org/onboard (LP: #982699); thanks R. Ancell
+  * Various visual improvements: 
+    - push down effect on keys
+    - keys now have shadows
+    - smaller touch handles
+    - tweak images used by click buttons and other keys
+    - smoother transparency transitions
+  * Detect window manager to care for its specificities
+  * Add command line option to override automatic environment detection
+  * Mark command line help as translatable
+  * Add middle click in hover click mode; requires mousetweaks >= 3.3.90
+  * Various auto-show fixes
+  * Stop endless loop of auto-show on top of unity dash
+  * Fix some show/hide problems
+  * Stop wiggling of launcher icons on show/hide of keyboard window
+  * Various python3 adaptions, trying to keep python2 compatibility
+  * Move to python3 needs virtkey version >= 0.61.0
+  * Switch all translated strings to unicode (LP: 933030)
+  * Make python3 the default
+  * Don't show disabled buttons when XEmbedding (LP: #1019593)
+  * Don't create the icon palette when XEmbedding
+  * Add new color scheme to follow the HighContrastInverse theme update
+  * Keep Onboard on top of full-screen windows in force-to-top mode (LP: #1035578)
+  * Fix keyboard and icon palette not always above dash
+  * Add lockdown key to disable all dwell-activation
+  * Adapt to WM_NAMEs of Unity version 6
+  * Write message listing dependencies when sdist fails
+  * Add tests to check translations for errors, uses python-nose
+  * Make Onboard more robust against translation errors
+  * Make icon palette dwellable
+  * Add dconf version detection, thanks Robert Ancell
+  * Fix Super key (LP: #900191)
+  * Make menu key pop up context menu
+  * Separate layout loading from the keyboard widget
+  * Improve exception handling for theme and color files
+  * Limit keyboard size when it doesn't fit on screen (LP: #991318)
+  * Trap various X BadWindow errors (LP: #1016980)
+  * Work around regression of configure event in quantal
+  * Remove wnck dependency as gtk3's window-state-event reports iconification
+  * Prevent zombie process when launching preferences (LP: #936332)
+  * Only appear in gnome-screen-saver if onboard was running (LP: #938302)
+  * Don't check for running Onboard if "Typing Assistant" is on (LP: #938302)
+  * Fix some problems when compositing is enabled
+  * Switch window property to type XA_CARDINAL for compiz
+  * Fix keyboard window not moving when the gsettings keys are changed
+  * Fix regression when starting in unity-greeter
+  * Suppress python error messages in unity-greeter
+  * Catch SIGTERM and make sure all keys are released when exiting (LP: #978430)
+  * Don't hide the keyboard when switching themes in unity-greeter
+  * Fix saving of keyboard window and icon palette after first start
+  * Fix theme not being remembered between launches
+  * Make active modifier keys visible in scanning mode
+  * Fix init of scanning mode with Xinput 2.2 and GTK 3.5.12-0ubuntu1
+  * Fix python3 encoding errors in non-Unicode locales
+  * Fix python3 encoding error when trying to personalize a layout
+  * Fix python3 backtrace on adding a new snippet
+  * Fix migration of gsettings values of icon palette
+  * Fix startup of Onboard for some tablet users
+  * Don't get resized by compiz grid plugin
+  * Fix saving of home-rect in GNOME Shell when decoration is active
+  * Fix keyboard window resizing when rotating screen in GNOME Shell
+  * Inform unity that this is an on-screen keyboard, cf LP: #739812
+  * Fix idle transparency kicking in while typing into firefox awesomebar
+  * Exit cleanly on Ctrl-c
+  * Fix typos in tooltips
+  * Some code and comments cleanup
+
+Version 0.97.0
+--------------
+
+    * Add improved scanning feature to osk extension
+      - scanning works with all official layouts
+      - different scan modes are available
+      - support for 1, 2, 3 and 5 switches
+      - devices can be configured to be used exclusively for scanning
+    * Port osk extension to GTK3
+    * Add auto-show with auto-move feature; requires at-spi2 (LP: #443986)
+      - confirm activation of at-spi2 with a dialog
+      - automatically move Onboard when it covers the input focus
+      - no auto-move when the keyboard is manually shown
+      - logging of focused at-spi accessibles through 'onboard -ddebug'
+    * Hide and show Onboard with a middle click on the indicator icon
+    * Add new icons for appindicator matching Ambiance and Radiance themes
+    * Add lockdown options for kiosk mode (LP: #879944)
+    * Silently embed into gnome-screen-saver if no app did so (LP: #857813)
+    * Make Onboard aware of screen rotation (LP: 911821)
+    * Protect against accidental resize/move of Onboard's windows (LP: #893644)
+    * Add option to disable resize handles (LP: #930373)
+    * Allow resizing with all mouse buttons
+    * Show menu entry for Xubuntu/Xfce (LP: #833862)
+    * Extend force-to-top mode to the Icon Palette
+    * Allow /user/local/share/onboard as an alternative installation directory
+    * Support starting onboard-settings in cli with non default language
+    * Don't start more than one instance under normal usage
+    * Fix onboard-settings crash in get_selected_layout_filename (LP: #913484)
+    * Add double click and drag click also for non dwelling mode
+    * Adjust category of the onboard-settings.desktop file (LP: #833873)
+    * Add more modifier behaviors: cycle (default), dblclick, latch, lock
+    * Add option to always show on visible workspace (LP: #803875)
+    * Add Alan Bell's themes: Typist, ModelM
+    * Add HighContrast, HighContrastInverse and LowContrast themes
+    * Option to track GTK theme to have Onboard switch to matching theme
+    * Make the colors of the icon of the Icon Palette adapt to the theme
+    * Calculate corner radius of the Icon Palette based on it's size
+    * Let Onboard draw itself the icon of Icon Palette instead of loading it
+    * Make a newly created customized theme the active one
+    * Stop selecting the default theme when resetting or deleting a theme
+    * Remove overrides for font setting and key label from themes
+    * Add format information to schemas, themes and colors files
+    * Convert sticky-key-behavior and system-theme-associations to dicts
+    * Show touch handles when activating drag click in dwell mode
+    * Show touch handles on long press of the move button
+    * Save window geometry 5 seconds after it was changed (LP: #819971)
+    * Add option to keep aspect ratio of keyboard window
+    * Update and fix system defaults example file
+    * Give the AppIndicator an accessible description (LP: #891931)
+    * Try to protect against bad accessibles
+    * Fix backtrace and ignore menu positioning with the status icon fallback
+    * Add shortcuts to the Preferences dialog
+    * Allow canceling click buttons actions at any time before the click
+    * Limit system impact of click polling (LP: #928800)
+    * Don't let the move button leave the screen (LP: 885608)
+    * Ask window manager to remove the maximize function (LP: #859288)
+    * Fix Unity 2D fighting with Onboard for the top spot
+    * Fix starting of the Preferences of Onboard on the LiveCD (LP: #877592)
+    * Block opening of Preferences when running in the Display Manager
+    * Improve handling of gsettings events (LP: #877601)
+    * Don't let compiz grid plugin resize the Icon Palette (LP: 893644)
+    * New color scheme format to better support detailed color settings
+    * Rename key attributes. "hovered" -> "prelight" and "latched" -> "active"
+    * Fix middle and right click button for 0.95 legacy layouts
+    * Fix Icon Palette flashing when unity-greeter is killed
+    * Fix Icon Palette not restoring the correct position
+    * Don't fail to start on older versions of gtk3 (3.0.11 on Mandriva 2011)
+    * Fix missing super key label on distributions without the ubuntu logo
+    * Fix almost invisibly short feedback on keypress occuring on some notebooks
+    * Fix Onboard being invisible after unlocking the screen
+    * Fix transparency bug when rapidly toggling inactivity timer
+    * Work around transparency state loss due to bug 837456
+    * Fix intltool warnings about messages being hard to translate
+    * Rename layer buttons
+    * Remove outdated hint about option for modal dialogs in AT panel
+    * Remove unused images
+    * Fix black corner issue when auto-starting in unity (LP: #877604)
+    * No fade delay when hiding Onboard and transparency is not supported
+    * Don't set inactive transparency when a text field gets focus while typing
+    * Remove redundant hook check
+    * Improve hide/show by using libwnck (LP: #917386), new runtime dependency
+    * Fix broken hide button in metacity without compositing
+    * Prevent onboard from disappearing when jammed into the lower left corner
+    * Don't allow to open multiple new snippet dialogs in force-to-top mode
+    * Don't hide new snippet dialog behind keyboard window in force-to-top mode
+    * Remove all active grabs
+    * Fix hidden window appearing as ghost in Metacity (LP: #929513)
+    * Fix showing of Icon Palette of first try in Metacity
+    * Fix typo in message about turning on accessibility (LP: #929226)
+    * Fix several backtraces
+    * Cleanup gsettings schema
+    * Rename tool-tip to tooltip (LP: #912929)
+    * Improve and fix some tooltips and key names
+    * Don't show tooltips while moving the keyboard
+    * Code cleanup, typo fixing, gui and tooltip improvements, performance fixes
+    * Replace % operator by python 3 string formatting to avoid encoding errors
+    * Begin python3 (>=3.2) conversion
+    * Add Gerd to AUTHORS file and order the names alphabetically
+
+Version 0.96.0
+--------------
+
+	* Uses gobject introspection (GTK3), (LP: #858988)
+    * Uses gsettings rather than gconf (LP: #801208)
+    * Show on new lock screen (LP: #857813)
+    * Make Caps Lock stick on single click, (LP: #68716)
+    * Use dh_python2 (LP: #788514)
+    * Make Caps Lock stick on single click (LP: #68716)
+    * Add a hide button (LP: #564040 , LP: #584119)
+    * Add options for transparency of the onscreen keyboard window (LP: #643204)
+    * Add option to use a window without decoration
+    * Add tooltips to some keys of Onboard
+    * Add option to force Onboard window to top (work around bug 739812)
+    * Add possibility to differentiate snippets with custom labels
+    * Add buttons to control the hover click eature provided by the system
+    * Enhance the layout creation with parts that are visible on all layer
+    * Reworked the layouts and renamed Classic Onboard layout to Compact layout
+    * Many other little fixes and adjustments (details in commits on launchpad)
+
+Version 0.95.0
+--------------
+
+    * Add support for themes supporting gradients, color schemes, round
+      corners, fonts, font styles, ... (partially Alan Bells; LP: #713466)
+    * Themes available:
+         - Ambiance (LP: #768583, Alan Bells design for Ubuntu 11.04)
+         - Blackboard
+         - Classic Onboard
+         - Darkroom
+         - Droid
+    * Use the theme for color information; not anymore the layout file
+    * Add theming to cli parameters
+    * Add configuration file for distributions to control default appearance
+    * Add possibility to name each snippet button according to its content
+    * Some cosmetic improvements by Gerd Kohlberger
+    * Move user settings from .sok to .onboard directory
+    * Rename layout files according to convention <layout name>-<pane name>.svg
+    * Make capitalisation of the name of Onboard consistent (LP: #524297)
+    * Fix and improve the "Personalize current layout" fonctionality
+    * Improve handling of deleted and invalid layout filenames
+    * Bring the height of the scan layout in line with the other layouts
+    * Fix memory leak (LP: #732179)
+    * Fix the close function of the status icon (LP: #718458)
+    * Improve mouse button emulation by increasing click polling (LP: #731642)
+    * Fix loading of default layout (LP: #769104)
+    * Import community translations from launchpad on 21st June 2011)
+    * Replace the word "Settings" with "Preferences" already used in Onboard
+    * Fix some usage of the ellipsis symbol
+    * Reduce the number of layout updates
+    
+
+Version 0.94.0
+--------------
+
+    * Make onboard follow keyboard layout changes (LP: 526791, LP: 65626)
+    * Save onboard geometry on quit instead on configure-events (LP: #596248)
+    * Improve handling of missing dependency for the clicks (LP: #524148):
+        - Use soname instead of linker for libXi in X11.py
+        - Add dependency on libxi6 to break package build if necessary
+        - Get current version of soname for libx11 from environment
+        - Respect DISPLAY environment variable in KeyboardGTK.py
+        - Add debian/README.source with info about libxi6 and libx11
+    * Do not crash if icon of IconPalette is missing (LP: #538109)
+    * Fix Menu key, Delete key and Insert key
+    * Qualify the import of our X11 module
+    * Make strings in X11 module translatable
+    * Some cleanup by remove trailing spaces
+
+Version 0.93.0
+------------
+
+    * Add option to make onboard appear when unlocking the screen
+    * Add possibility to do a middle click/right click by doing a left click
+    * Fix for the translations (LP: #452897)
+    * Replace with-keyword for compatibility with python < 2.6 (LP: #460389)
+    * Do not launch settings dialog under GDM (LP: #440371)
+    * Minimize to IconPalette if running under GDM, instead of disappearing
+    * Fix capitalisation of the word GNOME (LP: #495526)
+    * Check against version of auto module and not against version of package
+    * Make it compatible to DistUtilsExtra.auto >= 2.10
+    * Adjust permissions and fix typo (LP: #461491)
+    * Fix long description in schemas file
+    * Fix keysym of Del key
+    * Fix taskbar icon visibility (LP: #456178)
+
+Version 0.92.0
+------------
+
+    New release including
+     - More complete i18n.
+     - Improved rendering of the labels on keys.
+     - The option to minimize to a floating icon.
+     - A couple of new keyboard layouts.
+
+Version 0.91.2
+--------------
+
+    Bugfix release.
+
+Version 0.91.1
+--------------
+
+    Typo fix release.
+
+Version 0.91
+--------------
+
+    Release.

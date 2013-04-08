@@ -1,0 +1,49 @@
+Version 0.63.0
+--------------
+
+    * Add support for system-layout specific items in Onboard's layout files
+
+Version 0.62.0
+--------------
+
+    * Allow arbitrary sequence of modifier masks
+
+Version 0.61.0
+--------------
+
+    * Add support for python3. Create two binary packages now: 
+      - python-virtkey
+      - python3-virtkey
+    * Reduce the number of unnecessarily linked libraries
+    * Make XkbGetKeyboard use correct constants (thanks Gerd Kohlberger)
+    * Switch the name of the source code package back to virtkey
+
+Version 0.60.0
+--------------
+
+    * Add methods to get the active layout symbols and group (LP: #65626)
+    * Add python error exit in getKbd (LP: 526791)
+    * Fix potential X resource leaks
+    * Add test code to simulate missing X keyboard
+    * Some code cleanup
+    * Reorganize source directory and add AUTHORS, NEWS and README files
+    * Add MANIFEST.in file
+    * Use patch by Vincent Untz to use pkg-config instead of hardcoded paths
+    * Update license to LGPL 3
+    * Use 'python-virtkey' name also for source package
+    * Change version format to major.minor.micro
+    * Add some API documentation
+
+Version 0.50
+------------
+
+    * Add keycode methods
+    * Fix get_layouts method
+    * Fix indentation
+    * Cleaned up error handling
+    * Clean up cruft
+
+Version 0.42
+------------
+
+    * First stand-alone release after separating the virtkey code from onboard

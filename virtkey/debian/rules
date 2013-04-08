@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+DH_VERBOSE=1
+LDFLAGS += -Wl,--as-needed
+
+%:
+	dh $@ --buildsystem=python_distutils --with python2,python3
+
+override_dh_auto_install:
+	dh_auto_install
+	for python in $(shell py3versions -vr); do \
+		python$$python setup.py install --install-layout=deb --root=debian/tmp; \
+	done
+
+override_dh_auto_clean:
+	dh_auto_clean
+	python3 setup.py clean -a
+	rm -rf build
+
