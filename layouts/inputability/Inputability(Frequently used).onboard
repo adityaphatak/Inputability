@@ -49,8 +49,7 @@
         <key group="bottomrow" id="SPCE" keycode="65" label="Space" name="Space" sticky="false" unlatch_layer="false" scan_priority="1"/>
         <key group="misc" id="RTRN" keycode="36" label="⏎Enter" sticky="false" unlatch_layer="false"/>
       </panel>
-      
-      
+   
       <panel filename="Inputability(Frequently used)-Numbers.svg" layer="numbers">
         <key button="true" id="RST1" label="Reset" scan_no_activation="true" unlatch_layer="false"/>
         <key button="true" id="RST2" label="Reset" scan_no_activation="true" unlatch_layer="false" scan_priority="1"/>
@@ -83,11 +82,8 @@
         <key button="true" expand="false" group="bottomrow" id="hide" image="hide.svg" scannable="false" tooltip="Hide Onboard" unlatch_layer="false"/>
          
       </panel>
-      
-      
-      
+           
      <panel filename="Inputability(Frequently used)-Utils.svg" layer="utils">
-     
         <key group="alphanumeric" id="AA01" keysym="33" label="!" sticky="false" unlatch_layer="false"/>
         <key group="alphanumeric" id="AA02" keysym="64" label="@" sticky="false" unlatch_layer="false"/>
         <key char="#" group="alphanumeric" id="AA03" label="#" sticky="false" unlatch_layer="false" scan_priority="1"/>
@@ -162,6 +158,50 @@
         <key button="true" group="bottomrow" id="layer2" label="123" unlatch_layer="false"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" unlatch_layer="false"/>
       </panel>
+      
+      <panel filename="Inputability(Frequently used)-Emo.svg" layer="emoji">
+     
+        <key group="symbol" id="DD01" char="☺" label="☺"  sticky="false" unlatch_layer="false"/> 
+        <key group="symbol" id="DD02" char="😊" label="😊" sticky="false" unlatch_layer="false"/> 
+        <key group="symbol" id="DD03" char="😄" label="😄" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DD04" char="😉" label="😉" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DD05" char="😜" label="😜" sticky="false" unlatch_layer="false" scan_priority="2"/> 
+        <key group="symbol" id="DD06" char="😚" label="😚" sticky="false" unlatch_layer="false" scan_priority="2"/> 
+        <key group="symbol" id="DD07" char="😎" label="😎" sticky="false" unlatch_layer="false" scan_priority="3"/>
+ 
+        <key group="symbol" id="DD08" char="😇" label="😇" sticky="false" unlatch_layer="false"/> 
+        <key group="symbol" id="DD10" char="☼" label="☼" sticky="false" unlatch_layer="false"/>
+        <key group="symbol" id="DC01" char="☹" label="☹" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DC02" char="😠" label="😠" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DC03" char="😢" label="😢" sticky="false" unlatch_layer="false" scan_priority="2"/>
+        <key group="symbol" id="DC04" char="😲" label="😲" sticky="false" unlatch_layer="false" scan_priority="2"/> 
+        <key group="symbol" id="DC05" char="😖" label="😖" sticky="false" unlatch_layer="false" scan_priority="3"/>
+
+        <key group="symbol" id="DC06" char="😩" label="😩" sticky="false" unlatch_layer="false"/>
+        <key group="symbol" id="DC07" char="😋" label="😋" sticky="false" unlatch_layer="false"/> 
+        <key group="symbol" id="DC08" char="😈" label="😈" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DC09" char="♂" label="♂" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DC10" char="☾" label="☾" sticky="false" unlatch_layer="false" scan_priority="2"/> 
+        <key group="symbol" id="DB01" char="♡" label="♡" sticky="false" unlatch_layer="false" scan_priority="2"/> 
+        <key group="symbol" id="DB02" char="♫" label="♫" sticky="false" unlatch_layer="false" scan_priority="3"/>
+      
+        <key group="symbol" id="DB03" char="☏" label="☏" sticky="false" unlatch_layer="false"/> 
+        <key group="symbol" id="DB04" char="✉" label="✉" sticky="false" unlatch_layer="false"/> 
+        <key group="symbol" id="DB05" char="☂" label="☂" sticky="false" unlatch_layer="false" scan_priority="1"/> 
+        <key group="symbol" id="DB06" char="☮" label="☮" sticky="false" unlatch_layer="false" scan_priority="1"/>
+        <key group="symbol" id="DB07" char="☆" label="☆" sticky="false" unlatch_layer="false" scan_priority="2"/> 
+        <key group="symbol" id="DA01" char="☢" label="☢" sticky="false" unlatch_layer="false" scan_priority="2"/>
+        <key group="symbol" id="DA02" char="☯" label="☯" sticky="false" unlatch_layer="false" scan_priority="3"/> 
+              
+        <key group="bottomrow" id="SPCE" keycode="65" label="Space" sticky="false" unlatch_layer="false"/>
+        <key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false" unlatch_layer="false"/>
+        <key button="true" group="bottomrow" id="layer0" label="Abc" unlatch_layer="false" scan_priority="1"/>
+        <key button="true" group="bottomrow" id="layer1" label="Main" unlatch_layer="false" scan_priority="1"/>
+        <key button="true" group="bottomrow" id="layer2" label="123" unlatch_layer="false" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer3" label="Function" unlatch_layer="false" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer4" label="@#$" unlatch_layer="false" scan_priority="3"/>
+      </panel>
     </panel>
   </box>
 </keyboard>
+
