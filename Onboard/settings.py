@@ -324,7 +324,7 @@ class Settings(DialogBuilder):
         if not os.path.exists(self.user_layout_root):
             os.makedirs(self.user_layout_root)
             
-        # Inpitability layout view           
+        # Inpitability layout view -first page          
         self.layout_view1 = builder.get_object("layout_view1")
         self.layout_view1.append_column( \
                 Gtk.TreeViewColumn(None, Gtk.CellRendererText(), markup=0))  
@@ -372,6 +372,10 @@ class Settings(DialogBuilder):
         # Snippets
         self.snippet_view = SnippetView()
         builder.get_object("snippet_scrolled_window").add(self.snippet_view)
+        
+        # Inputability - seconde page
+        self.bind_check("scan_feedback_enabled_toggle",
+                        config.scanner, "scan_feedback_enabled")
 
         # Universal Access
         scanner_enabled = builder.get_object("scanner_enabled")
