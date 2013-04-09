@@ -3314,8 +3314,8 @@
                                             <property name="orientation">vertical</property>
                                             <property name="spacing">2</property>
                                             <child>
-                                              <object class="GtkCheckButton" id="scann_feedback_enabled_toggle">
-                                                <property name="label" translatable="yes">Show Scann label Popups</property>
+                                              <object class="GtkCheckButton" id="scan_feedback_enabled_toggle">
+                                                <property name="label" translatable="yes">Show Scan label Popup</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
