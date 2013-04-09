@@ -1,16 +1,14 @@
 <?xml version="1.0" ?>
 <keyboard format="3" id="Inputability(Sequential)">
   
- <include file='key_defs.xml'/>
-
- <box border='1' spacing='2' orientation="vertical">
+  <box border='1' spacing='2' orientation="vertical">
  
 
   <box spacing="1.5">
     <panel>
       
       <panel filename="Inputability(Sequential)-Main.svg" layer="main" unlatch_layer="false">
-	<key button="true" group="bottomrow" id="layer1" label="ABC"/>
+	    <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
       </panel>
