@@ -126,7 +126,7 @@ class Config(ConfigObject):
     DISH_KEY_BORDER = (2.5, 2.5)
 
     # minimum time keys are drawn in pressed state
-    UNPRESS_DELAY = 0.15
+    UNPRESS_DELAY = 0.8
 
     # Margin to leave around wordlist labels; smaller margins leave
     # room for more prediction choices
@@ -949,6 +949,7 @@ class ConfigKeyboard(ConfigObject):
         self.add_key("touch-feedback-size", 0)
         self.add_key("audio-feedback-enabled", False)
         self.add_key("show-secondary-labels", False)
+        #self.add_key("scan-feedback-enabled", False)
 
 
 class ConfigWindow(ConfigObject):
@@ -1322,6 +1323,7 @@ class ConfigScanner(ConfigObject):
         self.add_key("device-key-map", self.DEFAULT_DEVICE_KEY_MAP, 'a{ii}')
         self.add_key("device-button-map", self.DEFAULT_DEVICE_BUTTON_MAP, 'a{ii}')
         self.add_key("feedback-flash", self.DEFAULT_FEEDBACK_FLASH)
+        self.add_key("scan-feedback-enabled", False)#In
 
 
 class ConfigTypingAssistance(ConfigObject):

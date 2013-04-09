@@ -165,6 +165,12 @@ delayed-stroke: generate key-press and key-release on button-release, there is n
             <summary>Touch feedback enabled</summary>
             <description>Show extra labels above currently pressed keys.</description>
         </key>
+      <!--  <key name="scan-feedback-enabled" type="b">
+            <default>false</default>
+            <summary>Scan feedback enabled</summary>
+            <description>Show extra labels above currently pressed keys.</description>
+        </key>
+       --> 
         <key name="touch-feedback-size" type="i">
             <default>0</default>
             <summary>Touch-feedback size</summary>
@@ -600,6 +606,13 @@ Example: [["LALT", "TAB"], ["LALT", "SHIFT", "TAB"], ["CTRL", "ALT", "F[0-9]+"]]
             <summary>Flash keys</summary>
             <description>Keys should flash when activated.</description>
         </key>
+        
+        <key name="scan-feedback-enabled" type="b">
+            <default>false</default>
+            <summary>Scan feedback enabled</summary>
+            <description>Show extra labels above currently pressed keys.</description>
+        </key>
+        
     </schema>
 
     <enum id="org.onboard.typing-assistance.spell-check.Backend">
