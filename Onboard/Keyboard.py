@@ -419,6 +419,16 @@ class Keyboard(WordSuggestions):
 
     def enable_scanner(self, enable):
         """ Enable keyboard scanning. """
+        
+        # if both scanner and lable popup enable then disable flash feedback of keys,         
+         #its default for only show lable popup 
+        
+        if (config.scanner.scan_feedback_enabled and config.scanner.enabled): #In
+            config.scanner.feedback_flash = False #In
+            
+        else:
+            config.scanner.feedback_flash = True #In
+            
         if enable:
             if not self.scanner:
                 self.scanner = Scanner(self._on_scanner_redraw,
@@ -571,16 +581,24 @@ class Keyboard(WordSuggestions):
                                    action
 
             # Draw key unpressed to remove the visual feedback.
-            if extend_pressed_state and \
-               not config.scanner.enabled:
-                # Keep key pressed for a little longer for clear user feedback.
+            
+            # For Inputability
+            # if both scanner and lable popup enable for Inputablity popup otherwise work normally
+          
+            if (config.scanner.scan_feedback_enabled and  config.scanner.enabled):#In
+                
                 self._unpress_timers.start(key)
             else:
+                if extend_pressed_state and \
+                    not config.scanner.enabled:
+                # Keep key pressed for a little longer for clear user feedback.
+                    self._unpress_timers.start(key)
+                else:
                 # Unpress now to avoid flickering of the
                 # pressed color after key release.
-                key.pressed = False
-                self.on_key_unpressed(key)
-
+                    key.pressed = False
+                    self.on_key_unpressed(key)
+            
             # no more actions left to finish
             key.activated = False
 
@@ -1327,6 +1345,11 @@ class Keyboard(WordSuggestions):
                sequence.event_type != EventType.DWELL and \
                key.can_show_label_popup() and \
                allowed:
+                #pdb.set_trace()
+                self._touch_feedback.show(key, view)
+        else: # for Inputability Scanner Popup get view for show()
+            if not config.scanner.feedback_flash:
+                view=self._layout_views[0]
                 self._touch_feedback.show(key, view)
 
     def on_key_unpressed(self, key):
