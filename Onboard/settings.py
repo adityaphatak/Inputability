@@ -101,7 +101,7 @@ class DialogBuilder(object):
         setattr(config_object, key, value)
         if callback:
             callback(value)
-
+            
     # checkbox
     def bind_check(self, name, config_object, key, widget_callback = None):
         w = self.wid(name)
@@ -374,9 +374,17 @@ class Settings(DialogBuilder):
         builder.get_object("snippet_scrolled_window").add(self.snippet_view)
         
         # Inputability - seconde page
+        
+        self.bind_spin("activation_flash_interval_spinbutton",
+                            config.scanner, "activation_flash_interval")
+        self.bind_spin("activation_flash_count_spinbutton",
+                            config.scanner, "activation_flash_count")                      
+
         self.bind_check("scan_feedback_enabled_toggle",
                         config.scanner, "scan_feedback_enabled")
-
+        self.bind_spin("scanner_unpress_delay_spinbutton",
+                            config.scanner, "scanner_popup_unpress_delay")                        
+ 
         # Universal Access
         scanner_enabled = builder.get_object("scanner_enabled")
         scanner_enabled.set_active(config.scanner.enabled)
@@ -407,6 +415,7 @@ class Settings(DialogBuilder):
                             config.mousetweaks, "dwell_time")
             self.bind_spin("hover_click_motion_threshold_spinbutton",
                             config.mousetweaks, "dwell_threshold")
+                           
 
         # select last active page
         page = config.current_settings_page
@@ -546,19 +555,6 @@ class Settings(DialogBuilder):
 
     def on_background_transparency_spinbutton_changed(self, widget):
         config.window.background_transparency = widget.get_value()
-        
-        
-        
-    """InputAbility------------------------------------------------------------------------------------------------------"""  
-    def on_flash_interval_changed(self, widget):
-        config.scanner.activation_flash_interval = widget.get_value()
-        print("setting_config.scanner.activate_flash_interval", config.scanner.activation_flash_interval)
-        
-    def on_flash_count_changed(self, widget):
-        config.scanner.activation_flash_count = widget.get_value()
-    """----------------------------------------------------------------------------------------------------"""
- 
- 
         
     def on_enable_inactive_transparency_toggled(self, widget):
         if not config.scanner.enabled:
@@ -1548,7 +1544,7 @@ class ScannerDialog(DialogBuilder):
         self.bind_check("user_scan", scanner, "user_scan")
         self.bind_check("alternate", scanner, "alternate")
         self.bind_check("device_detach", scanner, "device_detach")
-
+        
     def __del__(self):
         _logger.debug("ScannerDialog.__del__()")
 
