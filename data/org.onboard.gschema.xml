@@ -606,11 +606,25 @@ Example: [["LALT", "TAB"], ["LALT", "SHIFT", "TAB"], ["CTRL", "ALT", "F[0-9]+"]]
             <summary>Flash keys</summary>
             <description>Keys should flash when activated.</description>
         </key>
-        
         <key name="scan-feedback-enabled" type="b">
             <default>false</default>
             <summary>Scan feedback enabled</summary>
             <description>Show extra labels above currently pressed keys.</description>
+        </key>
+        <key name="activation-flash-interval" type="d">
+            <default>0.1</default>
+            <summary>Activation Flash Interval</summary>
+            <description>Time between key activation flashes (in sec)</description>
+        </key>
+        <key name="activation-flash-count" type="i">
+            <default>2</default>
+            <summary>Activation Flash Count</summary>
+            <description>Number of key activation flashes.</description>
+        </key>
+        <key name="scanner-popup-unpress-delay" type="i">
+            <default>2</default>
+            <summary>Scanner Key Popup Delay</summary>
+            <description>Time to display Key Popup on screen(in sec)</description>
         </key>
         
     </schema>
