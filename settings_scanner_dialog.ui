@@ -602,23 +602,6 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkRadioButton" id="radio2buttons">
-                    <property name="label" translatable="yes">2 Buttons</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="xalign">0</property>
-                    <property name="draw_indicator">True</property>
-                    <property name="group">radiofullkeyboard</property>
-                    <signal name="toggled" handler="on_togg" swapped="no"/>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkScrolledWindow" id="scrolledwindow1">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
@@ -664,23 +647,6 @@
                     <property name="expand">True</property>
                     <property name="fill">True</property>
                     <property name="position">4</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkRadioButton" id="radiofullkeyboard">
-                    <property name="label" translatable="yes">Full Keyboard</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="xalign">0</property>
-                    <property name="draw_indicator">True</property>
-                    <property name="group">radio2buttons</property>
-                    <signal name="toggled" handler="on_radiofullkeyboard_toggled" swapped="no"/>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">5</property>
                   </packing>
                 </child>
               </object>
