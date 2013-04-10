@@ -384,9 +384,6 @@ class ScanMode(Timer):
     ACTION_STEP_START = 6
     ACTION_STEP_STOP  = 7
     ACTION_UNHANDLED  = 8
-    
-    
-
 
     """ Time between key activation flashes (in sec) """
     ACTIVATION_FLASH_INTERVAL = 0.1
@@ -404,6 +401,9 @@ class ScanMode(Timer):
 
         """ Counter for key flash animation """
         self._flash = 0
+    
+        """ Counter for key popup animation """
+        self._popup_display=0 #In
 
         """ Callback for key redraws """
         self._redraw_callback = redraw_callback
@@ -413,7 +413,13 @@ class ScanMode(Timer):
 
         """ A Chunker instance """
         self.chunker = None
-
+        
+        """ Time between key activation flashes (in sec) """
+        self.ACTIVATION_FLASH_INTERVAL = config.scanner.activation_flash_interval #0.1 #In
+        
+        """ Number of key activation flashes """
+        self.ACTIVATION_FLASH_COUNT = config.scanner.activation_flash_count  #2 #In
+        
     def __del__(self):
         logger.debug("ScanMode.__del__()")
 
@@ -512,7 +518,14 @@ class ScanMode(Timer):
             self._activate_callback(key)
             self.init_position()
             return False
-
+            
+    def _on_activation_timer_popup(self, key):#In
+        """
+        Timer callback: Reset Scanner.
+        """
+        self.init_position()
+        return False
+    
     def activate(self):
         """
         Activates a key and triggers feedback.
@@ -522,17 +535,21 @@ class ScanMode(Timer):
             return
 
         if config.scanner.feedback_flash:
+            """ Scanner Blinking """
             self._flash = self.ACTIVATION_FLASH_COUNT #self.ACTIVATION_FLASH_COUNT
             self._activation_timer.start(self.ACTIVATION_FLASH_INTERVAL,
                                          self._on_activation_timer,
                                          key)
-            """  self._activation_timer.start(config.scanner.activation_flash_count,
-                                         self._on_activation_timer,
-                                         key)
-            print("scanner_config.scanner.activate_flash_interval", config.scanner.activation_flash_interval)"""
-        else:
+        else:#In
+            """ Scanner Popup """
+            delay = config.UNPRESS_DELAY #In
+            config.UNPRESS_DELAY = config.scanner.scanner_popup_unpress_delay #In
             self._activate_callback(key)
-            self.init_position()
+            self._activation_timer.start(config.scanner.scanner_popup_unpress_delay,
+                                         self._on_activation_timer_popup,
+                                         key) #In
+            config.UNPRESS_DELAY = delay #In
+            #self.init_position()
 
     def reset(self):
         """
