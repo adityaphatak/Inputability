@@ -1306,6 +1306,9 @@ class ConfigScanner(ConfigObject):
     DEFAULT_ACTIVATION_FLASH_INTERVAL = 0.1 #In
     DEFAULT_ACTIVATION_FLASH_COUNT = 2 #In
     DEFAULT_SCANNER_POPUP_UNPRESS_DELAY = 1 #In
+    DEFAULT_SCAN_POPUP_HEIGHT = 10 #In
+    DEFAULT_SCAN_POPUP_WIDTH  = 10 #In
+    
 
     def _init_keys(self):
         self.schema = SCHEMA_SCANNER
@@ -1331,6 +1334,11 @@ class ConfigScanner(ConfigObject):
         self.add_key("activation-flash-interval", self.DEFAULT_ACTIVATION_FLASH_INTERVAL)#In
         self.add_key("activation-flash-count", self.DEFAULT_ACTIVATION_FLASH_COUNT) #In
         self.add_key("scanner-popup-unpress-delay", self.DEFAULT_SCANNER_POPUP_UNPRESS_DELAY)#In
+        self.add_key("scan-popup-size-change-enabled", False)#In
+        self.add_key("scan-popup-height",self.DEFAULT_SCAN_POPUP_HEIGHT )#In
+        self.add_key("scan-popup-width",self.DEFAULT_SCAN_POPUP_WIDTH )#In
+        
+        
 
 
 class ConfigTypingAssistance(ConfigObject):
