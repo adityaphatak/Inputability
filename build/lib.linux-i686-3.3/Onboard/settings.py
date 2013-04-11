@@ -376,15 +376,21 @@ class Settings(DialogBuilder):
         # Inputability - seconde page
         
         self.bind_spin("activation_flash_interval_spinbutton",
-                            config.scanner, "activation_flash_interval")
+                            config.scanner, "activation_flash_interval") #In
         self.bind_spin("activation_flash_count_spinbutton",
-                            config.scanner, "activation_flash_count")                      
+                            config.scanner, "activation_flash_count")    #In                
 
         self.bind_check("scan_feedback_enabled_toggle",
-                        config.scanner, "scan_feedback_enabled")
+                        config.scanner, "scan_feedback_enabled")         #In
         self.bind_spin("scanner_unpress_delay_spinbutton",
-                            config.scanner, "scanner_popup_unpress_delay")                        
- 
+                            config.scanner, "scanner_popup_unpress_delay") #In 
+        self.bind_check("size_change_enabled_toggle",
+                        config.scanner, "scan_popup_size_change_enabled") #In
+        self.bind_spin("scan_popup_height_spinbutton",
+                            config.scanner, "scan_popup_height")          #In  
+        self.bind_spin("scan_popup_width_spinbutton",
+                            config.scanner, "scan_popup_width")           #In         
+
         # Universal Access
         scanner_enabled = builder.get_object("scanner_enabled")
         scanner_enabled.set_active(config.scanner.enabled)
