@@ -101,7 +101,7 @@ class DialogBuilder(object):
         setattr(config_object, key, value)
         if callback:
             callback(value)
-
+            
     # checkbox
     def bind_check(self, name, config_object, key, widget_callback = None):
         w = self.wid(name)
@@ -324,7 +324,7 @@ class Settings(DialogBuilder):
         if not os.path.exists(self.user_layout_root):
             os.makedirs(self.user_layout_root)
             
-        # Inpitability layout view           
+        # Inpitability layout view -first page          
         self.layout_view1 = builder.get_object("layout_view1")
         self.layout_view1.append_column( \
                 Gtk.TreeViewColumn(None, Gtk.CellRendererText(), markup=0))  
@@ -372,7 +372,19 @@ class Settings(DialogBuilder):
         # Snippets
         self.snippet_view = SnippetView()
         builder.get_object("snippet_scrolled_window").add(self.snippet_view)
+        
+        # Inputability - seconde page
+        
+        self.bind_spin("activation_flash_interval_spinbutton",
+                            config.scanner, "activation_flash_interval")
+        self.bind_spin("activation_flash_count_spinbutton",
+                            config.scanner, "activation_flash_count")                      
 
+        self.bind_check("scan_feedback_enabled_toggle",
+                        config.scanner, "scan_feedback_enabled")
+        self.bind_spin("scanner_unpress_delay_spinbutton",
+                            config.scanner, "scanner_popup_unpress_delay")                        
+ 
         # Universal Access
         scanner_enabled = builder.get_object("scanner_enabled")
         scanner_enabled.set_active(config.scanner.enabled)
@@ -403,6 +415,7 @@ class Settings(DialogBuilder):
                             config.mousetweaks, "dwell_time")
             self.bind_spin("hover_click_motion_threshold_spinbutton",
                             config.mousetweaks, "dwell_threshold")
+                           
 
         # select last active page
         page = config.current_settings_page
@@ -542,7 +555,7 @@ class Settings(DialogBuilder):
 
     def on_background_transparency_spinbutton_changed(self, widget):
         config.window.background_transparency = widget.get_value()
-
+        
     def on_enable_inactive_transparency_toggled(self, widget):
         if not config.scanner.enabled:
             config.window.enable_inactive_transparency = widget.get_active()
@@ -677,24 +690,9 @@ class Settings(DialogBuilder):
      
 
        subprocess.Popen("orca")   
-#        subprocess.call("orca")
-
-        
-#       os.P_NOWAITTO("orca")        
-        
-#       sts = os.system("orca --replace")       
-#       p = Popen("orca --replace", shell=False)
-#       sts = os.waitpid(p.pid, 0)
-       
-
-#       os.system("orca")
        self.window.destroy()
        Gtk.main_quit()
-
- 
-
- 
-      
+    
 
  
     def cb_selected_layout_changed(self):
@@ -1546,7 +1544,7 @@ class ScannerDialog(DialogBuilder):
         self.bind_check("user_scan", scanner, "user_scan")
         self.bind_check("alternate", scanner, "alternate")
         self.bind_check("device_detach", scanner, "device_detach")
-
+        
     def __del__(self):
         _logger.debug("ScannerDialog.__del__()")
 
