@@ -261,6 +261,9 @@
                     <property name="headers_visible">False</property>
                     <property name="headers_clickable">False</property>
                     <signal name="cursor-changed" handler="on_pages_view_cursor_changed" swapped="no"/>
+                    <child internal-child="selection">
+                      <object class="GtkTreeSelection" id="treeview-selection1"/>
+                    </child>
                     <child>
                       <object class="GtkTreeViewColumn" id="treeviewcolumn1">
                         <property name="sizing">autosize</property>
@@ -3227,8 +3230,8 @@
                                           <object class="GtkGrid" id="grid3">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="row_spacing">20</property>
-                                            <property name="column_spacing">50</property>
+                                            <property name="row_spacing">10</property>
+                                            <property name="column_spacing">5</property>
                                             <property name="row_homogeneous">True</property>
                                             <child>
                                               <object class="GtkSpinButton" id="activation_flash_interval_spinbutton">
@@ -3265,6 +3268,19 @@
                                               </packing>
                                             </child>
                                             <child>
+                                              <object class="GtkLabel" id="label67">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <property name="label" translatable="yes">Flash Count</property>
+                                              </object>
+                                              <packing>
+                                                <property name="left_attach">2</property>
+                                                <property name="top_attach">0</property>
+                                                <property name="width">1</property>
+                                                <property name="height">1</property>
+                                              </packing>
+                                            </child>
+                                            <child>
                                               <object class="GtkSpinButton" id="activation_flash_count_spinbutton">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
@@ -3272,25 +3288,13 @@
                                                 <property name="tooltip_markup" translatable="yes">Time in seconds before a click is triggered.</property>
                                                 <property name="tooltip_text" translatable="yes">Time in seconds before a click is triggered.</property>
                                                 <property name="invisible_char">•</property>
+                                                <property name="invisible_char_set">True</property>
                                                 <property name="adjustment">_flash_count_adjustment</property>
                                                 <property name="numeric">True</property>
                                               </object>
                                               <packing>
-                                                <property name="left_attach">1</property>
-                                                <property name="top_attach">1</property>
-                                                <property name="width">1</property>
-                                                <property name="height">1</property>
-                                              </packing>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="label67">
-                                                <property name="visible">True</property>
-                                                <property name="can_focus">False</property>
-                                                <property name="label" translatable="yes">Flash Count</property>
-                                              </object>
-                                              <packing>
-                                                <property name="left_attach">0</property>
-                                                <property name="top_attach">1</property>
+                                                <property name="left_attach">3</property>
+                                                <property name="top_attach">0</property>
                                                 <property name="width">1</property>
                                                 <property name="height">1</property>
                                               </packing>
@@ -3351,8 +3355,8 @@
                                               <object class="GtkGrid" id="grid4">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="row_spacing">20</property>
-                                                <property name="column_spacing">50</property>
+                                                <property name="row_spacing">10</property>
+                                                <property name="column_spacing">10</property>
                                                 <child>
                                                   <object class="GtkLabel" id="label65">
                                                     <property name="visible">True</property>
@@ -3411,8 +3415,8 @@
                                                   <object class="GtkGrid" id="grid5">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
-                                                    <property name="row_spacing">20</property>
-                                                    <property name="column_spacing">80</property>
+                                                    <property name="row_spacing">10</property>
+                                                    <property name="column_spacing">45</property>
                                                     <child>
                                                       <object class="GtkLabel" id="label66">
                                                         <property name="visible">True</property>
@@ -3422,19 +3426,6 @@
                                                       <packing>
                                                         <property name="left_attach">0</property>
                                                         <property name="top_attach">0</property>
-                                                        <property name="width">1</property>
-                                                        <property name="height">1</property>
-                                                      </packing>
-                                                    </child>
-                                                    <child>
-                                                      <object class="GtkLabel" id="label68">
-                                                        <property name="visible">True</property>
-                                                        <property name="can_focus">False</property>
-                                                        <property name="label" translatable="yes">Width</property>
-                                                      </object>
-                                                      <packing>
-                                                        <property name="left_attach">0</property>
-                                                        <property name="top_attach">1</property>
                                                         <property name="width">1</property>
                                                         <property name="height">1</property>
                                                       </packing>
@@ -3454,15 +3445,30 @@
                                                       </packing>
                                                     </child>
                                                     <child>
+                                                      <object class="GtkLabel" id="label68">
+                                                        <property name="visible">True</property>
+                                                        <property name="can_focus">False</property>
+                                                        <property name="label" translatable="yes">Width</property>
+                                                      </object>
+                                                      <packing>
+                                                        <property name="left_attach">2</property>
+                                                        <property name="top_attach">0</property>
+                                                        <property name="width">1</property>
+                                                        <property name="height">1</property>
+                                                      </packing>
+                                                    </child>
+                                                    <child>
                                                       <object class="GtkSpinButton" id="scan_popup_width_spinbutton">
                                                         <property name="visible">True</property>
                                                         <property name="can_focus">True</property>
                                                         <property name="invisible_char">●</property>
+                                                        <property name="invisible_char_set">True</property>
                                                         <property name="adjustment">scan_popup_width_adjustment</property>
+                                                        <property name="numeric">True</property>
                                                       </object>
                                                       <packing>
-                                                        <property name="left_attach">1</property>
-                                                        <property name="top_attach">1</property>
+                                                        <property name="left_attach">3</property>
+                                                        <property name="top_attach">0</property>
                                                         <property name="width">1</property>
                                                         <property name="height">1</property>
                                                       </packing>
@@ -3529,53 +3535,10 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox" id="audio_box">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="valign">center</property>
-                            <property name="spacing">100</property>
-                            <child>
-                              <object class="GtkLabel" id="label57">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Audio Feedback</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkButton" id="button1">
-                                <property name="label" translatable="yes">Activate</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <signal name="pressed" handler="on_acitvate_orca_clicked" swapped="no"/>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="position">2</property>
-                            <property name="tab_fill">False</property>
-                          </packing>
+                          <placeholder/>
                         </child>
                         <child type="tab">
-                          <object class="GtkLabel" id="label60">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Audio Feedback</property>
-                          </object>
-                          <packing>
-                            <property name="position">2</property>
-                            <property name="tab_fill">False</property>
-                          </packing>
+                          <placeholder/>
                         </child>
                       </object>
                       <packing>
