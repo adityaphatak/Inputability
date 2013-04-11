@@ -102,7 +102,14 @@ class TouchFeedback:
                     w = min(sz[0] / 12.0, MAX_POPUP_SIZE_PX)
             else:
                 w = MAX_POPUP_SIZE_PX
-
+                
+        # To check Change Popup Size checkbox enbable or not in Inputabilibty Tab                
+        # If check then add new height and widht to current popup size
+        if config.scanner.scan_popup_size_change_enabled : #In
+            scan_width=config.scanner.scan_popup_width     #In
+            scan_height=config.scanner.scan_popup_height   #In     
+            return w + scan_width , w * (1.0 + LabelPopup.ARROW_HEIGHT)+ scan_height #In
+                
         return w, w * (1.0 + LabelPopup.ARROW_HEIGHT)
 
 
