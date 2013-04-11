@@ -626,7 +626,23 @@ Example: [["LALT", "TAB"], ["LALT", "SHIFT", "TAB"], ["CTRL", "ALT", "F[0-9]+"]]
             <summary>Scanner Key Popup Delay</summary>
             <description>Time to display Key Popup on screen(in sec)</description>
         </key>
-        
+        <!-- Inputability -->
+        <key name="scan-popup-size-change-enabled" type="b">
+            <default>false</default>
+            <summary>popup size change enable</summary>
+            <description>Show height and width spin button.</description>
+        </key>
+        <key name="scan-popup-height" type="i">
+            <default>10</default>
+            <summary>Scanner Key Popup Height</summary>
+            <description>set height for popup</description>
+        </key>
+        <key name="scan-popup-width" type="i">
+            <default>10</default>
+            <summary>Scanner Key Popup Width</summary>
+            <description>Set width for popup</description>
+        </key>
+        <!-- Inputability -->
     </schema>
 
     <enum id="org.onboard.typing-assistance.spell-check.Backend">
