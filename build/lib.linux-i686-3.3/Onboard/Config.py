@@ -127,7 +127,7 @@ class Config(ConfigObject):
 
     # minimum time keys are drawn in pressed state
     UNPRESS_DELAY = 0.15
-
+    
     # Margin to leave around wordlist labels; smaller margins leave
     # room for more prediction choices
     WORDLIST_LABEL_MARGIN = (2, 2)
@@ -949,6 +949,7 @@ class ConfigKeyboard(ConfigObject):
         self.add_key("touch-feedback-size", 0)
         self.add_key("audio-feedback-enabled", False)
         self.add_key("show-secondary-labels", False)
+        #self.add_key("scan-feedback-enabled", False)
 
 
 class ConfigWindow(ConfigObject):
@@ -1289,6 +1290,7 @@ class ConfigGDA(ConfigObject):
 class ConfigScanner(ConfigObject):
     """ Scanner configuration """
 
+
     DEFAULT_INTERVAL          = 1.20
     DEFAULT_INTERVAL_FAST     = 0.05
     DEFAULT_MODE              = 0 # AutoScan
@@ -1300,6 +1302,10 @@ class ConfigScanner(ConfigObject):
     DEFAULT_DEVICE_KEY_MAP    = {}
     DEFAULT_DEVICE_BUTTON_MAP = { 1: 0, 3: 5 } # Button 1: Step, Button 3: Activate
     DEFAULT_FEEDBACK_FLASH    = True
+    
+    DEFAULT_ACTIVATION_FLASH_INTERVAL = 0.1 #In
+    DEFAULT_ACTIVATION_FLASH_COUNT = 2 #In
+    DEFAULT_SCANNER_POPUP_UNPRESS_DELAY = 1 #In
 
     def _init_keys(self):
         self.schema = SCHEMA_SCANNER
@@ -1321,6 +1327,10 @@ class ConfigScanner(ConfigObject):
         self.add_key("device-key-map", self.DEFAULT_DEVICE_KEY_MAP, 'a{ii}')
         self.add_key("device-button-map", self.DEFAULT_DEVICE_BUTTON_MAP, 'a{ii}')
         self.add_key("feedback-flash", self.DEFAULT_FEEDBACK_FLASH)
+        self.add_key("scan-feedback-enabled", False)#In
+        self.add_key("activation-flash-interval", self.DEFAULT_ACTIVATION_FLASH_INTERVAL)#In
+        self.add_key("activation-flash-count", self.DEFAULT_ACTIVATION_FLASH_COUNT) #In
+        self.add_key("scanner-popup-unpress-delay", self.DEFAULT_SCANNER_POPUP_UNPRESS_DELAY)#In
 
 
 class ConfigTypingAssistance(ConfigObject):
