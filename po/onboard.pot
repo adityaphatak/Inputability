@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-10 17:14+0530\n"
+"POT-Creation-Date: 2013-04-11 16:39+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,413 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../Onboard/Config.py:177
-msgid "Layout file ({}) or name"
-msgstr ""
-
-#: ../Onboard/Config.py:180
-msgid "Theme file (.theme) or name"
-msgstr ""
-
-#: ../Onboard/Config.py:181
-msgid "Window x position"
-msgstr ""
-
-#: ../Onboard/Config.py:182
-msgid "Window y position"
-msgstr ""
-
-#: ../Onboard/Config.py:184
-msgid "Window size, widthxheight"
-msgstr ""
-
-#: ../Onboard/Config.py:186
-msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
-msgstr ""
-
-#: ../Onboard/Config.py:189
-msgid "Keep aspect ratio when resizing the window"
-msgstr ""
-
-#: ../Onboard/Config.py:194
-msgid "Allow multiple Onboard instances"
-msgstr ""
-
-#: ../Onboard/Config.py:196
-msgid ""
-"Override auto-detection and manually select quirks\n"
-"QUIRKS={metacity|compiz|mutter}"
-msgstr ""
-
-#: ../Onboard/Config.py:200
-msgid ""
-"Silently fail to start in the given desktop environments. DESKTOPS is a "
-"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
-msgstr ""
-
-#: ../Onboard/Config.py:257
-msgid "Migrating user directory '{}' to '{}'."
-msgstr ""
-
-#. python >2.5
-#: ../Onboard/Config.py:262
-msgid "Failed to migrate user directory. "
-msgstr ""
-
-#: ../Onboard/Config.py:524
-msgid "layout '{filename}' does not exist"
-msgstr ""
-
-#: ../Onboard/Config.py:569
-msgid "theme '{filename}' does not exist"
-msgstr ""
-
-#: ../Onboard/Config.py:583
-msgid "Loading theme from '{}'"
-msgstr ""
-
-#: ../Onboard/Config.py:587
-msgid "Unable to read theme '{}'"
-msgstr ""
-
-#: ../Onboard/Config.py:712
-msgid ""
-"Enabling auto-show requires Gnome Accessibility.\n"
-"\n"
-"Onboard can turn on accessiblity now, however it is recommended that you log "
-"out and back in for it to reach its full potential.\n"
-"\n"
-"Enable accessibility now?"
-msgstr ""
-
-#: ../Onboard/Config.py:1204
-msgid "color scheme '{filename}' does not exist"
-msgstr ""
-
-#. ##############
-#: ../Onboard/SnippetView.py:20
-msgid "<Enter label>"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:21
-msgid "<Enter text>"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:33
-msgid "Button Number"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:40
-msgid "Button Label"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:49
-msgid "Snippet Text"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:94
-msgid "Must be an integer number"
-msgstr ""
-
-#: ../Onboard/SnippetView.py:103
-#, python-format
-msgid "Snippet %d is already in use."
-msgstr ""
-
-#: ../Onboard/pypredict/tools/filter.py:380
-#: ../Onboard/pypredict/tools/train.py:227 ../Onboard/LanguageSupport.py:164
-#: ../Onboard/SpellChecker.py:306 ../Onboard/SpellChecker.py:342
-#: ../Onboard/SpellChecker.py:381 ../Onboard/SpellChecker.py:395
-#: ../Onboard/utils.py:1022
-msgid "Failed to execute '{}', {}"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:1
-msgid "Customize Theme"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:2
-msgid "Color Sche_me"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:3 ../settings.ui.h:95
-msgid "_Background:"
-msgstr ""
-
-#. Key style with simple gradients
-#: ../settings_theme_dialog.ui.h:4 ../Onboard/settings.py:1260
-msgid "Gradient"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:5
-msgid "_Angle:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:6
-msgid "Light Direction"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:7 ../settings.ui.h:9
-msgid "Keyboard"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:8
-msgid "_Style:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:9
-msgid "R_oundness:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:10
-msgid "S_ize:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:11
-msgid "B_order width:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:12
-msgid "Key Style"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:13
-msgid "_Key:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:14
-msgid "_Border:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:15
-msgid "Gradients"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:16
-msgid "_Strength:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:17
-msgid "Shadow"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:18
-msgid "Keys"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:19
-msgid "_Font:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:20
-msgid "_Attributes:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:21
-msgid "Font"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:22
-msgid "I_ndependent size"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:23
-msgid "_Super key:"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:24
-msgid "Label Override"
-msgstr ""
-
-#: ../settings_theme_dialog.ui.h:25
-msgid "Labels"
-msgstr ""
-
-#: ../Onboard/TextContext.py:27 ../Onboard/TextDomain.py:26
-msgid "Atspi unavailable, word suggestions not fully functional"
-msgstr ""
-
-#: ../Onboard/settings.py:171
-msgid "Onboard Preferences"
-msgstr ""
-
-#: ../Onboard/settings.py:577 ../Onboard/settings.py:586
-msgid "No file manager to open layout folder"
-msgstr ""
-
-#: ../Onboard/settings.py:597 ../Onboard/settings.py:607
-msgid "Enter name for personalised layout"
-msgstr ""
-
-#: ../Onboard/settings.py:633
-msgid "System settings not found ({}): {}"
-msgstr ""
-
-#. Frame resize handles: None
-#: ../Onboard/settings.py:646 ../settings.ui.h:21
-msgid "None"
-msgstr ""
-
-#. Frame resize handles: Corners only
-#: ../Onboard/settings.py:648
-msgid "Corners only"
-msgstr ""
-
-#. Frame resize handles: All
-#: ../Onboard/settings.py:650
-msgid "All corners and edges"
-msgstr ""
-
-#: ../Onboard/settings.py:702
-msgid "Add Layout"
-msgstr ""
-
-#: ../Onboard/settings.py:712
-msgid "Onboard layout files"
-msgstr ""
-
-#: ../Onboard/settings.py:717
-msgid "All files"
-msgstr ""
-
-#: ../Onboard/settings.py:879
-msgid "Enter a name for the new theme:"
-msgstr ""
-
-#: ../Onboard/settings.py:887
-msgid ""
-"This theme file already exists.\n"
-"'{filename}'\n"
-"\n"
-"Overwrite it?"
-msgstr ""
-
-#: ../Onboard/settings.py:904
-msgid "Reset selected theme to Onboard defaults?"
-msgstr ""
-
-#: ../Onboard/settings.py:906
-msgid "Delete selected theme?"
-msgstr ""
-
-#: ../Onboard/settings.py:1028
-msgid "Reset"
-msgstr ""
-
-#. Key style with flat fill- and border colors
-#: ../Onboard/settings.py:1258
-msgid "Flat"
-msgstr ""
-
-#. Key style for dish-like key caps
-#: ../Onboard/settings.py:1262
-msgid "Dish"
-msgstr ""
-
-#: ../Onboard/settings.py:1311 ../Onboard/settings.py:1368
-msgid "Default"
-msgstr ""
-
-#: ../Onboard/settings.py:1352
-msgid "Bold"
-msgstr ""
-
-#: ../Onboard/settings.py:1354
-msgid "Italic"
-msgstr ""
-
-#: ../Onboard/settings.py:1356
-msgid "Condensed"
-msgstr ""
-
-#: ../Onboard/settings.py:1369
-msgid ""
-msgstr ""
-
-#: ../Onboard/settings.py:1369
-msgid "Ubuntu Logo"
-msgstr ""
-
-#: ../Onboard/settings.py:1503
-msgid "Step"
-msgstr ""
-
-#: ../Onboard/settings.py:1504
-msgid "Left"
-msgstr ""
-
-#: ../Onboard/settings.py:1505
-msgid "Right"
-msgstr ""
-
-#: ../Onboard/settings.py:1506
-msgid "Up"
-msgstr ""
-
-#: ../Onboard/settings.py:1507
-msgid "Down"
-msgstr ""
-
-#: ../Onboard/settings.py:1508 ../settings.ui.h:136
-msgid "Activate"
-msgstr ""
-
-#: ../Onboard/settings.py:1677
-msgid "Action:"
-msgstr ""
-
-#: ../Onboard/settings.py:1841
-msgid "Disabled"
-msgstr ""
-
-#: ../Onboard/settings.py:1847
-msgid "Button"
-msgstr ""
-
-#: ../Onboard/settings.py:1902 ../Onboard/settings.py:1947
-msgid "Press a button..."
-msgstr ""
-
-#: ../Onboard/settings.py:1949
-msgid "Press a key..."
-msgstr ""
-
-#: ../Onboard/Appearance.py:111
-msgid "Color scheme for theme '{filename}' not found"
-msgstr ""
-
-#: ../Onboard/Appearance.py:326
-msgid "Error loading theme '{filename}'. {exception}: {cause}"
-msgstr ""
-
-#: ../Onboard/Appearance.py:398
-msgid "Error saving "
-msgstr ""
-
-#: ../Onboard/Appearance.py:815
-msgid ""
-"Loading legacy color scheme format '{old_format}', please consider upgrading "
-"to current format '{new_format}': '{filename}'"
-msgstr ""
-
-#: ../Onboard/Appearance.py:835
-msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
-msgstr ""
-
-#: ../Onboard/Appearance.py:912 ../Onboard/Appearance.py:1044
-msgid ""
-"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
-"once."
-msgstr ""
-
-#: ../Onboard/KbdWindow.py:75 ../data/onboard.desktop.in.h:1
-msgid "Onboard"
-msgstr ""
-
-#: ../Onboard/KbdWindow.py:163
-msgid "no window transparency available; screen doesn't support alpha channels"
-msgstr ""
 
 #: ../Onboard/Indicator.py:67
 msgid "_Show Onboard"
@@ -436,114 +29,525 @@ msgstr ""
 msgid "Onboard on-screen keyboard"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:1
-msgid "Automatic scan for 1 switch"
+#: ../settings_docking_dialog.ui.h:1
+msgid "Top"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:2
-msgid "Critical overscan for 1 switch"
+#: ../settings_docking_dialog.ui.h:2
+msgid "Bottom"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:3
-msgid "Step scan for 2 switches"
+#: ../settings_docking_dialog.ui.h:3
+msgid "Docking settings"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:4
-msgid "Directed scan for 3 or 5 switches"
+#: ../settings_docking_dialog.ui.h:4
+msgid "Shrink workarea"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:5
-msgid "Scanner Settings"
+#: ../settings_docking_dialog.ui.h:5
+msgid "Shrink the available space for maximized windows."
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:6
-msgid "Select a scanning _profile:"
+#: ../settings_docking_dialog.ui.h:6
+msgid "Expand on landscape screens"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:7
-msgid "_Step interval:"
+#: ../settings_docking_dialog.ui.h:7
+msgid "Expand keyboard to the width of the workarea."
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:8
-msgid "Sc_an cycles:"
+#: ../settings_docking_dialog.ui.h:8
+msgid "Expand on portrait screens"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:9
+#: ../settings_docking_dialog.ui.h:9
+msgid "Dock to screen edge:"
+msgstr ""
+
+#: ../settings_docking_dialog.ui.h:10
+msgid "Settings"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:61
+msgid "gsettings schema for '{}' is not installed"
+msgstr ""
+
+#. assume filename is just a basename instead of a full file path
+#: ../Onboard/ConfigUtils.py:416
+msgid "{description} '{filename}' not found yet, retrying in default paths"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:431
+msgid "unable to locate '{filename}', loading default {description} instead"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:439
+msgid "failed to find {description} '{filename}'"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:443
+msgid "{description} '{filepath}' found."
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:510
+msgid "Looking for system defaults in {paths}"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:521
+msgid "Failed to read system defaults. "
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:525
+msgid "No system defaults found."
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:527
+msgid "Loading system defaults from {filename}"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:551
+msgid "Found system default '[{}] {}={}'"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:569
+msgid "System defaults: Unknown key '{}' in section '{}'"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:576
+msgid "System defaults: Invalid enum value for key '{}' in section '{}': {}"
+msgstr ""
+
+#: ../Onboard/ConfigUtils.py:589
 msgid ""
-"The time the scanner rests on a key or group before moving to the next. (in "
-"seconds)"
+"System defaults: Invalid value for key '{}' in section '{}'\n"
+"  {}"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:10
-msgid ""
-"The number of times the scanner cycles through the entire keyboard before it "
-"stops."
+#: ../Onboard/ConfigUtils.py:651
+msgid "Failed to get gsettings value. "
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:11
-msgid "Step _only during switch down"
+#: ../data/layoutstrings.py:15
+msgid "Activate Hover Click"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:12
-msgid "Progress the highlight only while the switch is held down."
+#: ../data/layoutstrings.py:16
+msgid "Alphanumeric keys"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:13
-msgid "_Forward interval:"
+#. translators: very short label of the left Alt key
+#: ../data/layoutstrings.py:18
+msgid "Alt"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:14
-msgid "_Backtrack interval:"
+#. translators: very short label of the Alt Gr key
+#: ../data/layoutstrings.py:20
+msgid "Alt Gr"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:15
-msgid ""
-"The time the scanner rests on a key  while progressing forward. (in seconds)"
+#. translators: very short label of the CAPS LOCK key
+#: ../data/layoutstrings.py:22
+msgid "CAPS"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:16
-msgid ""
-"The time the scanner rests on a key  while moving backwards. (in seconds)"
+#. translators: very short label of the Ctrl key
+#: ../data/layoutstrings.py:24
+msgid "Ctrl"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:17
-msgid "Backtrack _steps:"
+#. translators: very short label of the DELETE key
+#: ../data/layoutstrings.py:26
+msgid "Del"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:18
-msgid "The number of keys the scanner steps back before moving forward again."
+#: ../data/layoutstrings.py:27
+msgid "Double click"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:19
-msgid "_Alternate switch actions"
+#: ../data/layoutstrings.py:28
+msgid "Drag click"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:20
-msgid ""
-"Swap the scan actions after every key activation. The Step action will "
-"become the Activate action and vice versa."
+#. translators: very short label of the numpad END key
+#: ../data/layoutstrings.py:30
+msgid "End"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:21
-msgid "Profiles"
+#. translators: very short label of the numpad ENTER key
+#: ../data/layoutstrings.py:32
+msgid "Ent"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:22
-msgid "_Select an input device:"
+#. translators: very short label of the ESCAPE key
+#: ../data/layoutstrings.py:34
+msgid "Esc"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:23
-msgid "_Use this device only for scanning"
+#: ../data/layoutstrings.py:35
+msgid "Function keys"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:24
-msgid ""
-"The selected device should not control the system mouse cursor or the "
-"keyboard caret."
+#: ../data/layoutstrings.py:36
+msgid "Number block and function keys"
 msgstr ""
 
-#: ../settings_scanner_dialog.ui.h:25
-msgid "Input Device"
+#: ../data/layoutstrings.py:37
+msgid "Hide Onboard"
+msgstr ""
+
+#. translators: very short label of the HOME key
+#: ../data/layoutstrings.py:39
+msgid "Hm"
+msgstr ""
+
+#. translators: very short label of the INSERT key
+#: ../data/layoutstrings.py:41
+msgid "Ins"
+msgstr ""
+
+#: ../data/layoutstrings.py:42
+msgid "Main keyboard"
+msgstr ""
+
+#. translators: very short label of the Menu key
+#: ../data/layoutstrings.py:44
+msgid "Menu"
+msgstr ""
+
+#: ../data/layoutstrings.py:45
+msgid "Middle click"
+msgstr ""
+
+#: ../data/layoutstrings.py:46
+msgid "Move Onboard"
+msgstr ""
+
+#. translators: very short label of the NUMLOCK key
+#: ../data/layoutstrings.py:48
+msgid "Nm&#10;Lk"
+msgstr ""
+
+#: ../data/layoutstrings.py:49
+msgid "Number block and snippets"
+msgstr ""
+
+#. translators: very short label of the PAUSE key
+#: ../data/layoutstrings.py:51
+msgid "Pause"
+msgstr ""
+
+#. translators: very short label of the PAGE DOWN key
+#: ../data/layoutstrings.py:53
+msgid "Pg&#10;Dn"
+msgstr ""
+
+#. translators: very short label of the PAGE UP key
+#: ../data/layoutstrings.py:55
+msgid "Pg&#10;Up"
+msgstr ""
+
+#. translators: very short label of the Preferences button
+#: ../data/layoutstrings.py:57
+msgid "Preferences"
+msgstr ""
+
+#. translators: very short label of the PRINT key
+#: ../data/layoutstrings.py:59
+msgid "Prnt"
+msgstr ""
+
+#. translators: very short label of the Quit button
+#: ../data/layoutstrings.py:61
+msgid "Quit"
+msgstr ""
+
+#. translators: very short label of the RETURN key
+#: ../data/layoutstrings.py:63
+msgid "Return"
+msgstr ""
+
+#: ../data/layoutstrings.py:64
+msgid "Right click"
+msgstr ""
+
+#. translators: very short label of the SCROLL key
+#: ../data/layoutstrings.py:66
+msgid "Scroll"
+msgstr ""
+
+#: ../data/layoutstrings.py:67 ../settings.ui.h:14
+msgid "Snippets"
+msgstr ""
+
+#: ../data/layoutstrings.py:68
+msgid "Space"
+msgstr ""
+
+#: ../data/layoutstrings.py:69
+msgid "Toggle click helpers"
+msgstr ""
+
+#. translators: very short label of the TAB key
+#: ../data/layoutstrings.py:71
+msgid "Tab"
+msgstr ""
+
+#. translators: very short label of the default SUPER key
+#: ../data/layoutstrings.py:73
+msgid "Win"
+msgstr ""
+
+#. translators: description of unicode character U+2602
+#: ../data/layoutstrings.py:75
+msgid "Umbrella"
+msgstr ""
+
+#. translators: description of unicode character U+2606
+#: ../data/layoutstrings.py:77
+msgid "White star"
+msgstr ""
+
+#. translators: description of unicode character U+260F
+#: ../data/layoutstrings.py:79
+msgid "White telephone"
+msgstr ""
+
+#. translators: description of unicode character U+2615
+#: ../data/layoutstrings.py:81
+msgid "Hot beverage"
+msgstr ""
+
+#. translators: description of unicode character U+2620
+#: ../data/layoutstrings.py:83
+msgid "Skull and crossbones"
+msgstr ""
+
+#. translators: description of unicode character U+2622
+#: ../data/layoutstrings.py:85
+msgid "Radioactive sign"
+msgstr ""
+
+#. translators: description of unicode character U+262E
+#: ../data/layoutstrings.py:87
+msgid "Peace symbol"
+msgstr ""
+
+#. translators: description of unicode character U+262F
+#: ../data/layoutstrings.py:89
+msgid "Yin yang"
+msgstr ""
+
+#. translators: description of unicode character U+2639
+#: ../data/layoutstrings.py:91
+msgid "Frowning face"
+msgstr ""
+
+#. translators: description of unicode character U+263A
+#: ../data/layoutstrings.py:93
+msgid "Smiling face"
+msgstr ""
+
+#. translators: description of unicode character U+263C
+#: ../data/layoutstrings.py:95
+msgid "White sun with rays"
+msgstr ""
+
+#. translators: description of unicode character U+263E
+#: ../data/layoutstrings.py:97
+msgid "Last quarter moon"
+msgstr ""
+
+#. translators: description of unicode character U+2640
+#: ../data/layoutstrings.py:99
+msgid "Female sign"
+msgstr ""
+
+#. translators: description of unicode character U+2642
+#: ../data/layoutstrings.py:101
+msgid "Male sign"
+msgstr ""
+
+#. translators: description of unicode character U+2661
+#: ../data/layoutstrings.py:103
+msgid "White heart suit"
+msgstr ""
+
+#. translators: description of unicode character U+2662
+#: ../data/layoutstrings.py:105
+msgid "White diamond suit"
+msgstr ""
+
+#. translators: description of unicode character U+2664
+#: ../data/layoutstrings.py:107
+msgid "White spade suit"
+msgstr ""
+
+#. translators: description of unicode character U+2667
+#: ../data/layoutstrings.py:109
+msgid "White club suit"
+msgstr ""
+
+#. translators: description of unicode character U+266B
+#: ../data/layoutstrings.py:111
+msgid "Beamed eighth note"
+msgstr ""
+
+#. translators: description of unicode character U+2709
+#: ../data/layoutstrings.py:113
+msgid "Envelope"
+msgstr ""
+
+#. translators: description of unicode character U+270C
+#: ../data/layoutstrings.py:115
+msgid "Victory hand"
+msgstr ""
+
+#. translators: description of unicode character U+270D
+#: ../data/layoutstrings.py:117
+msgid "Writing hand"
+msgstr ""
+
+#. translators: description of unicode character U+1F604
+#: ../data/layoutstrings.py:119
+msgid "Smiling face with open mouth and smiling eyes"
+msgstr ""
+
+#. translators: description of unicode character U+1F607
+#: ../data/layoutstrings.py:121
+msgid "Smiling face with halo"
+msgstr ""
+
+#. translators: description of unicode character U+1F608
+#: ../data/layoutstrings.py:123
+msgid "Smiling face with horns"
+msgstr ""
+
+#. translators: description of unicode character U+1F609
+#: ../data/layoutstrings.py:125
+msgid "Winking face"
+msgstr ""
+
+#. translators: description of unicode character U+1F60A
+#: ../data/layoutstrings.py:127
+msgid "Smiling face with smiling eyes"
+msgstr ""
+
+#. translators: description of unicode character U+1F60B
+#: ../data/layoutstrings.py:129
+msgid "Face savouring delicious food"
+msgstr ""
+
+#. translators: description of unicode character U+1F60D
+#: ../data/layoutstrings.py:131
+msgid "Smiling face with heart-shaped eyes"
+msgstr ""
+
+#. translators: description of unicode character U+1F60E
+#: ../data/layoutstrings.py:133
+msgid "Smiling face with sunglasses"
+msgstr ""
+
+#. translators: description of unicode character U+1F60F
+#: ../data/layoutstrings.py:135
+msgid "Smirking face"
+msgstr ""
+
+#. translators: description of unicode character U+1F610
+#: ../data/layoutstrings.py:137
+msgid "Neutral face"
+msgstr ""
+
+#. translators: description of unicode character U+1F612
+#: ../data/layoutstrings.py:139
+msgid "Unamused face"
+msgstr ""
+
+#. translators: description of unicode character U+1F616
+#: ../data/layoutstrings.py:141
+msgid "Confounded face"
+msgstr ""
+
+#. translators: description of unicode character U+1F618
+#: ../data/layoutstrings.py:143
+msgid "Face throwing a kiss"
+msgstr ""
+
+#. translators: description of unicode character U+1F61A
+#: ../data/layoutstrings.py:145
+msgid "Kissing face with closed eyes"
+msgstr ""
+
+#. translators: description of unicode character U+1F61C
+#: ../data/layoutstrings.py:147
+msgid "Face with stuck-out tongue and winking eye"
+msgstr ""
+
+#. translators: description of unicode character U+1F61D
+#: ../data/layoutstrings.py:149
+msgid "Face with stuck-out tongue and tightly closed eyes"
+msgstr ""
+
+#. translators: description of unicode character U+1F61E
+#: ../data/layoutstrings.py:151
+msgid "Disappointed face"
+msgstr ""
+
+#. translators: description of unicode character U+1F620
+#: ../data/layoutstrings.py:153
+msgid "Angry face"
+msgstr ""
+
+#. translators: description of unicode character U+1F621
+#: ../data/layoutstrings.py:155
+msgid "Pouting face"
+msgstr ""
+
+#. translators: description of unicode character U+1F622
+#: ../data/layoutstrings.py:157
+msgid "Crying face"
+msgstr ""
+
+#. translators: description of unicode character U+1F623
+#: ../data/layoutstrings.py:159
+msgid "Persevering face"
+msgstr ""
+
+#. translators: description of unicode character U+1F629
+#: ../data/layoutstrings.py:161
+msgid "Weary face"
+msgstr ""
+
+#. translators: description of unicode character U+1F62B
+#: ../data/layoutstrings.py:163
+msgid "Tired face"
+msgstr ""
+
+#. translators: description of unicode character U+1F632
+#: ../data/layoutstrings.py:165
+msgid "Astonished face"
+msgstr ""
+
+#. translators: description of unicode character U+1F633
+#: ../data/layoutstrings.py:167
+msgid "Flushed face"
+msgstr ""
+
+#. translators: description of unicode character U+1F635
+#: ../data/layoutstrings.py:169
+msgid "Dizzy face"
+msgstr ""
+
+#: ../data/onboard.desktop.in.h:1 ../Onboard/KbdWindow.py:75
+msgid "Onboard"
+msgstr ""
+
+#: ../data/onboard.desktop.in.h:2
+msgid "Onboard onscreen keyboard"
+msgstr ""
+
+#: ../data/onboard.desktop.in.h:3
+msgid "Flexible onscreen keyboard for GNOME"
 msgstr ""
 
 #: ../settings.ui.h:1
@@ -578,6 +582,10 @@ msgstr ""
 msgid "General"
 msgstr ""
 
+#: ../settings.ui.h:9 ../settings_theme_dialog.ui.h:7
+msgid "Keyboard"
+msgstr ""
+
 #: ../settings.ui.h:10
 msgid "Assistance"
 msgstr ""
@@ -592,10 +600,6 @@ msgstr ""
 
 #: ../settings.ui.h:13
 msgid "Theme"
-msgstr ""
-
-#: ../settings.ui.h:14 ../data/layoutstrings.py:67
-msgid "Snippets"
 msgstr ""
 
 #: ../settings.ui.h:15
@@ -620,6 +624,11 @@ msgstr ""
 
 #: ../settings.ui.h:20
 msgid "Lock only"
+msgstr ""
+
+#. Frame resize handles: None
+#: ../settings.ui.h:21 ../Onboard/settings.py:652
+msgid "None"
 msgstr ""
 
 #: ../settings.ui.h:22
@@ -936,6 +945,10 @@ msgstr ""
 msgid "Transparency of the whole keyboard window. Requires compositing."
 msgstr ""
 
+#: ../settings.ui.h:95 ../settings_theme_dialog.ui.h:3
+msgid "_Background:"
+msgstr ""
+
 #: ../settings.ui.h:96
 msgid "Transparency of the keyboard background"
 msgstr ""
@@ -1093,74 +1106,31 @@ msgid "Popup Delay"
 msgstr ""
 
 #: ../settings.ui.h:134
-msgid "Scan Key-press Feedback"
+msgid "Change Popup Size"
 msgstr ""
 
 #: ../settings.ui.h:135
-msgid "Audio Feedback"
+msgid "Height"
+msgstr ""
+
+#: ../settings.ui.h:136
+msgid "Width"
 msgstr ""
 
 #: ../settings.ui.h:137
-msgid "Inputablity"
+msgid "Scan Key-press Feedback"
 msgstr ""
 
-#: ../Onboard/ConfigUtils.py:61
-msgid "gsettings schema for '{}' is not installed"
+#: ../settings.ui.h:138
+msgid "Audio Feedback"
 msgstr ""
 
-#. assume filename is just a basename instead of a full file path
-#: ../Onboard/ConfigUtils.py:416
-msgid "{description} '{filename}' not found yet, retrying in default paths"
+#: ../settings.ui.h:139 ../Onboard/settings.py:1514
+msgid "Activate"
 msgstr ""
 
-#: ../Onboard/ConfigUtils.py:431
-msgid "unable to locate '{filename}', loading default {description} instead"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:439
-msgid "failed to find {description} '{filename}'"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:443
-msgid "{description} '{filepath}' found."
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:510
-msgid "Looking for system defaults in {paths}"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:521
-msgid "Failed to read system defaults. "
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:525
-msgid "No system defaults found."
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:527
-msgid "Loading system defaults from {filename}"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:551
-msgid "Found system default '[{}] {}={}'"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:569
-msgid "System defaults: Unknown key '{}' in section '{}'"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:576
-msgid "System defaults: Invalid enum value for key '{}' in section '{}': {}"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:589
-msgid ""
-"System defaults: Invalid value for key '{}' in section '{}'\n"
-"  {}"
-msgstr ""
-
-#: ../Onboard/ConfigUtils.py:651
-msgid "Failed to get gsettings value. "
+#: ../settings.ui.h:140
+msgid "nputability"
 msgstr ""
 
 #: ../data/onboard-settings.desktop.in.h:1
@@ -1173,6 +1143,312 @@ msgstr ""
 
 #: ../data/onboard-settings.desktop.in.h:3
 msgid "Change Onboard settings"
+msgstr ""
+
+#: ../Onboard/settings.py:171
+msgid "Onboard Preferences"
+msgstr ""
+
+#: ../Onboard/settings.py:583 ../Onboard/settings.py:592
+msgid "No file manager to open layout folder"
+msgstr ""
+
+#: ../Onboard/settings.py:603 ../Onboard/settings.py:613
+msgid "Enter name for personalised layout"
+msgstr ""
+
+#: ../Onboard/settings.py:639
+msgid "System settings not found ({}): {}"
+msgstr ""
+
+#. Frame resize handles: Corners only
+#: ../Onboard/settings.py:654
+msgid "Corners only"
+msgstr ""
+
+#. Frame resize handles: All
+#: ../Onboard/settings.py:656
+msgid "All corners and edges"
+msgstr ""
+
+#: ../Onboard/settings.py:708
+msgid "Add Layout"
+msgstr ""
+
+#: ../Onboard/settings.py:718
+msgid "Onboard layout files"
+msgstr ""
+
+#: ../Onboard/settings.py:723
+msgid "All files"
+msgstr ""
+
+#: ../Onboard/settings.py:885
+msgid "Enter a name for the new theme:"
+msgstr ""
+
+#: ../Onboard/settings.py:893
+msgid ""
+"This theme file already exists.\n"
+"'{filename}'\n"
+"\n"
+"Overwrite it?"
+msgstr ""
+
+#: ../Onboard/settings.py:910
+msgid "Reset selected theme to Onboard defaults?"
+msgstr ""
+
+#: ../Onboard/settings.py:912
+msgid "Delete selected theme?"
+msgstr ""
+
+#: ../Onboard/settings.py:1034
+msgid "Reset"
+msgstr ""
+
+#. Key style with flat fill- and border colors
+#: ../Onboard/settings.py:1264
+msgid "Flat"
+msgstr ""
+
+#. Key style with simple gradients
+#: ../Onboard/settings.py:1266 ../settings_theme_dialog.ui.h:4
+msgid "Gradient"
+msgstr ""
+
+#. Key style for dish-like key caps
+#: ../Onboard/settings.py:1268
+msgid "Dish"
+msgstr ""
+
+#: ../Onboard/settings.py:1317 ../Onboard/settings.py:1374
+msgid "Default"
+msgstr ""
+
+#: ../Onboard/settings.py:1358
+msgid "Bold"
+msgstr ""
+
+#: ../Onboard/settings.py:1360
+msgid "Italic"
+msgstr ""
+
+#: ../Onboard/settings.py:1362
+msgid "Condensed"
+msgstr ""
+
+#: ../Onboard/settings.py:1375
+msgid ""
+msgstr ""
+
+#: ../Onboard/settings.py:1375
+msgid "Ubuntu Logo"
+msgstr ""
+
+#: ../Onboard/settings.py:1509
+msgid "Step"
+msgstr ""
+
+#: ../Onboard/settings.py:1510
+msgid "Left"
+msgstr ""
+
+#: ../Onboard/settings.py:1511
+msgid "Right"
+msgstr ""
+
+#: ../Onboard/settings.py:1512
+msgid "Up"
+msgstr ""
+
+#: ../Onboard/settings.py:1513
+msgid "Down"
+msgstr ""
+
+#: ../Onboard/settings.py:1683
+msgid "Action:"
+msgstr ""
+
+#: ../Onboard/settings.py:1847
+msgid "Disabled"
+msgstr ""
+
+#: ../Onboard/settings.py:1853
+msgid "Button"
+msgstr ""
+
+#: ../Onboard/settings.py:1908 ../Onboard/settings.py:1953
+msgid "Press a button..."
+msgstr ""
+
+#: ../Onboard/settings.py:1955
+msgid "Press a key..."
+msgstr ""
+
+#: ../Onboard/Config.py:177
+msgid "Layout file ({}) or name"
+msgstr ""
+
+#: ../Onboard/Config.py:180
+msgid "Theme file (.theme) or name"
+msgstr ""
+
+#: ../Onboard/Config.py:181
+msgid "Window x position"
+msgstr ""
+
+#: ../Onboard/Config.py:182
+msgid "Window y position"
+msgstr ""
+
+#: ../Onboard/Config.py:184
+msgid "Window size, widthxheight"
+msgstr ""
+
+#: ../Onboard/Config.py:186
+msgid "Start in XEmbed mode, e.g. for gnome-screensaver"
+msgstr ""
+
+#: ../Onboard/Config.py:189
+msgid "Keep aspect ratio when resizing the window"
+msgstr ""
+
+#: ../Onboard/Config.py:194
+msgid "Allow multiple Onboard instances"
+msgstr ""
+
+#: ../Onboard/Config.py:196
+msgid ""
+"Override auto-detection and manually select quirks\n"
+"QUIRKS={metacity|compiz|mutter}"
+msgstr ""
+
+#: ../Onboard/Config.py:200
+msgid ""
+"Silently fail to start in the given desktop environments. DESKTOPS is a "
+"comma-separated list of XDG desktop names, e.g. GNOME for GNOME Shell."
+msgstr ""
+
+#: ../Onboard/Config.py:257
+msgid "Migrating user directory '{}' to '{}'."
+msgstr ""
+
+#. python >2.5
+#: ../Onboard/Config.py:262
+msgid "Failed to migrate user directory. "
+msgstr ""
+
+#: ../Onboard/Config.py:524
+msgid "layout '{filename}' does not exist"
+msgstr ""
+
+#: ../Onboard/Config.py:569
+msgid "theme '{filename}' does not exist"
+msgstr ""
+
+#: ../Onboard/Config.py:583
+msgid "Loading theme from '{}'"
+msgstr ""
+
+#: ../Onboard/Config.py:587
+msgid "Unable to read theme '{}'"
+msgstr ""
+
+#: ../Onboard/Config.py:712
+msgid ""
+"Enabling auto-show requires Gnome Accessibility.\n"
+"\n"
+"Onboard can turn on accessiblity now, however it is recommended that you log "
+"out and back in for it to reach its full potential.\n"
+"\n"
+"Enable accessibility now?"
+msgstr ""
+
+#: ../Onboard/Config.py:1204
+msgid "color scheme '{filename}' does not exist"
+msgstr ""
+
+#: ../Onboard/SpellChecker.py:306 ../Onboard/SpellChecker.py:342
+#: ../Onboard/SpellChecker.py:381 ../Onboard/SpellChecker.py:395
+#: ../Onboard/LanguageSupport.py:164 ../Onboard/utils.py:1022
+#: ../Onboard/pypredict/tools/train.py:227
+#: ../Onboard/pypredict/tools/filter.py:380
+msgid "Failed to execute '{}', {}"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1311 ../Onboard/KeyboardWidget.py:1424
+msgid "New snippet"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1315 ../Onboard/KeyboardWidget.py:1428
+msgid "_Save snippet"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1328 ../Onboard/KeyboardWidget.py:1441
+msgid "Enter a new snippet for this button:"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1334 ../Onboard/KeyboardWidget.py:1447
+msgid "_Button label:"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1338 ../Onboard/KeyboardWidget.py:1451
+msgid "S_nippet:"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1534
+msgid "_System Language"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1553
+msgid "Other _Languages"
+msgstr ""
+
+#: ../Onboard/KeyboardWidget.py:1555
+msgid "_Languages"
+msgstr ""
+
+#: ../Onboard/KbdWindow.py:163
+msgid "no window transparency available; screen doesn't support alpha channels"
+msgstr ""
+
+#. ##############
+#: ../Onboard/SnippetView.py:20
+msgid "<Enter label>"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:21
+msgid "<Enter text>"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:33
+msgid "Button Number"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:40
+msgid "Button Label"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:49
+msgid "Snippet Text"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:94
+msgid "Must be an integer number"
+msgstr ""
+
+#: ../Onboard/SnippetView.py:103
+#, python-format
+msgid "Snippet %d is already in use."
+msgstr ""
+
+#: ../Onboard/AtspiStateTracker.py:16
+msgid "Atspi unavailable, auto-hide won't be available"
+msgstr ""
+
+#: ../Onboard/TextDomain.py:26 ../Onboard/TextContext.py:27
+msgid "Atspi unavailable, word suggestions not fully functional"
 msgstr ""
 
 #: ../Onboard/OnboardGtk.py:343
@@ -1198,16 +1474,246 @@ msgid ""
 "Would you like to activate it?"
 msgstr ""
 
-#: ../data/onboard.desktop.in.h:2
-msgid "Onboard onscreen keyboard"
+#: ../Onboard/utils.py:324
+msgid "New Input Device"
 msgstr ""
 
-#: ../data/onboard.desktop.in.h:3
-msgid "Flexible onscreen keyboard for GNOME"
+#: ../Onboard/utils.py:325
+msgid "Onboard has detected a new input device"
 msgstr ""
 
-#: ../Onboard/AtspiStateTracker.py:16
-msgid "Atspi unavailable, auto-hide won't be available"
+#: ../Onboard/utils.py:334
+msgid "Do you want to use this device for keyboard scanning?"
+msgstr ""
+
+#: ../Onboard/utils.py:338
+msgid "Use device"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:1
+msgid "Automatic scan for 1 switch"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:2
+msgid "Critical overscan for 1 switch"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:3
+msgid "Step scan for 2 switches"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:4
+msgid "Directed scan for 3 or 5 switches"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:5
+msgid "Scanner Settings"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:6
+msgid "Select a scanning _profile:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:7
+msgid "_Step interval:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:8
+msgid "Sc_an cycles:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:9
+msgid ""
+"The time the scanner rests on a key or group before moving to the next. (in "
+"seconds)"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:10
+msgid ""
+"The number of times the scanner cycles through the entire keyboard before it "
+"stops."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:11
+msgid "Step _only during switch down"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:12
+msgid "Progress the highlight only while the switch is held down."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:13
+msgid "_Forward interval:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:14
+msgid "_Backtrack interval:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:15
+msgid ""
+"The time the scanner rests on a key  while progressing forward. (in seconds)"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:16
+msgid ""
+"The time the scanner rests on a key  while moving backwards. (in seconds)"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:17
+msgid "Backtrack _steps:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:18
+msgid "The number of keys the scanner steps back before moving forward again."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:19
+msgid "_Alternate switch actions"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:20
+msgid ""
+"Swap the scan actions after every key activation. The Step action will "
+"become the Activate action and vice versa."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:21
+msgid "Profiles"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:22
+msgid "_Select an input device:"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:23
+msgid "_Use this device only for scanning"
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:24
+msgid ""
+"The selected device should not control the system mouse cursor or the "
+"keyboard caret."
+msgstr ""
+
+#: ../settings_scanner_dialog.ui.h:25
+msgid "Input Device"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:1
+msgid "Customize Theme"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:2
+msgid "Color Sche_me"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:5
+msgid "_Angle:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:6
+msgid "Light Direction"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:8
+msgid "_Style:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:9
+msgid "R_oundness:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:10
+msgid "S_ize:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:11
+msgid "B_order width:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:12
+msgid "Key Style"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:13
+msgid "_Key:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:14
+msgid "_Border:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:15
+msgid "Gradients"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:16
+msgid "_Strength:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:17
+msgid "Shadow"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:18
+msgid "Keys"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:19
+msgid "_Font:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:20
+msgid "_Attributes:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:21
+msgid "Font"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:22
+msgid "I_ndependent size"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:23
+msgid "_Super key:"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:24
+msgid "Label Override"
+msgstr ""
+
+#: ../settings_theme_dialog.ui.h:25
+msgid "Labels"
+msgstr ""
+
+#: ../Onboard/Appearance.py:111
+msgid "Color scheme for theme '{filename}' not found"
+msgstr ""
+
+#: ../Onboard/Appearance.py:326
+msgid "Error loading theme '{filename}'. {exception}: {cause}"
+msgstr ""
+
+#: ../Onboard/Appearance.py:398
+msgid "Error saving "
+msgstr ""
+
+#: ../Onboard/Appearance.py:815
+msgid ""
+"Loading legacy color scheme format '{old_format}', please consider upgrading "
+"to current format '{new_format}': '{filename}'"
+msgstr ""
+
+#: ../Onboard/Appearance.py:835
+msgid "Error loading color scheme '{filename}'. {exception}: {cause}"
+msgstr ""
+
+#: ../Onboard/Appearance.py:912 ../Onboard/Appearance.py:1044
+msgid ""
+"Duplicate key_id '{}' found in color scheme file. Key_ids must occur only "
+"once."
 msgstr ""
 
 #: ../Onboard/WordSuggestions.py:32
@@ -1247,498 +1753,4 @@ msgstr ""
 
 #: ../Onboard/LayoutLoaderSVG.py:900
 msgid "copying svg file '{}' to '{}'"
-msgstr ""
-
-#: ../data/layoutstrings.py:15
-msgid "Activate Hover Click"
-msgstr ""
-
-#: ../data/layoutstrings.py:16
-msgid "Alphanumeric keys"
-msgstr ""
-
-#. translators: very short label of the left Alt key
-#: ../data/layoutstrings.py:18
-msgid "Alt"
-msgstr ""
-
-#. translators: very short label of the Alt Gr key
-#: ../data/layoutstrings.py:20
-msgid "Alt Gr"
-msgstr ""
-
-#. translators: very short label of the CAPS LOCK key
-#: ../data/layoutstrings.py:22
-msgid "CAPS"
-msgstr ""
-
-#. translators: very short label of the Ctrl key
-#: ../data/layoutstrings.py:24
-msgid "Ctrl"
-msgstr ""
-
-#. translators: very short label of the DELETE key
-#: ../data/layoutstrings.py:26
-msgid "Del"
-msgstr ""
-
-#: ../data/layoutstrings.py:27
-msgid "Double click"
-msgstr ""
-
-#: ../data/layoutstrings.py:28
-msgid "Drag click"
-msgstr ""
-
-#. translators: very short label of the numpad END key
-#: ../data/layoutstrings.py:30
-msgid "End"
-msgstr ""
-
-#. translators: very short label of the numpad ENTER key
-#: ../data/layoutstrings.py:32
-msgid "Ent"
-msgstr ""
-
-#. translators: very short label of the ESCAPE key
-#: ../data/layoutstrings.py:34
-msgid "Esc"
-msgstr ""
-
-#: ../data/layoutstrings.py:35
-msgid "Function keys"
-msgstr ""
-
-#: ../data/layoutstrings.py:36
-msgid "Number block and function keys"
-msgstr ""
-
-#: ../data/layoutstrings.py:37
-msgid "Hide Onboard"
-msgstr ""
-
-#. translators: very short label of the HOME key
-#: ../data/layoutstrings.py:39
-msgid "Hm"
-msgstr ""
-
-#. translators: very short label of the INSERT key
-#: ../data/layoutstrings.py:41
-msgid "Ins"
-msgstr ""
-
-#: ../data/layoutstrings.py:42
-msgid "Main keyboard"
-msgstr ""
-
-#. translators: very short label of the Menu key
-#: ../data/layoutstrings.py:44
-msgid "Menu"
-msgstr ""
-
-#: ../data/layoutstrings.py:45
-msgid "Middle click"
-msgstr ""
-
-#: ../data/layoutstrings.py:46
-msgid "Move Onboard"
-msgstr ""
-
-#. translators: very short label of the NUMLOCK key
-#: ../data/layoutstrings.py:48
-msgid "Nm&#10;Lk"
-msgstr ""
-
-#: ../data/layoutstrings.py:49
-msgid "Number block and snippets"
-msgstr ""
-
-#. translators: very short label of the PAUSE key
-#: ../data/layoutstrings.py:51
-msgid "Pause"
-msgstr ""
-
-#. translators: very short label of the PAGE DOWN key
-#: ../data/layoutstrings.py:53
-msgid "Pg&#10;Dn"
-msgstr ""
-
-#. translators: very short label of the PAGE UP key
-#: ../data/layoutstrings.py:55
-msgid "Pg&#10;Up"
-msgstr ""
-
-#. translators: very short label of the Preferences button
-#: ../data/layoutstrings.py:57
-msgid "Preferences"
-msgstr ""
-
-#. translators: very short label of the PRINT key
-#: ../data/layoutstrings.py:59
-msgid "Prnt"
-msgstr ""
-
-#. translators: very short label of the Quit button
-#: ../data/layoutstrings.py:61
-msgid "Quit"
-msgstr ""
-
-#. translators: very short label of the RETURN key
-#: ../data/layoutstrings.py:63
-msgid "Return"
-msgstr ""
-
-#: ../data/layoutstrings.py:64
-msgid "Right click"
-msgstr ""
-
-#. translators: very short label of the SCROLL key
-#: ../data/layoutstrings.py:66
-msgid "Scroll"
-msgstr ""
-
-#: ../data/layoutstrings.py:68
-msgid "Space"
-msgstr ""
-
-#: ../data/layoutstrings.py:69
-msgid "Toggle click helpers"
-msgstr ""
-
-#. translators: very short label of the TAB key
-#: ../data/layoutstrings.py:71
-msgid "Tab"
-msgstr ""
-
-#. translators: very short label of the default SUPER key
-#: ../data/layoutstrings.py:73
-msgid "Win"
-msgstr ""
-
-#. translators: description of unicode character U+2602
-#: ../data/layoutstrings.py:75
-msgid "Umbrella"
-msgstr ""
-
-#. translators: description of unicode character U+2606
-#: ../data/layoutstrings.py:77
-msgid "White star"
-msgstr ""
-
-#. translators: description of unicode character U+260F
-#: ../data/layoutstrings.py:79
-msgid "White telephone"
-msgstr ""
-
-#. translators: description of unicode character U+2615
-#: ../data/layoutstrings.py:81
-msgid "Hot beverage"
-msgstr ""
-
-#. translators: description of unicode character U+2620
-#: ../data/layoutstrings.py:83
-msgid "Skull and crossbones"
-msgstr ""
-
-#. translators: description of unicode character U+2622
-#: ../data/layoutstrings.py:85
-msgid "Radioactive sign"
-msgstr ""
-
-#. translators: description of unicode character U+262E
-#: ../data/layoutstrings.py:87
-msgid "Peace symbol"
-msgstr ""
-
-#. translators: description of unicode character U+262F
-#: ../data/layoutstrings.py:89
-msgid "Yin yang"
-msgstr ""
-
-#. translators: description of unicode character U+2639
-#: ../data/layoutstrings.py:91
-msgid "Frowning face"
-msgstr ""
-
-#. translators: description of unicode character U+263A
-#: ../data/layoutstrings.py:93
-msgid "Smiling face"
-msgstr ""
-
-#. translators: description of unicode character U+263C
-#: ../data/layoutstrings.py:95
-msgid "White sun with rays"
-msgstr ""
-
-#. translators: description of unicode character U+263E
-#: ../data/layoutstrings.py:97
-msgid "Last quarter moon"
-msgstr ""
-
-#. translators: description of unicode character U+2640
-#: ../data/layoutstrings.py:99
-msgid "Female sign"
-msgstr ""
-
-#. translators: description of unicode character U+2642
-#: ../data/layoutstrings.py:101
-msgid "Male sign"
-msgstr ""
-
-#. translators: description of unicode character U+2661
-#: ../data/layoutstrings.py:103
-msgid "White heart suit"
-msgstr ""
-
-#. translators: description of unicode character U+2662
-#: ../data/layoutstrings.py:105
-msgid "White diamond suit"
-msgstr ""
-
-#. translators: description of unicode character U+2664
-#: ../data/layoutstrings.py:107
-msgid "White spade suit"
-msgstr ""
-
-#. translators: description of unicode character U+2667
-#: ../data/layoutstrings.py:109
-msgid "White club suit"
-msgstr ""
-
-#. translators: description of unicode character U+266B
-#: ../data/layoutstrings.py:111
-msgid "Beamed eighth note"
-msgstr ""
-
-#. translators: description of unicode character U+2709
-#: ../data/layoutstrings.py:113
-msgid "Envelope"
-msgstr ""
-
-#. translators: description of unicode character U+270C
-#: ../data/layoutstrings.py:115
-msgid "Victory hand"
-msgstr ""
-
-#. translators: description of unicode character U+270D
-#: ../data/layoutstrings.py:117
-msgid "Writing hand"
-msgstr ""
-
-#. translators: description of unicode character U+1F604
-#: ../data/layoutstrings.py:119
-msgid "Smiling face with open mouth and smiling eyes"
-msgstr ""
-
-#. translators: description of unicode character U+1F607
-#: ../data/layoutstrings.py:121
-msgid "Smiling face with halo"
-msgstr ""
-
-#. translators: description of unicode character U+1F608
-#: ../data/layoutstrings.py:123
-msgid "Smiling face with horns"
-msgstr ""
-
-#. translators: description of unicode character U+1F609
-#: ../data/layoutstrings.py:125
-msgid "Winking face"
-msgstr ""
-
-#. translators: description of unicode character U+1F60A
-#: ../data/layoutstrings.py:127
-msgid "Smiling face with smiling eyes"
-msgstr ""
-
-#. translators: description of unicode character U+1F60B
-#: ../data/layoutstrings.py:129
-msgid "Face savouring delicious food"
-msgstr ""
-
-#. translators: description of unicode character U+1F60D
-#: ../data/layoutstrings.py:131
-msgid "Smiling face with heart-shaped eyes"
-msgstr ""
-
-#. translators: description of unicode character U+1F60E
-#: ../data/layoutstrings.py:133
-msgid "Smiling face with sunglasses"
-msgstr ""
-
-#. translators: description of unicode character U+1F60F
-#: ../data/layoutstrings.py:135
-msgid "Smirking face"
-msgstr ""
-
-#. translators: description of unicode character U+1F610
-#: ../data/layoutstrings.py:137
-msgid "Neutral face"
-msgstr ""
-
-#. translators: description of unicode character U+1F612
-#: ../data/layoutstrings.py:139
-msgid "Unamused face"
-msgstr ""
-
-#. translators: description of unicode character U+1F616
-#: ../data/layoutstrings.py:141
-msgid "Confounded face"
-msgstr ""
-
-#. translators: description of unicode character U+1F618
-#: ../data/layoutstrings.py:143
-msgid "Face throwing a kiss"
-msgstr ""
-
-#. translators: description of unicode character U+1F61A
-#: ../data/layoutstrings.py:145
-msgid "Kissing face with closed eyes"
-msgstr ""
-
-#. translators: description of unicode character U+1F61C
-#: ../data/layoutstrings.py:147
-msgid "Face with stuck-out tongue and winking eye"
-msgstr ""
-
-#. translators: description of unicode character U+1F61D
-#: ../data/layoutstrings.py:149
-msgid "Face with stuck-out tongue and tightly closed eyes"
-msgstr ""
-
-#. translators: description of unicode character U+1F61E
-#: ../data/layoutstrings.py:151
-msgid "Disappointed face"
-msgstr ""
-
-#. translators: description of unicode character U+1F620
-#: ../data/layoutstrings.py:153
-msgid "Angry face"
-msgstr ""
-
-#. translators: description of unicode character U+1F621
-#: ../data/layoutstrings.py:155
-msgid "Pouting face"
-msgstr ""
-
-#. translators: description of unicode character U+1F622
-#: ../data/layoutstrings.py:157
-msgid "Crying face"
-msgstr ""
-
-#. translators: description of unicode character U+1F623
-#: ../data/layoutstrings.py:159
-msgid "Persevering face"
-msgstr ""
-
-#. translators: description of unicode character U+1F629
-#: ../data/layoutstrings.py:161
-msgid "Weary face"
-msgstr ""
-
-#. translators: description of unicode character U+1F62B
-#: ../data/layoutstrings.py:163
-msgid "Tired face"
-msgstr ""
-
-#. translators: description of unicode character U+1F632
-#: ../data/layoutstrings.py:165
-msgid "Astonished face"
-msgstr ""
-
-#. translators: description of unicode character U+1F633
-#: ../data/layoutstrings.py:167
-msgid "Flushed face"
-msgstr ""
-
-#. translators: description of unicode character U+1F635
-#: ../data/layoutstrings.py:169
-msgid "Dizzy face"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:1
-msgid "Top"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:2
-msgid "Bottom"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:3
-msgid "Docking settings"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:4
-msgid "Shrink workarea"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:5
-msgid "Shrink the available space for maximized windows."
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:6
-msgid "Expand on landscape screens"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:7
-msgid "Expand keyboard to the width of the workarea."
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:8
-msgid "Expand on portrait screens"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:9
-msgid "Dock to screen edge:"
-msgstr ""
-
-#: ../settings_docking_dialog.ui.h:10
-msgid "Settings"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1311 ../Onboard/KeyboardWidget.py:1424
-msgid "New snippet"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1315 ../Onboard/KeyboardWidget.py:1428
-msgid "_Save snippet"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1328 ../Onboard/KeyboardWidget.py:1441
-msgid "Enter a new snippet for this button:"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1334 ../Onboard/KeyboardWidget.py:1447
-msgid "_Button label:"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1338 ../Onboard/KeyboardWidget.py:1451
-msgid "S_nippet:"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1534
-msgid "_System Language"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1553
-msgid "Other _Languages"
-msgstr ""
-
-#: ../Onboard/KeyboardWidget.py:1555
-msgid "_Languages"
-msgstr ""
-
-#: ../Onboard/utils.py:324
-msgid "New Input Device"
-msgstr ""
-
-#: ../Onboard/utils.py:325
-msgid "Onboard has detected a new input device"
-msgstr ""
-
-#: ../Onboard/utils.py:334
-msgid "Do you want to use this device for keyboard scanning?"
-msgstr ""
-
-#: ../Onboard/utils.py:338
-msgid "Use device"
 msgstr ""
