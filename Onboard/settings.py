@@ -379,18 +379,33 @@ class Settings(DialogBuilder):
                             config.scanner, "activation_flash_interval") #In
         self.bind_spin("activation_flash_count_spinbutton",
                             config.scanner, "activation_flash_count")    #In                
-
+        
+        # If scan popup enable then enable delay spin-button
+        
+        self.wid("scan_feedback_enabled_toggle") \
+                .connect_after("toggled", lambda x:self.popup_delay_update_ui())#In
         self.bind_check("scan_feedback_enabled_toggle",
-                        config.scanner, "scan_feedback_enabled")         #In
+                        config.scanner, "scan_feedback_enabled")#In
+                                 
         self.bind_spin("scanner_unpress_delay_spinbutton",
                             config.scanner, "scanner_popup_unpress_delay") #In 
+        self.popup_delay_update_ui()                            
+        
+        # If change-popup-size checkbox enable then enable height and width spin-button
+        
+        self.wid("size_change_enabled_toggle") \
+                .connect_after("toggled", lambda x:self.size_change_update_ui())#In
+        
         self.bind_check("size_change_enabled_toggle",
-                        config.scanner, "scan_popup_size_change_enabled") #In
+                        config.scanner, "scan_popup_size_change_enabled")
         self.bind_spin("scan_popup_height_spinbutton",
                             config.scanner, "scan_popup_height")          #In  
         self.bind_spin("scan_popup_width_spinbutton",
                             config.scanner, "scan_popup_width")           #In         
-
+        
+        self.size_change_update_ui()
+        # Inputability-End
+        
         # Universal Access
         scanner_enabled = builder.get_object("scanner_enabled")
         scanner_enabled.set_active(config.scanner.enabled)
@@ -446,7 +461,16 @@ class Settings(DialogBuilder):
 
         _logger.info("Entering mainloop of Onboard-settings")
         Gtk.main()
-
+    
+    #To Enable or disable height and widht grid-box    
+    def size_change_update_ui(self): #In
+        self.wid("scan_popup_size_grid"). \
+                    set_sensitive(config.scanner.scan_popup_size_change_enabled)
+    #To Enable or disable popup delay grid-box    
+    def popup_delay_update_ui(self): #In
+        self.wid("scan_popup_delay_grid"). \
+                    set_sensitive(config.scanner.scan_feedback_enabled)        
+    
     def on_pages_view_cursor_changed(self, widget):
         sel = widget.get_selection()
         if sel:
@@ -515,7 +539,7 @@ class Settings(DialogBuilder):
 
     def update_window_widgets(self):
         force_to_top =  config.is_force_to_top()
-
+        
         self.icon_palette_toggle.set_sensitive( \
                              not config.is_icon_palette_last_unhide_option())
         active = config.is_icon_palette_in_use()
@@ -549,6 +573,24 @@ class Settings(DialogBuilder):
         if self.enable_inactive_transparency_toggle.get_active() != active:
             self.enable_inactive_transparency_toggle.set_active(active)
 
+        """
+        #Inputablity[To Enable height and widht spin button when ChangePopupSize checked ]
+        if self.wid("size_change_enabled_toggle").get_active():
+            self.wid("scan_popup_size_grid").set_sensitive(True)
+        else:
+            self.wid("scan_popup_size_grid").set_sensitive(False)
+            
+        if self.wid("scan_feedback_enabled_toggle").get_active():
+            self.wid("scan_popup_delay_grid").set_sensitive(True)
+        else:
+            self.wid("scan_popup_delay_grid").set_sensitive(False)
+       
+        print("\n Val :",config.scanner.scan_popup_size_change_enabled)
+        if config.scanner.scan_popup_size_change_enabled:
+            self.wid("scan_popup_size_grid").set_sensitive(True)
+        else:
+            self.wid("scan_popup_size_grid").set_sensitive(False)
+       """        
     def update_all_widgets(self):
         pass
 
