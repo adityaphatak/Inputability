@@ -3352,7 +3352,7 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkGrid" id="grid4">
+                                              <object class="GtkGrid" id="scan_popup_delay_grid">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
                                                 <property name="row_spacing">10</property>
@@ -3412,7 +3412,7 @@
                                                   </packing>
                                                 </child>
                                                 <child>
-                                                  <object class="GtkGrid" id="grid5">
+                                                  <object class="GtkGrid" id="scan_popup_size_grid">
                                                     <property name="visible">True</property>
                                                     <property name="can_focus">False</property>
                                                     <property name="row_spacing">10</property>
