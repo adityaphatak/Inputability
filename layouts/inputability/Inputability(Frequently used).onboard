@@ -164,6 +164,13 @@
         <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$"/>
+        <key button="true" group="bottomrow" id="layer0" label="Main"/>
+        <key button="true" group="bottomrow" id="layer5" label="Emotions"/>
+        <key button="true" id="gedit" label="Gedit" scan_priority="3" script='gedit'/>
+        <key button="true" id="firefox" label="Firefox" scan_priority="3" script='firefox'/>
+        <key button="true" id="cal" label="Calculator" scan_priority="3" script='cal'/>
+        <key button="true" id="orca" label="Orca" scan_priority="3" script='orca'/>
+                                        
       </panel>
       
       <panel filename="Inputability(Frequently used)-Emo.svg" layer="emoji" unlatch_layer="false">
