@@ -642,6 +642,11 @@ Example: [["LALT", "TAB"], ["LALT", "SHIFT", "TAB"], ["CTRL", "ALT", "F[0-9]+"]]
             <summary>Scanner Key Popup Width</summary>
             <description>Set width for popup</description>
         </key>
+        <key name="key-type" type="s">
+            <default>"single_key"</default>
+            <summary>Key Selection Type (single/multiple)</summary>
+            <description>Number of keys mapped to scan actions for 2-switches scanning.</description>
+        </key>
         <!-- Inputability -->
     </schema>
 
