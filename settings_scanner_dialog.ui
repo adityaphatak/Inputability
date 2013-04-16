@@ -602,7 +602,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkGrid" id="grid4">
+                  <object class="GtkGrid" id="key_type_grid">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -614,7 +614,6 @@
                         <property name="xalign">0</property>
                         <property name="active">True</property>
                         <property name="draw_indicator">True</property>
-                        <signal name="toggled" handler="on_key_type_toggled" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -625,7 +624,7 @@
                     </child>
                     <child>
                       <object class="GtkRadioButton" id="multiple_key">
-                        <property name="label" translatable="yes">Multiple Keys (Half Keyboard)</property>
+                        <property name="label" translatable="yes">Multi-Key</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -633,7 +632,6 @@
                         <property name="active">True</property>
                         <property name="draw_indicator">True</property>
                         <property name="group">single_key</property>
-                        <signal name="toggled" handler="on_key_type_toggled" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
