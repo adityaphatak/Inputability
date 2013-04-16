@@ -1309,6 +1309,8 @@ class ConfigScanner(ConfigObject):
     DEFAULT_SCAN_POPUP_HEIGHT = 10 #In
     DEFAULT_SCAN_POPUP_WIDTH  = 10 #In
     
+    DEFAULT_KEY_TYPE          = "single_key"#In
+    
 
     def _init_keys(self):
         self.schema = SCHEMA_SCANNER
@@ -1337,10 +1339,9 @@ class ConfigScanner(ConfigObject):
         self.add_key("scan-popup-size-change-enabled", False)#In
         self.add_key("scan-popup-height",self.DEFAULT_SCAN_POPUP_HEIGHT )#In
         self.add_key("scan-popup-width",self.DEFAULT_SCAN_POPUP_WIDTH )#In
-        
-        
+        self.add_key("key-type", self.DEFAULT_KEY_TYPE)#In
 
-
+        
 class ConfigTypingAssistance(ConfigObject):
     """ typing-assistance configuration keys"""
 
