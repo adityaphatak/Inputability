@@ -102,6 +102,20 @@ class DialogBuilder(object):
         if callback:
             callback(value)
             
+    """	#In: radio button """
+    def bind_radio(self, name, config_object, key, widget_callback = None):
+        w = self.wid(name)
+        w.set_active(name == getattr(config_object, key))
+        w.connect("toggled", self.bind_radio_callback, config_object, key, widget_callback, name)
+        getattr(config_object, key + '_notify_add')(lambda x: widget_callback)
+
+    def bind_radio_callback(self, widget, config_object, key, callback, value = None):
+        if widget.get_active():
+            setattr(config_object, key, value)
+        if callback:
+            callback(widget, value, config_object, key)
+    """ #In: radio button """
+            
     # checkbox
     def bind_check(self, name, config_object, key, widget_callback = None):
         w = self.wid(name)
@@ -1566,6 +1580,11 @@ class ScannerDialog(DialogBuilder):
                            ScanMode.ACTION_DOWN,
                            ScanMode.ACTION_ACTIVATE] ]
 
+    """ """
+    keyvalues_LHalf = [Gdk.KEY_F1, Gdk.KEY_F2, Gdk.KEY_F3, Gdk.KEY_F4, Gdk.KEY_F5, Gdk.KEY_F6, Gdk.KEY_F7, Gdk.KEY_F8, Gdk.KEY_grave, Gdk.KEY_1, Gdk.KEY_2, Gdk.KEY_3, Gdk.KEY_4, Gdk.KEY_5, Gdk.KEY_6, Gdk.KEY_7, Gdk.KEY_8,  Gdk.KEY_9, Gdk.KEY_Tab, Gdk.KEY_q, Gdk.KEY_w, Gdk.KEY_e, Gdk.KEY_r, Gdk.KEY_t, Gdk.KEY_y, Gdk.KEY_u, Gdk.KEY_i, Gdk.KEY_o, Gdk.KEY_Caps_Lock, Gdk.KEY_a, Gdk.KEY_s, Gdk.KEY_d, Gdk.KEY_f, Gdk.KEY_g, Gdk.KEY_h, Gdk.KEY_j, Gdk.KEY_k, Gdk.KEY_l, Gdk.KEY_Shift_L, Gdk.KEY_z, Gdk.KEY_x, Gdk.KEY_c, Gdk.KEY_v, Gdk.KEY_b, Gdk.KEY_n, Gdk.KEY_m, Gdk.KEY_comma, Gdk.KEY_Control_L, Gdk.KEY_Super_L, Gdk.KEY_Alt_L, Gdk.KEY_space]
+    
+    keyvalues_RHalf = [Gdk.KEY_F9, Gdk.KEY_F10, Gdk.KEY_F11, Gdk.KEY_F12, Gdk.KEY_minus, Gdk.KEY_equal, Gdk.KEY_BackSpace, Gdk.KEY_Print, Gdk.KEY_Scroll_Lock, Gdk.KEY_Pause, Gdk.KEY_Num_Lock, Gdk.KEY_KP_Divide, Gdk.KEY_KP_Multiply, Gdk.KEY_KP_Subtract, Gdk.KEY_bracketleft, Gdk.KEY_bracketright, Gdk.KEY_backslash, Gdk.KEY_Insert, Gdk.KEY_Home, Gdk.KEY_Page_Up, Gdk.KEY_KP_7, Gdk.KEY_KP_8, Gdk.KEY_KP_9, Gdk.KEY_apostrophe, Gdk.KEY_Return, Gdk.KEY_Delete, Gdk.KEY_End, Gdk.KEY_Page_Down, Gdk.KEY_KP_4, Gdk.KEY_KP_5, Gdk.KEY_KP_6, Gdk.KEY_KP_Add, Gdk.KEY_slash, Gdk.KEY_Shift_R, Gdk.KEY_Up, Gdk.KEY_KP_1, Gdk.KEY_KP_2, Gdk.KEY_KP_3, Gdk.KEY_Super_R, Gdk.KEY_Menu, Gdk.KEY_Control_R, Gdk.KEY_Left, Gdk.KEY_Down, Gdk.KEY_Right, Gdk.KEY_KP_0, Gdk.KEY_KP_Decimal, Gdk.KEY_KP_Enter]
+
     def __init__(self):
 
         builder = LoadUI("settings_scanner_dialog")
@@ -1592,6 +1611,41 @@ class ScannerDialog(DialogBuilder):
         self.bind_check("user_scan", scanner, "user_scan")
         self.bind_check("alternate", scanner, "alternate")
         self.bind_check("device_detach", scanner, "device_detach")
+
+        """	#In: radio button	"""
+        def on_key_type_toggle(radio, data, config_object, key):
+            if radio.get_active():
+                self._update_2_scan_ui()
+                
+                self.on_mapping_cleared(None, "clear", self.pointer_selected)
+                
+                if data == "multiple_key":
+                    print("- - - - Key values Left Half - - - -")#In
+                    for keyval in self.keyvalues_LHalf:#In
+                        print(" ", Gdk.keyval_name(keyval), ":", keyval)#In
+                        
+                    print("\n- - - - Key values Right Half - - - -")#In
+                    for keyval in self.keyvalues_RHalf:#In
+                        print(" ", Gdk.keyval_name(keyval), ":", keyval)#In
+                        
+                    for action in self.supported_actions[config.scanner.mode]:
+                        if action == ScanMode.ACTION_STEP:#In
+                            for keyval in self.keyvalues_LHalf:#In
+                                config.scanner.device_key_map[keyval] = action#In
+                        else:
+                            for keyval in self.keyvalues_RHalf:#In
+                                config.scanner.device_key_map[keyval] = action#In
+                
+                    self.on_mapping_edited(None, "multiple", Gdk.KEY_Escape, self.pointer_selected)
+                #else:
+                #    print("\n len_abc: ", len(config.scanner.device_key_map))
+                #    print("\n single_key is active...")
+        	        	
+        self.bind_radio("single_key", config.scanner, "key_type", widget_callback = on_key_type_toggle)
+        self.bind_radio("multiple_key", config.scanner, "key_type", widget_callback = on_key_type_toggle)
+        
+        self._update_2_scan_ui()
+        """	#In: radio button	"""
         
     def __del__(self):
         _logger.debug("ScannerDialog.__del__()")
@@ -1618,6 +1672,16 @@ class ScannerDialog(DialogBuilder):
     def _scan_mode_notify(self, mode):
         self.wid("scan_mode_combo").set_active(mode)
         self.wid("scan_mode_notebook").set_current_page(mode)
+        
+        """ In: radio button """
+        if mode == 2 and self.wid("device_detach").get_sensitive() == True:#stepscan
+            config.scanner.key_type = "single_key"
+            self.wid(config.scanner.key_type).set_active(True)
+            self.wid("key_type_grid").show()
+            """The below line exists here to resest when mode is changed; and not when @ regular start-up once you had set i.e. in case of same if-else in above function"""
+        else:
+            self.wid("key_type_grid").hide()
+        
         self.update_device_mapping()
 
     def init_input_devices(self):
@@ -1657,6 +1721,8 @@ class ScannerDialog(DialogBuilder):
         if it is None:
             return
 
+        self.wid("key_type_grid").hide()
+        
         if name == ScanDevice.DEFAULT_NAME:
             self.pointer_selected = True
             self.wid("device_detach").set_sensitive(False)
@@ -1667,6 +1733,8 @@ class ScannerDialog(DialogBuilder):
                 if device and name == device.get_config_string():
                     self.pointer_selected = device.is_pointer()
                     self.wid("device_detach").set_sensitive(True)
+                    if config.scanner.mode == 2:#stepscan
+                        self.wid("key_type_grid").show()
                     combo.set_active_iter(it)
                     break
                 it = model.iter_next(it)
@@ -1687,10 +1755,16 @@ class ScannerDialog(DialogBuilder):
         if device:
             config.scanner.device_name = device.get_config_string()
             self.wid("device_detach").set_sensitive(True)
+            if config.scanner.mode == 2:#stepscan
+                config.scanner.key_type = "single_key"
+                self.wid(config.scanner.key_type).set_active(True)
+                self.wid("key_type_grid").show()
+                """The below line exists here to resest when mode is changed; and not when @ regular start-up once you had set i.e. in case of same if-else in above function"""
             self.pointer_selected = device.is_pointer()
         else:
             config.scanner.device_name = ScanDevice.DEFAULT_NAME
             self.wid("device_detach").set_sensitive(False)
+            self.wid("key_type_grid").hide()
             self.pointer_selected = True
 
         if self.mapping_renderer:
@@ -1747,6 +1821,10 @@ class ScannerDialog(DialogBuilder):
         view.expand_all()
 
     def on_mapping_edited(self, cell, path, value, pointer_mode):
+        if path == "multiple":#for radio button mapping to work
+        	path = "0:0"
+        	pass
+        
         model = self.wid("device_mapping_model")
         it = model.get_iter_from_string(path)
         if it is None:
@@ -1770,6 +1848,9 @@ class ScannerDialog(DialogBuilder):
 
         model.set(it, col, value)
 
+        if config.scanner.mode == 2 and config.scanner.key_type == "multiple_key":
+            model.set(it, col, 0)
+
         if dup_val in dev_map:
             del dev_map[dup_val]
 
@@ -1787,6 +1868,16 @@ class ScannerDialog(DialogBuilder):
             config.scanner.device_key_map = dev_map
 
     def on_mapping_cleared(self, cell, path, pointer_mode):
+        """ In: radio button """
+        if path == "clear":
+            if len(config.scanner.device_key_map) > 0:
+                config.scanner.device_key_map = {}
+                model = self.wid("device_mapping_model")
+                model.set(model.get_iter_from_string("0:0"), self.COL_KEY, 0)
+                model.set(model.get_iter_from_string("0:1"), self.COL_KEY, 0)
+            return
+        """ In: radio button """
+        
         model = self.wid("device_mapping_model")
         it = model.get_iter_from_string(path)
         if it is None:
@@ -1820,6 +1911,13 @@ class ScannerDialog(DialogBuilder):
         for k, v in dev_map.items():
             if v == action:
                 return k
+
+    """ In: radio button """
+    def _update_2_scan_ui(self):
+        if config.scanner.key_type == "multiple_key" and config.scanner.mode == 2:#only for stepscan
+            self.wid("scrolledwindow1").set_sensitive(False)
+        else: #config.scanner.key_type == "single_key"
+            self.wid("scrolledwindow1").set_sensitive(True)
 
 
 MAX_GINT32 = (1 << 31) - 1
@@ -1895,6 +1993,9 @@ class CellRendererMapping(Gtk.CellRendererText):
                 text = "{} {!s}".format(_("Button"), self.button)
             else:
                 text = Gdk.keyval_name(self.key)
+
+        if config.scanner.mode == 2 and config.scanner.key_type == "multiple_key":
+            text = _("Disabled")
 
         self.set_property("text", text)
 
