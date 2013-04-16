@@ -385,6 +385,11 @@ class ScanMode(Timer):
     ACTION_STEP_STOP  = 7
     ACTION_UNHANDLED  = 8
 
+    """ Handles Key Events (Multiple Press at a time) """#In
+    MUL_KEY = 0#In
+    SCAN_PREV_ACTION = ACTION_UNHANDLED#In
+    SCAN_ACTION_DO = True#In
+
     """ Time between key activation flashes (in sec) """
     ACTIVATION_FLASH_INTERVAL = 0.1
 
@@ -471,12 +476,41 @@ class ScanMode(Timer):
             action = self.map_actions(button_map, event.button, False)
 
         elif event_type == XIEventType.KeyPress:
-            key_map = config.scanner.device_key_map
-            action = self.map_actions(key_map, event.keyval, True)
+            #key_map = config.scanner.device_key_map
+            #action = self.map_actions(key_map, event.keyval, True)
+            if self.MUL_KEY >= 0:#In
+                key_map = config.scanner.device_key_map#In
+                self.SCAN_PREV_ACTION = self.map_actions(key_map, event.keyval, True)#In
+                
+                self.MUL_KEY = self.MUL_KEY + 1#In
+                return#In
+            else:
+                action = self.map_actions(key_map, event.keyval, False)
 
         elif event_type == XIEventType.KeyRelease:
-            key_map = config.scanner.device_key_map
-            action = self.map_actions(key_map, event.keyval, False)
+            #key_map = config.scanner.device_key_map
+            #action = self.map_actions(key_map, event.keyval, False)
+            if self.MUL_KEY > 0:#In
+                self.MUL_KEY = self.MUL_KEY - 1#In
+                
+                key_map = config.scanner.device_key_map
+                action = self.map_actions(key_map, event.keyval, True)#In
+                
+                if action != self.SCAN_PREV_ACTION:#In
+                    self.SCAN_ACTION_DO = False#In
+                    
+                if self.MUL_KEY > 0 or (self.MUL_KEY == 0 and self.SCAN_ACTION_DO != True):#In
+                    action = self.map_actions(key_map, event.keyval, False)
+
+                    if self.MUL_KEY == 0 and self.SCAN_ACTION_DO != True:#In
+                        """
+                        print("E R R O R : PLEASE DONT PRESS BOTH FUNCTIONALITIES TOGETHER!!!")#In
+
+                        TODO : Show Error Message
+                        """
+                        self.SCAN_ACTION_DO = True#In
+            else:
+                action = self.map_actions(key_map, event.keyval, False)
 
         else:
             action = self.ACTION_UNHANDLED
@@ -761,6 +795,7 @@ class StepScan(ScanMode):
                 self.redraw(self.chunker.highlight(True))
             else:
                 self.activate()
+                self.SCAN_PREV_ACTION = self.ACTION_UNHANDLED#2_2
 
 
 class DirectScan(ScanMode):
