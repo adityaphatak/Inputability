@@ -3245,7 +3245,6 @@
                                                 <property name="adjustment">_flash_interval_adjustment</property>
                                                 <property name="digits">1</property>
                                                 <property name="numeric">True</property>
-                                                <property name="update_policy">if-valid</property>
                                               </object>
                                               <packing>
                                                 <property name="left_attach">1</property>

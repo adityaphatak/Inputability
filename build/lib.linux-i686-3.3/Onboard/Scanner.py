@@ -566,7 +566,7 @@ class ScanMode(Timer):
 
         if config.scanner.feedback_flash:
             """ Scanner Blinking """
-            self._flash = self.ACTIVATION_FLASH_COUNT #self.ACTIVATION_FLASH_COUNT
+            self._flash = self.ACTIVATION_FLASH_COUNT * 2 #In
             self._activation_timer.start(self.ACTIVATION_FLASH_INTERVAL,
                                          self._on_activation_timer,
                                          key)
