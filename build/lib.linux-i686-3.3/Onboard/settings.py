@@ -1620,14 +1620,6 @@ class ScannerDialog(DialogBuilder):
                 self.on_mapping_cleared(None, "clear", self.pointer_selected)
                 
                 if data == "multiple_key":
-                    print("- - - - Key values Left Half - - - -")#In
-                    for keyval in self.keyvalues_LHalf:#In
-                        print(" ", Gdk.keyval_name(keyval), ":", keyval)#In
-                        
-                    print("\n- - - - Key values Right Half - - - -")#In
-                    for keyval in self.keyvalues_RHalf:#In
-                        print(" ", Gdk.keyval_name(keyval), ":", keyval)#In
-                        
                     for action in self.supported_actions[config.scanner.mode]:
                         if action == ScanMode.ACTION_STEP:#In
                             for keyval in self.keyvalues_LHalf:#In
@@ -1637,9 +1629,6 @@ class ScannerDialog(DialogBuilder):
                                 config.scanner.device_key_map[keyval] = action#In
                 
                     self.on_mapping_edited(None, "multiple", Gdk.KEY_Escape, self.pointer_selected)
-                #else:
-                #    print("\n len_abc: ", len(config.scanner.device_key_map))
-                #    print("\n single_key is active...")
         	        	
         self.bind_radio("single_key", config.scanner, "key_type", widget_callback = on_key_type_toggle)
         self.bind_radio("multiple_key", config.scanner, "key_type", widget_callback = on_key_type_toggle)
