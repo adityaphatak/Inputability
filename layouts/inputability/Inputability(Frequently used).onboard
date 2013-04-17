@@ -22,7 +22,7 @@
         <key button="true" id="RST1" label="Reset" scan_no_activation="true"/>
         <key button="true" id="RST2" label="Reset" scan_no_activation="true" scan_priority="1"/>
         <key button="true" id="RST3" label="Reset" scan_no_activation="true" scan_priority="2"/>
-        <key button="true" id="RST4" label="Orca" scan_priority="3" script='orca'/>
+        <key button="true" id="RST4" label="Orca" scan_priority="3" />
         <key group="alphanumeric" id="AD01" keycode="24" name="q" sticky="false"/>
         <key group="alphanumeric" id="AD02" keycode="25" name="w" sticky="false" scan_priority="1"/>
         <key group="alphanumeric" id="AD03" keycode="26" name="e" sticky="false"/>
