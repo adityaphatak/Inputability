@@ -476,8 +476,6 @@ class ScanMode(Timer):
             action = self.map_actions(button_map, event.button, False)
 
         elif event_type == XIEventType.KeyPress:
-            #key_map = config.scanner.device_key_map
-            #action = self.map_actions(key_map, event.keyval, True)
             if self.MUL_KEY >= 0:#In
                 key_map = config.scanner.device_key_map#In
                 self.SCAN_PREV_ACTION = self.map_actions(key_map, event.keyval, True)#In
@@ -488,8 +486,6 @@ class ScanMode(Timer):
                 action = self.map_actions(key_map, event.keyval, False)
 
         elif event_type == XIEventType.KeyRelease:
-            #key_map = config.scanner.device_key_map
-            #action = self.map_actions(key_map, event.keyval, False)
             if self.MUL_KEY > 0:#In
                 self.MUL_KEY = self.MUL_KEY - 1#In
                 
