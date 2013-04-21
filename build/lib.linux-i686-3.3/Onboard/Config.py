@@ -1310,6 +1310,7 @@ class ConfigScanner(ConfigObject):
     DEFAULT_SCAN_POPUP_WIDTH  = 10 #In
     
     DEFAULT_KEY_TYPE          = "single_key"#In
+    DEFAULT_COLOR_TYPE        = "theme_color"#In
     
 
     def _init_keys(self):
@@ -1332,6 +1333,7 @@ class ConfigScanner(ConfigObject):
         self.add_key("device-key-map", self.DEFAULT_DEVICE_KEY_MAP, 'a{ii}')
         self.add_key("device-button-map", self.DEFAULT_DEVICE_BUTTON_MAP, 'a{ii}')
         self.add_key("feedback-flash", self.DEFAULT_FEEDBACK_FLASH)
+        
         self.add_key("scan-feedback-enabled", False)#In
         self.add_key("activation-flash-interval", self.DEFAULT_ACTIVATION_FLASH_INTERVAL)#In
         self.add_key("activation-flash-count", self.DEFAULT_ACTIVATION_FLASH_COUNT) #In
@@ -1340,6 +1342,7 @@ class ConfigScanner(ConfigObject):
         self.add_key("scan-popup-height",self.DEFAULT_SCAN_POPUP_HEIGHT )#In
         self.add_key("scan-popup-width",self.DEFAULT_SCAN_POPUP_WIDTH )#In
         self.add_key("key-type", self.DEFAULT_KEY_TYPE)#In
+        self.add_key("color-type", self.DEFAULT_COLOR_TYPE)#In
 
         
 class ConfigTypingAssistance(ConfigObject):
