@@ -647,6 +647,11 @@ Example: [["LALT", "TAB"], ["LALT", "SHIFT", "TAB"], ["CTRL", "ALT", "F[0-9]+"]]
             <summary>Key Selection Type (single/multiple)</summary>
             <description>Number of keys mapped to scan actions for 2-switches scanning.</description>
         </key>
+        <key name="color-type" type="s">
+            <default>"theme_color"</default>
+            <summary>Key Color Type (theme/custom)</summary>
+            <description>Color mapped to scan actions for 2-switches scanning.</description>
+        </key>
         <!-- Inputability -->
     </schema>
 
