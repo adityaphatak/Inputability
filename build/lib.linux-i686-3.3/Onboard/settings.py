@@ -418,6 +418,23 @@ class Settings(DialogBuilder):
                             config.scanner, "scan_popup_width")           #In         
         
         self.size_change_update_ui()
+        
+        # Color type
+
+        def on_color_type_toggle(radio, data, config_object, key):
+            if radio.get_active():
+                self.scan_color_update_ui()
+                
+                if data == "theme_color":
+                    print("\n Theme-color")
+                else:
+                    print("\n Custom-color")
+        	        	
+        self.bind_radio("theme_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
+        self.bind_radio("custom_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
+        
+        self.scan_color_update_ui()
+        
         # Inputability-End
         
         # Universal Access
@@ -475,6 +492,20 @@ class Settings(DialogBuilder):
 
         _logger.info("Entering mainloop of Onboard-settings")
         Gtk.main()
+    
+    #To Enable or disable color_button grid-box
+    def scan_color_update_ui(self): #In
+        self.wid("scan_colorbutton").set_sensitive(not (config.scanner.color_type == "theme_color"))
+        """
+        print("\n color_type: ", config.scanner.color_type)
+        if config.scanner.color_type == "theme_color":
+            print("\n False: Hide")
+            #self.wid("scan_color_button_grid").set_visible(False)
+            self.wid("scan_color_button_grid").set_sensitive(False)
+        else:
+            print("\n True: Show")
+            #self.wid("scan_color_button_grid").set_visible(True)
+            self.wid("scan_color_button_grid").set_sensitive(True)"""
     
     #To Enable or disable height and widht grid-box    
     def size_change_update_ui(self): #In
