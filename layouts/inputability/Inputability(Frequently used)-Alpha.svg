@@ -59,16 +59,14 @@
  <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="241.5"/>
  <rect id="layer4" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="281.75"/>
 
- <rect id="RST1" style="stroke:#000;fill:#e5d8b2" height="20" width="78" y="108" x="0"/> <!-- SKIP Button -->
- <rect id="RST2" style="stroke:#000;fill:#e5d8b2" height="20" width="78" y="108" x="80.5"/> <!-- SKIP Button -->
- <rect id="RST3" style="stroke:#000;fill:#e5d8b2" height="20" width="78" y="108" x="161"/> <!-- SKIP Button -->
- <rect id="RST4" style="stroke:#000;fill:#e5d8b2" height="20" width="78" y="108" x="241.5"/> <!-- SKIP Button -->
-
 
  <rect id="UP" height="20" width="39" stroke="#000;fill:#e5d8b2" y="108" x="0"  />
  <rect id="DOWN" height="20" width="39" stroke="#000;fill:#e5d8b2" y="108" x="40.25"  />
  <rect id="LEFT" height="20" width="39" stroke="#000;fill:#e5d8b2" y="108" x="80.5"  />
-  <rect id="RGHT" height="20" width="39" stroke="#000;fill#e5d8b2" y="108" x="120.75"  />
-
+ <rect id="RGHT" height="20" width="39" stroke="#000;fill#e5d8b2" y="108" x="120.75"  />
+ <rect id="RTRN" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="108" x="161"/>
+ <rect id="BKSP" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="108" x="201.25"/>
+ <rect id="TAB" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="108" x="241.5"/>
+ 
 
 </svg>
