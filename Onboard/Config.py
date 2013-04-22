@@ -1312,7 +1312,6 @@ class ConfigScanner(ConfigObject):
     DEFAULT_KEY_TYPE          = "single_key"#In
     DEFAULT_COLOR_TYPE        = "theme_color"#In
     
-
     def _init_keys(self):
         self.schema = SCHEMA_SCANNER
         self.sysdef_section = "scanner"
@@ -1343,6 +1342,7 @@ class ConfigScanner(ConfigObject):
         self.add_key("scan-popup-width",self.DEFAULT_SCAN_POPUP_WIDTH )#In
         self.add_key("key-type", self.DEFAULT_KEY_TYPE)#In
         self.add_key("color-type", self.DEFAULT_COLOR_TYPE)#In
+        self.add_key("scan-color", ['0.45', '0.45', '0.7', '1.0'], "as") #In
 
         
 class ConfigTypingAssistance(ConfigObject):
