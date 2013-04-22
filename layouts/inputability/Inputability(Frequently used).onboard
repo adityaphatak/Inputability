@@ -10,6 +10,8 @@
         <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
+ 	<key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
+ 	<key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="4"/>
       </panel>
     
 
@@ -214,8 +216,8 @@
         <key button="true" group="bottomrow" id="layer0" label="Abc" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer1" label="Main" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="2"/>
-        <key button="true" group="bottomrow" id="layer3" label="Function" scan_priority="2"/>
-        <key button="true" group="bottomrow" id="layer4" label="@#$" scan_priority="3"/>
+        <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="3"/>
       </panel>
     </panel>
   </box>
