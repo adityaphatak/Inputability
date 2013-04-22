@@ -652,6 +652,11 @@ Example: [["LALT", "TAB"], ["LALT", "SHIFT", "TAB"], ["CTRL", "ALT", "F[0-9]+"]]
             <summary>Key Color Type (theme/custom)</summary>
             <description>Color mapped to scan actions for 2-switches scanning.</description>
         </key>
+        <key name="scan-color" type="as">
+            <default>['0.45', '0.45', '0.7', '1.0']</default>
+            <summary>Scan Color</summary>
+            <description>Color to be set for feedback while scanning.</description>
+        </key>
         <!-- Inputability -->
     </schema>
 
