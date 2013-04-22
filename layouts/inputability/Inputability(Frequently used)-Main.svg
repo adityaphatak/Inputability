@@ -10,7 +10,9 @@
   </rdf:RDF>
  </metadata>
 
- <rect id="layer1" style="fill:#e5d8b2;stroke:#000000;stroke-width:1" height="50" width="60" y="26.5" x="30"/>
- <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="50" width="60" y="26.5" x="120"/>
- <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="50" width="60" y="26.5" x="210"/>
+ <rect id="layer1" style="fill:#e5d8b2;stroke:#000000;stroke-width:1" height="50" width="50" y="26.5" x="7"/>
+ <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="50" width="50" y="26.5" x="71"/>
+ <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="50" width="50" y="26.5" x="135"/>
+ <rect id="layer4" style="stroke:#000;fill:#e5d8b2" height="50" width="50" y="26.5" x="199"/>
+ <rect id="layer5" style="stroke:#000;fill:#e5d8b2" height="50" width="50" y="26.5" x="263"/>
 </svg>

@@ -10,6 +10,8 @@
         <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
+ 	<key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
+ 	<key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="4"/>
       </panel>
     
 
@@ -57,6 +59,8 @@
         <key group="misc" id="CAPS" keycode="66" label="⇪Caps Lock" sticky="true" sticky_behavior="lock" action="double-stroke" scan_priority="1"/>
         <key group="bottomrow" id="SPCE" keycode="65" label="Space" name="Space" sticky="false" scan_priority="1"/>
         <key group="misc" id="RTRN" keycode="36" label="⏎Enter" sticky="false"/>
+	<key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false" scan_priority="2"/>
+  	<key id='TAB' group='misc' keycode='23'  label='⇥ TAB' action='single-stroke'/>
       </panel>
    
       <panel filename="Inputability(Frequently used)-Numbers.svg" layer="numbers" unlatch_layer="false">
@@ -214,8 +218,8 @@
         <key button="true" group="bottomrow" id="layer0" label="Abc" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer1" label="Main" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="2"/>
-        <key button="true" group="bottomrow" id="layer3" label="Function" scan_priority="2"/>
-        <key button="true" group="bottomrow" id="layer4" label="@#$" scan_priority="3"/>
+        <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="3"/>
       </panel>
     </panel>
   </box>

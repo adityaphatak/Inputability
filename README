@@ -1,7 +1,7 @@
 Onboard 0.99.0~alpha1~tr1190
 ----------------------------
 
-Hello World
+
 
 Description:
 
@@ -65,14 +65,6 @@ D-Bus Interface:
         string:"org.onboard.Onboard.Keyboard" string:"Visible"
 
 
-Homepage:
-
-    https://launchpad.net/onboard
-
-
-Reporting Bugs:
-
-    https://bugs.launchpad.net/onboard
 
 
 License:
@@ -82,4 +74,3 @@ License:
 
 
 
-Testing push to git
