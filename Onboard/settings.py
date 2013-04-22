@@ -101,8 +101,28 @@ class DialogBuilder(object):
         setattr(config_object, key, value)
         if callback:
             callback(value)
-            
-    """	#In: radio button """
+
+    # color button
+    def bind_color(self, name, config_object, key, widget_callback):
+        w = self.wid(name)
+        w.connect("color-set", self.bind_color_callback, config_object, key, widget_callback)    #3
+        getattr(config_object, key + '_notify_add')(lambda x: widget_callback)                 #4
+
+    def bind_color_callback(self, widget, config_object, key, callback):
+        color = Gdk.RGBA()
+        widget.get_rgba(color)
+        
+        color_rgba = []
+        color_rgba.append(str(color.red))
+        color_rgba.append(str(color.green))
+        color_rgba.append(str(color.blue))
+        color_rgba.append(str(color.alpha))
+        
+        setattr(config_object, key, color_rgba)
+        if callback:
+            callback(widget, config_object, key)
+
+    # radio button
     def bind_radio(self, name, config_object, key, widget_callback = None):
         w = self.wid(name)
         w.set_active(name == getattr(config_object, key))
@@ -114,7 +134,6 @@ class DialogBuilder(object):
             setattr(config_object, key, value)
         if callback:
             callback(widget, value, config_object, key)
-    """ #In: radio button """
             
     # checkbox
     def bind_check(self, name, config_object, key, widget_callback = None):
@@ -429,9 +448,16 @@ class Settings(DialogBuilder):
                     print("\n Theme-color")
                 else:
                     print("\n Custom-color")
+                    
         	        	
         self.bind_radio("theme_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
         self.bind_radio("custom_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
+        
+        def on_color_set(colorbutton, config_object, key):
+            if config.scanner.color_type == "custom_color":
+                print("\n scan color: ", config.scanner.scan_color)
+        
+        self.bind_color("scan_colorbutton", config.scanner, "scan_color", widget_callback = on_color_set)
         
         self.scan_color_update_ui()
         
