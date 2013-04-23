@@ -446,7 +446,7 @@ class ColorScheme(object):
         Get the color for the given key element and optionally key state.
         If <state> is None the key state is retrieved from <key>.
         """
-
+        
         if state is None:
             state = {}
             state["prelight"]    =  key.prelight
@@ -511,27 +511,21 @@ class ColorScheme(object):
             rgb = root_rgb
             opacity = root_opacity
 
-        if state.get("scanned") and config.scanner.color_type == "custom_color" and config.scanner.enabled == True:
-            color_rgba = []
-            for val in config.scanner.scan_color:
-                color_rgba.append(float(val))
-
-            rgb = color_rgba[:3]
-            opacity = color_rgba[3]
-        else:
-            if rgb is None:
-                rgb = self.get_key_default_rgba(key, element, state)[:3]
-
-            if opacity is None:
-                opacity = self.get_key_default_rgba(key, element, state)[3]
-        
-        """    
         if rgb is None:
-            rgb = self.get_key_default_rgba(key, element, state)[:3]
+            # If custom color is chosen for scanning, then set that color
+            if state.get("scanned") and config.scanner.color_type == "custom_color" and config.scanner.enabled == True:
+                color_rgba = []
+                for val in config.scanner.scan_color:
+                    color_rgba.append(float(val))
+                    
+                rgb = color_rgba[:3]
+                opacity = color_rgba[3]
+            else:
+            # Otherwise set default color for scanning (via get_key_default_rgba())
+                rgb = self.get_key_default_rgba(key, element, state)[:3]
 
         if opacity is None:
             opacity = self.get_key_default_rgba(key, element, state)[3]
-        """
 
         rgba = rgb + [opacity]
         return rgba
