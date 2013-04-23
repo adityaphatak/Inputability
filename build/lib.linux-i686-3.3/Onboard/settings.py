@@ -104,7 +104,6 @@ class DialogBuilder(object):
 
     # color button
     def bind_color(self, name, config_object, key, widget_callback):
-        print("\n Binding Color button")
         w = self.wid(name)
         w.connect("color-set", self.bind_color_callback, config_object, key, widget_callback)    #3
         getattr(config_object, key + '_notify_add')(lambda x: widget_callback)                 #4
@@ -444,19 +443,13 @@ class Settings(DialogBuilder):
         def on_color_type_toggle(radio, data, config_object, key):
             if radio.get_active():
                 self.scan_color_update_ui()
-                
-                if data == "theme_color":
-                    print("\n Theme-color")
-                else:
-                    print("\n Custom-color")
-                    
         	        	
         self.bind_radio("theme_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
         self.bind_radio("custom_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
         
         def on_color_set(colorbutton, config_object, key):
             if config.scanner.color_type == "custom_color":
-                print("\n scan color: ", config.scanner.scan_color)
+                pass
         
         self.bind_color("scan_colorbutton", config.scanner, "scan_color", widget_callback = on_color_set)
         
@@ -635,24 +628,6 @@ class Settings(DialogBuilder):
         if self.enable_inactive_transparency_toggle.get_active() != active:
             self.enable_inactive_transparency_toggle.set_active(active)
 
-        """
-        #Inputablity[To Enable height and widht spin button when ChangePopupSize checked ]
-        if self.wid("size_change_enabled_toggle").get_active():
-            self.wid("scan_popup_size_grid").set_sensitive(True)
-        else:
-            self.wid("scan_popup_size_grid").set_sensitive(False)
-            
-        if self.wid("scan_feedback_enabled_toggle").get_active():
-            self.wid("scan_popup_delay_grid").set_sensitive(True)
-        else:
-            self.wid("scan_popup_delay_grid").set_sensitive(False)
-       
-        print("\n Val :",config.scanner.scan_popup_size_change_enabled)
-        if config.scanner.scan_popup_size_change_enabled:
-            self.wid("scan_popup_size_grid").set_sensitive(True)
-        else:
-            self.wid("scan_popup_size_grid").set_sensitive(False)
-       """        
     def update_all_widgets(self):
         pass
 
