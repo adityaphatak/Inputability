@@ -205,16 +205,17 @@ class LabelPopup(KeyboardPopup):
 
         # background
         if config.scanner.color_type == "custom_color" and config.scanner.enabled == True:
-            #  scan label popup color
+            # scan label popup color
             color_rgba = []
             for val in config.scanner.scan_color:
-                color_rgba.append(float(val))
+                color_rgba.append(val)
             
             rgb = color_rgba[:3]
             opacity = color_rgba[3]
             fill = rgb + [opacity]
         else:
             fill = self._key.get_fill_color()
+
         context.save()
         context.set_operator(cairo.OPERATOR_CLEAR)
         context.paint()
