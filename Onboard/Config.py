@@ -1342,7 +1342,7 @@ class ConfigScanner(ConfigObject):
         self.add_key("scan-popup-width",self.DEFAULT_SCAN_POPUP_WIDTH )#In
         self.add_key("key-type", self.DEFAULT_KEY_TYPE)#In
         self.add_key("color-type", self.DEFAULT_COLOR_TYPE)#In
-        self.add_key("scan-color", ['0.45', '0.45', '0.7', '1.0'], "as") #In
+        self.add_key("scan-color", [0.45, 0.45, 0.7, 1.0], "ad") #In
 
         
 class ConfigTypingAssistance(ConfigObject):
