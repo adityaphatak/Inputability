@@ -516,7 +516,7 @@ class ColorScheme(object):
             if state.get("scanned") and config.scanner.color_type == "custom_color" and config.scanner.enabled == True:
                 color_rgba = []
                 for val in config.scanner.scan_color:
-                    color_rgba.append(float(val))
+                    color_rgba.append(val)
                     
                 rgb = color_rgba[:3]
                 opacity = color_rgba[3]
