@@ -208,7 +208,7 @@ class LabelPopup(KeyboardPopup):
             # scan label popup color
             color_rgba = []
             for val in config.scanner.scan_color:
-                color_rgba.append(float(val))
+                color_rgba.append(val)
             
             rgb = color_rgba[:3]
             opacity = color_rgba[3]
