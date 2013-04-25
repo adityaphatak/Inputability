@@ -105,18 +105,18 @@ class DialogBuilder(object):
     # color button
     def bind_color(self, name, config_object, key, widget_callback):
         w = self.wid(name)
-        w.connect("color-set", self.bind_color_callback, config_object, key, widget_callback)    #3
-        getattr(config_object, key + '_notify_add')(lambda x: widget_callback)                 #4
+        w.connect("color-set", self.bind_color_callback, config_object, key, widget_callback)   #3
+        getattr(config_object, key + '_notify_add')(lambda x: widget_callback)                  #4
 
     def bind_color_callback(self, widget, config_object, key, callback):
         color = Gdk.RGBA()
         widget.get_rgba(color)
         
         color_rgba = []
-        color_rgba.append(str(color.red))
-        color_rgba.append(str(color.green))
-        color_rgba.append(str(color.blue))
-        color_rgba.append(str(color.alpha))
+        color_rgba.append(color.red)
+        color_rgba.append(color.green)
+        color_rgba.append(color.blue)
+        color_rgba.append(color.alpha)
         
         setattr(config_object, key, color_rgba)
         if callback:
