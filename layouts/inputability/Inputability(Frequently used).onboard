@@ -150,33 +150,34 @@
       
       
       
-      <panel filename="Inputability(Frequently used)-Functions.svg" layer="function" unlatch_layer="false">
+       <panel filename="Inputability(Frequently used)-Functions.svg" layer="function" unlatch_layer="false">
         <key group="fkey s" id="F1" keysym="65470" label="F1"/>
         <key group="fkeys" id="F2" keysym="65471" label="F2"/>
-        <key group="fkeys" id="F3" keysym="65472" label="F3"/>
+        <key group="fkeys" id="F3" keysym="65472" label="F3" scan_priority="1"/>
         <key group="fkeys" id="F4" keysym="65473" label="F4"/>
         <key group="fkeys" id="F5" keysym="65474" label="F5"/>
-        <key group="fkeys" id="F6" keysym="65475" label="F6"/>
+        <key group="fkeys" id="F6" keysym="65475" label="F6" scan_priority="1"/>
         <key group="fkeys" id="F7" keysym="65476" label="F7"/>
         <key group="fkeys" id="F8" keysym="65477" label="F8"/>
-        <key group="fkeys" id="F9" keysym="65478" label="F9"/>
+        <key group="fkeys" id="F9" keysym="65478" label="F9" scan_priority="1"/>
         <key group="fkeys" id="F10" keysym="65479" label="F10"/>
         <key group="fkeys" id="F11" keysym="65480" label="F11"/>
-        <key group="fkeys" id="F12" keysym="65481" label="F12"/>
+        <key group="fkeys" id="F12" keysym="65481" label="F12" scan_priority="1"/>
         <key id="LCTL" keycode="37" label="Ctrl" sticky="true"/>
         <key id="LALT" keycode="64" label="Alt" sticky="true"/>
-        <key group="alphanumeric" id="LWIN" keycode="133" label="Win" sticky="false"/>
-        <key button="true" group="bottomrow" id="layer1" label="ABC"/>
-        <key button="true" group="bottomrow" id="layer2" label="123"/>
-        <key button="true" group="bottomrow" id="layer3" label="@#$"/>
-        <key button="true" group="bottomrow" id="layer0" label="Main"/>
-        <key button="true" group="bottomrow" id="layer5" label="Emotions"/>
-        <key button="true" id="gedit" label="Gedit" scan_priority="3" script='gedit'/>
-        <key button="true" id="firefox" label="Firefox" scan_priority="3" script='firefox'/>
-        <key button="true" id="cal" label="Calculator" scan_priority="3" script='cal'/>
-        <key button="true" id="orca" label="Orca" scan_priority="3" script='orca'/>
+        <key group="alphanumeric" id="LWIN" keycode="133" label="Win" sticky="false" scan_priority="1"/>
+        <key button="true" group="bottomrow" id="layer1" label="ABC" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
+        <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer0" label="Main" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="2"/>
+        <key button="true" id="gedit" label="Gedit" scan_priority="1" script='gedit' />
+        <key button="true" id="firefox" label="Firefox" scan_priority="2" script='firefox' />
+        <key button="true" id="cal" label="Calculator" scan_priority="2" script='cal' />
+        <key button="true" id="orca" label="Orca" scan_priority="1" script='orca' />
                                         
       </panel>
+      
       
       <panel filename="Inputability(Frequently used)-Emo.svg" layer="emoji" unlatch_layer="false">
      
