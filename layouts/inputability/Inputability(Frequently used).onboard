@@ -22,10 +22,10 @@
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="3"/>
         <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
         
-        <key id='LEFT' group='directions' keycode='113' label='←' />
-        <key id='RGHT' group='directions' keycode='114' label='→' />
-        <key id='UP'   group='directions' scan_priority='1' keycode='111' label='↑' />
-        <key id='DOWN' group='directions' scan_priority='1' keycode='116' label='↓' />
+        <key id='LEFT' group='directions' keycode='113' label='←' scan_priority='1'/>
+        <key id='RGHT' group='directions' keycode='114' label='→' scan_priority='1'/>
+        <key id='UP'   group='directions' keycode='111' label='↑' />
+        <key id='DOWN' group='directions' keycode='116' label='↓' />
                     
         <key group="alphanumeric" id="AD01" keycode="24" name="q" sticky="false"/>
         <key group="alphanumeric" id="AD02" keycode="25" name="w" sticky="false" scan_priority="1"/>
@@ -54,13 +54,12 @@
         <key group="alphanumeric" id="AB05" keycode="56" name="b" sticky="false" />
         <key group="alphanumeric" id="AB06" keycode="57" name="n" sticky="false" scan_priority="3"/>
         <key group="alphanumeric" id="AB07" keycode="58" name="m" sticky="false"  scan_priority="2"/>
-        <key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false"/>
+        <key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false" scan_priority="2"/>
         <key group="alphanumeric" id="AB08" keycode="59" name="," sticky="false" />
         <key group="misc" id="CAPS" keycode="66" label="⇪Caps Lock" sticky="true" sticky_behavior="lock" action="double-stroke" scan_priority="1"/>
         <key group="bottomrow" id="SPCE" keycode="65" label="Space" name="Space" sticky="false" scan_priority="1"/>
-        <key group="misc" id="RTRN" keycode="36" label="⏎Enter" sticky="false"/>
-	<key group="bottomrow" id="BKSP" image="erase-left.svg" keycode="22" sticky="false" scan_priority="2"/>
-  	<key id='TAB' group='misc' keycode='23'  label='⇥ TAB' action='single-stroke'/>
+        <key group="misc" id="RTRN" keycode="36" label="⏎Enter" sticky="false" scan_priority='2'/>
+	    <key id='TAB' group='misc' keycode='23'  label='⇥ TAB' action='single-stroke' scan_priority='3'/>
       </panel>
    
       <panel filename="Inputability(Frequently used)-Numbers.svg" layer="numbers" unlatch_layer="false">
