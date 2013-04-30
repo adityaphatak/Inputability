@@ -10,8 +10,8 @@
         <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
- 	<key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
- 	<key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="4"/>
+ 	    <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
+ 	    <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="4"/>
       </panel>
     
 
@@ -136,16 +136,6 @@
         <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="2"/>
          <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="3"/>
       
-        
-       
-        
-       
-        <key group="alphanumeric" id="AB01" keysym="2761" label="™" sticky="false"/>
-        <key group="alphanumeric" id="AB02" keysym="174" label="®" sticky="false"/>
-        <key group="alphanumeric" id="AB03" keysym="169" label="©" stidcky="false"/>
-        <key group="alphanumeric" id="AB04" keysym="182" label="¶" sticky="false"/>
-        <key group="alphanumeric" id="AC03" keysym="163" label="£" sticky="false"/>
-       
     </panel>
       
       
@@ -175,6 +165,7 @@
         <key button="true" id="firefox" label="Firefox" scan_priority="2" script='firefox' />
         <key button="true" id="cal" label="Calculator" scan_priority="2" script='cal' />
         <key button="true" id="orca" label="Orca" scan_priority="1" script='orca' />
+        <key button="true" group="bottomrow" id="layer6" label="Restart" scan_priority="1"/>
                                         
       </panel>
       
@@ -221,6 +212,17 @@
         <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="2"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="3"/>
       </panel>
+      
+      
+      
+      
+      <panel filename="Inputability(Frequently used)-Power-OFF.svg" layer="power-off">
+        <key button="true" group="bottomrow" id="layer0" label="@#$"/>
+ 	    <key button="true" id="restart" label="Restart" scan_priority="1" script='restart' />
+ 	     <key button="true" id="shutdown" label="Power Off" scan_priority="2" script='shutdown' />
+      </panel>
+    
+      
     </panel>
   </box>
 </keyboard>
