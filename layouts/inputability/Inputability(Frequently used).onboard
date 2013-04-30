@@ -165,7 +165,9 @@
         <key button="true" id="firefox" label="Firefox" scan_priority="2" script='firefox' />
         <key button="true" id="cal" label="Calculator" scan_priority="2" script='cal' />
         <key button="true" id="orca" label="Orca" scan_priority="1" script='orca' />
+        <key button="true" id="terminal" label="Terminal" scan_priority="2" script='terminal'/>
         <key button="true" group="bottomrow" id="layer6" label="Restart" scan_priority="1"/>
+        
                                         
       </panel>
       
