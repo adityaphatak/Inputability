@@ -217,7 +217,7 @@
       
       
       <panel filename="Inputability(Frequently used)-Power-OFF.svg" layer="power-off">
-        <key button="true" group="bottomrow" id="layer0" label="@#$"/>
+        <key button="true" group="bottomrow" id="layer0" label="Main"/>
  	    <key button="true" id="restart" label="Restart" scan_priority="1" script='restart' />
  	     <key button="true" id="shutdown" label="Power Off" scan_priority="2" script='shutdown' />
       </panel>
