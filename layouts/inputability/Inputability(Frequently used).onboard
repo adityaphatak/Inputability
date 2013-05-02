@@ -167,7 +167,7 @@
         <key button="true" id="orca" label="Orca" scan_priority="1" script='orca' />
         <key button="true" id="terminal" label="Terminal" scan_priority="2" script='terminal'/>
         <key button="true" group="bottomrow" id="layer6" label="Restart" scan_priority="1"/>
-        
+       
                                         
       </panel>
       
@@ -220,8 +220,9 @@
       
       <panel filename="Inputability(Frequently used)-Power-OFF.svg" layer="power-off">
         <key button="true" group="bottomrow" id="layer0" label="Main"/>
- 	    <key button="true" id="restart" label="Restart" scan_priority="1" script='restart' />
- 	     <key button="true" id="shutdown" label="Power Off" scan_priority="2" script='shutdown' />
+        <key button="true" id="restart" label="Restart" scan_priority="1" script='restart' />
+        <key button="true" id="shutdown" label="Power Off" scan_priority="2" script='shutdown' />
+        <key button="true" id="logout" label="Logout" scan_priority="3" script='logout' />
       </panel>
     
       
