@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created for Onboard -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="105" width="330" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata3346">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+
+ 
+
+ <rect id="F1" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="0.5" x="0"/>
+ <rect id="F2" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="0.5" x="54"/>
+ <rect id="F3" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="0.5" x="108"/>
+ 
+ <rect id="F4" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="0"/>
+ <rect id="F5" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="54"/>
+ <rect id="F6" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="108"/>
+       
+ <rect id="F7" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="0"/>
+ <rect id="F8" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="54"/>
+ <rect id="F9" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="108"/>
+ 
+ <rect id="F10" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="78.5" x="0"/>
+ <rect id="F11" style="stroke:#000;fill:#d8cca5" height="25" width="52" y="78.5" x="54"/>
+ <rect id="F12" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="78.5" x="108"/>
+  
+ <rect id="LCTL" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="104.5" x="0"/>
+ <rect id="LALT" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="104.5" x="54"/>
+ <rect id="LWIN" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="104.5" x="108"/>
+ 
+ <rect id="gedit" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="0.5" x="162"/>
+ <rect id="firefox" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="0.5" x="216"/>
+ <rect id="cal" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="0.5" x="270"/>
+ 
+ <rect id="orca" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="162"/>
+ <rect id="layer0" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="216"/>
+ <rect id="layer1" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="270"/>
+ 
+ <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="162"/>
+ <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="216"/>
+ <rect id="layer5" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="270"/>
+
+ <rect id="layer6" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="78.5" x="162"/>
+ <rect id="terminal" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="78.5" x="216"/>
+   
+</svg>
