@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created for Onboard -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="scan-base"
+   height="100"
+   width="179"
+   version="1.0"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Inputability(Row scan,Frequently used)-Alpha.svg">
+  <defs
+     id="defs49" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1215"
+     inkscape:window-height="1000"
+     id="namedview47"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:zoom="2.8324022"
+     inkscape:cx="163.78236"
+     inkscape:cy="91.248847"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="scan-base" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata> 
+ 
+<rect id="wordlist" height="19" width="320" y="0" x="0.5" style="fill:#151530;stroke:#7f7f7f;stroke-width:0.97168803;stroke-miterlimit:4;stroke-dasharray:none"/>
+     
+<rect id="correction" height="19" width="49" y="0" x="0.5" style="color:#000000;fill:#2b2b63;fill-opacity:1;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+       
+<rect id="prediction" height="19" width="49" y="0" x="55.5" style="color:#000000;fill:#2b2b63;fill-opacity:1;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+     
+<rect id="expand-corrections" height="19" width="17.272728" y="0" x="35.711266" style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:1.3142575;stroke-miterlimit:4;stroke-dasharray:none" />
+     
+<rect label="" id="language.wordlist" height="19" width="18" y="0" x="154.51506" style="fill:#2b2b63;stroke:#7f7f7f;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none" />
+ 
+ <rect id="hide.wordlist" height="19" width="15" y="0" x="0.5" style="fill:#e5d8b2;stroke:#000000" />    
+  
+ <rect id="AD03" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="0"/>e
+ <rect id="AC01" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="40.25"/>a
+ <rect id="AD04" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="80.5"/> r
+ <rect id="AD08" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="120.75"/>i
+ <rect id="AD09" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="161"/>o
+ <rect id="AD05" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="201.25"/>t
+ <rect id="AB06" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="241.5"/>n
+ <rect id="AC02" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="21" x="281.75"/>s
+
+ <rect id="AC09" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="0"/>l
+ <rect id="AB03" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="40.25"/>c
+ <rect id="AD07" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="80.5"/>u
+ <rect id="AC03" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="120.75"/>d
+ <rect id="AD10" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="161"/>p
+ <rect id="AB07" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="201.25"/>m
+ <rect id="AC06" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="241.5"/>h
+ <rect id="AC05" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="42" x="281.75"/>g
+
+ 
+ <rect id="AB05" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="0"/>b
+ <rect id="AC04" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="40.25"/>f
+ <rect id="AD06" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="80.5"/>y
+ <rect id="AD02" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="120.75"/>w
+ <rect id="AC08" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="161"/>k
+ <rect id="AB04" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="201.25"/>v
+ <rect id="AB02" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="241.5"/>x
+ <rect id="AB01" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="64" x="281.75"/>z
+
+
+ <rect id="AC07" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="0"/>j
+ <rect id="AD01" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="40.25"/> q
+ <rect id="SPCE" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="80.5"/>
+ <rect id="CAPS" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="120.75"/>
+ <rect id="layer0" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="161"/>
+ <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="201.25"/>
+ <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="241.5"/>
+ <rect id="layer4" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="86" x="281.75"/>
+
+
+ <rect id="UP" height="20" width="39" stroke="#000;fill:#e5d8b2" y="108" x="0"  />
+ <rect id="DOWN" height="20" width="39" stroke="#000;fill:#e5d8b2" y="108" x="40.25"  />
+ <rect id="LEFT" height="20" width="39" stroke="#000;fill:#e5d8b2" y="108" x="80.5"  />
+ <rect id="RGHT" height="20" width="39" stroke="#000;fill#e5d8b2" y="108" x="120.75"  />
+ <rect id="RTRN" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="108" x="161"/>
+ <rect id="BKSP" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="108" x="201.25"/>
+ <rect id="TAB" style="stroke:#000;fill:#e5d8b2" height="20" width="39" y="108" x="241.5"/>
+ 
+
+</svg>
