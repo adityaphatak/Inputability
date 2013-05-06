@@ -1303,14 +1303,19 @@ class ConfigScanner(ConfigObject):
     DEFAULT_DEVICE_BUTTON_MAP = { 1: 0, 3: 5 } # Button 1: Step, Button 3: Activate
     DEFAULT_FEEDBACK_FLASH    = True
     
-    DEFAULT_ACTIVATION_FLASH_INTERVAL = 0.1 #In
-    DEFAULT_ACTIVATION_FLASH_COUNT = 2 #In
-    DEFAULT_SCANNER_POPUP_UNPRESS_DELAY = 1 #In
-    DEFAULT_SCAN_POPUP_HEIGHT = 10 #In
-    DEFAULT_SCAN_POPUP_WIDTH  = 10 #In
+    DEFAULT_KEY_TYPE          = 0 #In: single
     
-    DEFAULT_KEY_TYPE          = "single_key"#In
     DEFAULT_COLOR_TYPE        = "theme_color"#In
+    
+    DEFAULT_FEEDBACK_TYPE     = 0 # In: flash 
+    
+    DEFAULT_ACTIVATION_FLASH_INTERVAL   = 0.1 #In
+    DEFAULT_ACTIVATION_FLASH_COUNT      = 2 #In
+    
+    DEFAULT_SCANNER_POPUP_UNPRESS_DELAY = 1 #In
+    DEFAULT_SCAN_POPUP_HEIGHT           = 10 #In
+    DEFAULT_SCAN_POPUP_WIDTH            = 10 #In
+    DEFAULT_POPUP_COLOR_TYPE            = "theme_popup_color"#In
     
     def _init_keys(self):
         self.schema = SCHEMA_SCANNER
@@ -1333,16 +1338,24 @@ class ConfigScanner(ConfigObject):
         self.add_key("device-button-map", self.DEFAULT_DEVICE_BUTTON_MAP, 'a{ii}')
         self.add_key("feedback-flash", self.DEFAULT_FEEDBACK_FLASH)
         
-        self.add_key("scan-feedback-enabled", False)#In
-        self.add_key("activation-flash-interval", self.DEFAULT_ACTIVATION_FLASH_INTERVAL)#In
-        self.add_key("activation-flash-count", self.DEFAULT_ACTIVATION_FLASH_COUNT) #In
-        self.add_key("scanner-popup-unpress-delay", self.DEFAULT_SCANNER_POPUP_UNPRESS_DELAY)#In
-        self.add_key("scan-popup-size-change-enabled", False)#In
-        self.add_key("scan-popup-height",self.DEFAULT_SCAN_POPUP_HEIGHT )#In
-        self.add_key("scan-popup-width",self.DEFAULT_SCAN_POPUP_WIDTH )#In
-        self.add_key("key-type", self.DEFAULT_KEY_TYPE)#In
-        self.add_key("color-type", self.DEFAULT_COLOR_TYPE)#In
+        self.add_key("key-type", self.DEFAULT_KEY_TYPE, enum={"Single" : 0,
+                                                              "Multiple" : 1}) #In
+        
+        self.add_key("color-type", self.DEFAULT_COLOR_TYPE) #In
         self.add_key("scan-color", [0.45, 0.45, 0.7, 1.0], "ad") #In
+        
+        self.add_key("feedback-type", self.DEFAULT_FEEDBACK_TYPE, enum={"Flash" : 0,
+                                                                        "Pop-up" : 1}) #In
+                                                                        
+        self.add_key("activation-flash-interval", self.DEFAULT_ACTIVATION_FLASH_INTERVAL) #In
+        self.add_key("activation-flash-count", self.DEFAULT_ACTIVATION_FLASH_COUNT) #In
+        
+        self.add_key("scanner-popup-unpress-delay", self.DEFAULT_SCANNER_POPUP_UNPRESS_DELAY)#In
+        self.add_key("scan-popup-height", self.DEFAULT_SCAN_POPUP_HEIGHT) #In
+        self.add_key("scan-popup-width", self.DEFAULT_SCAN_POPUP_WIDTH) #In
+
+        self.add_key("popup-color-type", self.DEFAULT_POPUP_COLOR_TYPE) #In
+        self.add_key("scan-popup-color", [0.45, 0.45, 0.7, 1.0], "ad") #In
 
         
 class ConfigTypingAssistance(ConfigObject):
