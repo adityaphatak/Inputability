@@ -105,7 +105,7 @@ class TouchFeedback:
                 
         # To check Change Popup Size checkbox enbable or not in Inputabilibty Tab                
         # If check then add new height and widht to current popup size
-        if config.scanner.scan_popup_size_change_enabled : #In
+        if (config.scanner.enabled and config.scanner.feedback_type == 1): #In
             scan_width=config.scanner.scan_popup_width     #In
             scan_height=config.scanner.scan_popup_height   #In     
             return w + scan_width , w * (1.0 + LabelPopup.ARROW_HEIGHT)+ scan_height #In
@@ -204,10 +204,10 @@ class LabelPopup(KeyboardPopup):
         label_rect = content_rect.deflate(rect.w * self.LABEL_MARGIN)
 
         # background
-        if config.scanner.color_type == "custom_color" and config.scanner.enabled == True:
+        if config.scanner.enabled and config.scanner.popup_color_type == "custom_popup_color": #In
             # scan label popup color
             color_rgba = []
-            for val in config.scanner.scan_color:
+            for val in config.scanner.scan_popup_color:
                 color_rgba.append(val)
             
             rgb = color_rgba[:3]
