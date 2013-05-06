@@ -423,9 +423,8 @@ class Keyboard(WordSuggestions):
         # if both scanner and lable popup enable then disable flash feedback of keys,         
          #its default for only show lable popup 
         
-        if (config.scanner.scan_feedback_enabled and config.scanner.enabled): #In
+        if (config.scanner.enabled and config.scanner.feedback_type == 1): #In
             config.scanner.feedback_flash = False #In
-            
         else:
             config.scanner.feedback_flash = True #In
             
@@ -585,8 +584,7 @@ class Keyboard(WordSuggestions):
             # For Inputability
             # if both scanner and lable popup enable for Inputablity popup otherwise work normally
           
-            if (config.scanner.scan_feedback_enabled and  config.scanner.enabled):#In
-                
+            if (config.scanner.enabled and config.scanner.feedback_type == 1): #In
                 self._unpress_timers.start(key)
             else:
                 if extend_pressed_state and \
