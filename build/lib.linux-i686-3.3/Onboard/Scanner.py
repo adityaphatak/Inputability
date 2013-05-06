@@ -897,7 +897,7 @@ class Scanner(object):
 
         return profiles[mode](redraw_callback, activate_callback)
 
-    def update_layer(self, layout, layer):
+    def update_layer(self, layout, layer, force_update = False):
         """
         Notify the scanner about layer or layout changes.
         """
@@ -911,7 +911,7 @@ class Scanner(object):
             self.layer = layer
             changed = True
 
-        if changed:
+        if changed or force_update:
             self.mode.set_layer(self.layout, self.layer)
 
     def finalize(self):
