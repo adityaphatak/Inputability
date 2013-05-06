@@ -103,14 +103,12 @@ class DialogBuilder(object):
             callback(value)
 
     # color button
-    
     def bind_color(self, name, config_object, key):
         w = self.wid(name)
         
-        color = Gdk.RGBA()
-        
         color_rgba = getattr(config_object, key)
         
+        color = Gdk.RGBA()
         color.red = color_rgba[0]
         color.green = color_rgba[1]
         color.blue = color_rgba[2]
@@ -119,7 +117,7 @@ class DialogBuilder(object):
         w.set_rgba(color)
         
         w.connect("color-set", self.bind_color_callback, config_object, key)
-        getattr(config_object, key + '_notify_add')(lambda x: w.set_rgba(Gdk.RGBA()))
+        getattr(config_object, key + '_notify_add')(lambda x: w.set_rgba(Gdk.RGBA(*x)))
 
     def bind_color_callback(self, widget, config_object, key):
         color = Gdk.RGBA()
@@ -134,10 +132,18 @@ class DialogBuilder(object):
         setattr(config_object, key, color_rgba)
     
     # radio button
-    def bind_radio(self, name, config_object, key, widget_callback = None):
+    def bind_radio(self, name, config_object, key, data = None, widget_callback = None):
         w = self.wid(name)
-        w.set_active(name == getattr(config_object, key))
-        w.connect("toggled", self.bind_radio_callback, config_object, key, widget_callback, name)
+        
+        if data == None:
+            w.set_active(name == getattr(config_object, key))
+        else:
+            w.set_active(data == getattr(config_object, key))
+        
+        if data == None:
+            w.connect("toggled", self.bind_radio_callback, config_object, key, widget_callback, name)
+        else:
+            w.connect("toggled", self.bind_radio_callback, config_object, key, widget_callback, data)
         getattr(config_object, key + '_notify_add')(lambda x: widget_callback)
 
     def bind_radio_callback(self, widget, config_object, key, callback, value = None):
@@ -419,49 +425,72 @@ class Settings(DialogBuilder):
         
         # Inputability - seconde page
         
-        self.bind_spin("activation_flash_interval_spinbutton",
-                            config.scanner, "activation_flash_interval") #In
-        self.bind_spin("activation_flash_count_spinbutton",
-                            config.scanner, "activation_flash_count")    #In                
-        
-        # If scan popup enable then enable delay spin-button
-        
-        self.wid("scan_feedback_enabled_toggle") \
-                .connect_after("toggled", lambda x:self.popup_delay_update_ui())#In
-        self.bind_check("scan_feedback_enabled_toggle",
-                        config.scanner, "scan_feedback_enabled")#In
-                                 
-        self.bind_spin("scanner_unpress_delay_spinbutton",
-                            config.scanner, "scanner_popup_unpress_delay") #In 
-        self.popup_delay_update_ui()                            
-        
-        # If change-popup-size checkbox enable then enable height and width spin-button
-        
-        self.wid("size_change_enabled_toggle") \
-                .connect_after("toggled", lambda x:self.size_change_update_ui())#In
-        
-        self.bind_check("size_change_enabled_toggle",
-                        config.scanner, "scan_popup_size_change_enabled")
-        self.bind_spin("scan_popup_height_spinbutton",
-                            config.scanner, "scan_popup_height")          #In  
-        self.bind_spin("scan_popup_width_spinbutton",
-                            config.scanner, "scan_popup_width")           #In         
-        
-        self.size_change_update_ui()
-        
-        # Color type
-
-        def on_color_type_toggle(radio, data, config_object, key):
+        # Scan-Color type
+        def on_color_type_toggle(radio, data, config_object, key): #In
             if radio.get_active():
                 self.scan_color_update_ui()
         	        	
-        self.bind_radio("theme_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
-        self.bind_radio("custom_color", config.scanner, "color_type", widget_callback = on_color_type_toggle)
+        self.bind_radio("theme_color", 
+                        config.scanner, "color_type", widget_callback = on_color_type_toggle) #In
+        self.bind_radio("custom_color", 
+                        config.scanner, "color_type", widget_callback = on_color_type_toggle) #In
         
-        self.bind_color("scan_colorbutton", config.scanner, "scan_color")
+        self.bind_color("scan_colorbutton", 
+                        config.scanner, "scan_color") #In
         
-        self.scan_color_update_ui()
+        self.scan_color_update_ui() #In
         
+        # Scan-Feedback type
+        def on_feedback_type_toggle(radio, data, config_object, key): #In
+            if radio.get_active():
+                self.scan_feedback_update_ui()
+                
+                if data == 1:
+                    # Reset Flash Settings to default
+                    config.scanner.activation_flash_interval = ScanMode.ACTIVATION_FLASH_INTERVAL
+                    config.scanner.activation_flash_count = ScanMode.ACTIVATION_FLASH_COUNT
+                else:
+                    # Reset Pop-up Settings to default
+                    config.scanner.scanner_popup_unpress_delay = config.scanner.DEFAULT_SCANNER_POPUP_UNPRESS_DELAY
+                    config.scanner.scan_popup_height = config.scanner.DEFAULT_SCAN_POPUP_HEIGHT
+                    config.scanner.scan_popup_width  = config.scanner.DEFAULT_SCAN_POPUP_WIDTH
+                    config.scanner.popup_color_type  = config.scanner.DEFAULT_POPUP_COLOR_TYPE
+
+        self.bind_radio("flash_feedback", 
+                        config.scanner, "feedback_type", 0, widget_callback = on_feedback_type_toggle) #In
+        self.bind_radio("popup_feedback", 
+                        config.scanner, "feedback_type", 1, widget_callback = on_feedback_type_toggle) #In
+        
+        self.scan_feedback_update_ui() #In
+        
+        # Scan-Feedback: Flash Settings
+        self.bind_spin("activation_flash_interval_spinbutton",
+                       config.scanner, "activation_flash_interval") #In
+        self.bind_spin("activation_flash_count_spinbutton",
+                       config.scanner, "activation_flash_count") #In
+        
+
+        # Scan-Feedback: Pop-up Settings
+        self.bind_spin("scanner_unpress_delay_spinbutton",
+                       config.scanner, "scanner_popup_unpress_delay") #In
+        self.bind_spin("scan_popup_height_spinbutton",
+                       config.scanner, "scan_popup_height") #In  
+        self.bind_spin("scan_popup_width_spinbutton",
+                       config.scanner, "scan_popup_width")#In
+
+        def on_popup_color_type_toggle(radio, data, config_object, key): #In
+            if radio.get_active():
+                self.scan_popup_color_update_ui()
+        	        	
+        self.bind_radio("theme_popup_color", 
+                        config.scanner, "popup_color_type", widget_callback = on_popup_color_type_toggle) #In
+        self.bind_radio("custom_popup_color", 
+                        config.scanner, "popup_color_type", widget_callback = on_popup_color_type_toggle) #In
+        
+        self.bind_color("scan_popup_colorbutton", 
+                        config.scanner, "scan_popup_color") #In
+        
+        self.scan_popup_color_update_ui() #In
         # Inputability-End
         
         # Universal Access
@@ -520,18 +549,20 @@ class Settings(DialogBuilder):
         _logger.info("Entering mainloop of Onboard-settings")
         Gtk.main()
     
-    #To Enable or disable color_button grid-box
+    #To Enable or disable scan colorbutton
     def scan_color_update_ui(self): #In
         self.wid("scan_colorbutton").set_sensitive(not (config.scanner.color_type == "theme_color"))
-    
-    #To Enable or disable height and widht grid-box    
-    def size_change_update_ui(self): #In
-        self.wid("scan_popup_size_grid"). \
-                    set_sensitive(config.scanner.scan_popup_size_change_enabled)
-    #To Enable or disable popup delay grid-box    
-    def popup_delay_update_ui(self): #In
-        self.wid("scan_popup_delay_grid"). \
-                    set_sensitive(config.scanner.scan_feedback_enabled)        
+
+    #To show the selected scan-feedback settings
+    def scan_feedback_update_ui(self): #In
+        self.wid("scan_feedback_notebook").set_current_page(config.scanner.feedback_type)
+        
+        """if config.scanner.feedback_type == 1: #Pop-up
+            self.scan_popup_color_update_ui()"""
+
+    #To Enable or disable scan pop-up colorbutton
+    def scan_popup_color_update_ui(self): #In
+        self.wid("scan_popup_colorbutton").set_sensitive(not (config.scanner.popup_color_type == "theme_popup_color"))
     
     def on_pages_view_cursor_changed(self, widget):
         sel = widget.get_selection()
@@ -1649,7 +1680,7 @@ class ScannerDialog(DialogBuilder):
                 
                 self.on_mapping_cleared(None, "clear", self.pointer_selected)
                 
-                if data == "multiple_key":
+                if data == 1: # 1:Multiple (key-type)
                     for action in self.supported_actions[config.scanner.mode]:
                         if action == ScanMode.ACTION_STEP:#In
                             for keyval in self.keyvalues_LHalf:#In
@@ -1660,8 +1691,8 @@ class ScannerDialog(DialogBuilder):
                 
                     self.on_mapping_edited(None, "multiple", Gdk.KEY_Escape, self.pointer_selected)
         	        	
-        self.bind_radio("single_key", config.scanner, "key_type", widget_callback = on_key_type_toggle)
-        self.bind_radio("multiple_key", config.scanner, "key_type", widget_callback = on_key_type_toggle)
+        self.bind_radio("single_key", config.scanner, "key_type", 0, widget_callback = on_key_type_toggle)
+        self.bind_radio("multiple_key", config.scanner, "key_type", 1, widget_callback = on_key_type_toggle)
         
         self._update_2_scan_ui()
         """	#In: radio button	"""
@@ -1694,8 +1725,8 @@ class ScannerDialog(DialogBuilder):
         
         """ In: radio button """
         if mode == 2 and self.wid("device_detach").get_sensitive() == True:#stepscan
-            config.scanner.key_type = "single_key"
-            self.wid(config.scanner.key_type).set_active(True)
+            config.scanner.key_type = 0 # 0: Single (key-type)
+            self.wid("single_key").set_active(True)
             self.wid("key_type_grid").show()
             """The below line exists here to resest when mode is changed; and not when @ regular start-up once you had set i.e. in case of same if-else in above function"""
         else:
@@ -1775,8 +1806,8 @@ class ScannerDialog(DialogBuilder):
             config.scanner.device_name = device.get_config_string()
             self.wid("device_detach").set_sensitive(True)
             if config.scanner.mode == 2:#stepscan
-                config.scanner.key_type = "single_key"
-                self.wid(config.scanner.key_type).set_active(True)
+                config.scanner.key_type = 0 # 0: Single (key-type)
+                self.wid("single_key").set_active(True)
                 self.wid("key_type_grid").show()
                 """The below line exists here to resest when mode is changed; and not when @ regular start-up once you had set i.e. in case of same if-else in above function"""
             self.pointer_selected = device.is_pointer()
@@ -1867,7 +1898,7 @@ class ScannerDialog(DialogBuilder):
 
         model.set(it, col, value)
 
-        if config.scanner.mode == 2 and config.scanner.key_type == "multiple_key":
+        if config.scanner.mode == 2 and config.scanner.key_type == 1: # 1: Multiple (key-type)
             model.set(it, col, 0)
 
         if dup_val in dev_map:
@@ -1933,9 +1964,9 @@ class ScannerDialog(DialogBuilder):
 
     """ In: radio button """
     def _update_2_scan_ui(self):
-        if config.scanner.key_type == "multiple_key" and config.scanner.mode == 2:#only for stepscan
+        if config.scanner.key_type == 1 and config.scanner.mode == 2: # 2:stepscan (mode) & 1:Multiple (key-type)
             self.wid("scrolledwindow1").set_sensitive(False)
-        else: #config.scanner.key_type == "single_key"
+        else: #config.scanner.key_type == 0
             self.wid("scrolledwindow1").set_sensitive(True)
 
 
@@ -2013,7 +2044,7 @@ class CellRendererMapping(Gtk.CellRendererText):
             else:
                 text = Gdk.keyval_name(self.key)
 
-        if config.scanner.mode == 2 and config.scanner.key_type == "multiple_key":
+        if config.scanner.mode == 2 and config.scanner.key_type == 1: # 1: Multiple (key-type) 
             text = _("Disabled")
 
         self.set_property("text", text)
