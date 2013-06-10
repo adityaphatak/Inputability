@@ -38,11 +38,11 @@
  
  <rect id="orca" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="162"/>
  <rect id="layer0" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="216"/>
- <rect id="layer1" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="270"/>
+ <rect id="layer7" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="26.5" x="270"/>
  
  <rect id="layer2" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="162"/>
- <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="216"/>
- <rect id="layer5" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="270"/>
+ <rect id="layer1" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="216"/>
+ <rect id="layer3" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="52.5" x="270"/>
 
  <rect id="layer6" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="78.5" x="162"/>
  <rect id="terminal" style="stroke:#000;fill:#e5d8b2" height="25" width="52" y="78.5" x="216"/>
