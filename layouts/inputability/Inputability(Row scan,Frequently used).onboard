@@ -7,8 +7,9 @@
         <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
-        <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
-        <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="4"/>
+        <key button="true" group="bottomrow" id="layer7" label="Navigate" scan_priority="3"/>
+ 	    <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="4"/>
+ 	    <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="5"/>
       </panel>
       <panel filename="Inputability(Row scan,Frequently used)-Alpha.svg" layer="alpha" unlatch_layer="false">
         <include file="./word_suggestions.xml"/>
@@ -121,7 +122,7 @@
         <key button="true" group="bottomrow" id="layer5" label="Emotions"/>
       </panel>
       <panel filename="Inputability(Row scan,Frequently used)-Functions.svg" layer="function" unlatch_layer="false">
-        <key group="fkey s" id="F1" keysym="65470" label="F1"/>
+        <key group="fkeys" id="F1" keysym="65470" label="F1"/>
         <key group="fkeys" id="F2" keysym="65471" label="F2"/>
         <key group="fkeys" id="F3" keysym="65472" label="F3"/>
         <key group="fkeys" id="F4" keysym="65473" label="F4"/>
@@ -140,6 +141,7 @@
         <key button="true" group="bottomrow" id="layer2" label="123"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$"/>
         <key button="true" group="bottomrow" id="layer0" label="Main"/>
+        <key button="true" group="bottomrow" id="layer7" label="Navigate"/>
         <key button="true" group="bottomrow" id="layer5" label="Emotions"/>
         <key button="true" id="gedit" label="Gedit" script="gedit"/>
         <key button="true" id="firefox" label="Firefox" script="firefox"/>
@@ -190,6 +192,11 @@
         <key button="true" id="restart" label="Restart" scan_priority="1" script="restart"/>
         <key button="true" id="shutdown" label="Power Off" scan_priority="2" script="shutdown"/>
         <key button="true" id="logout" label="Logout" scan_priority="3" script="logout"/>
+      </panel>
+      <panel filename="Inputability(Row scan,Frequently used)-Navigate.svg" layer="navigate" unlatch_layer="false">
+        <key id='TAB' group='misc' keycode='23'  label='⇥ TAB' action='single-stroke'/>
+        <key id="RTRN" group="misc" keycode="36" label="⏎Enter" sticky="false" scan_priority="1"/>
+        <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="2"/>
       </panel>
     </panel>
   </box>
