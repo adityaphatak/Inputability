@@ -10,8 +10,9 @@
         <key button="true" group="bottomrow" id="layer1" label="ABC"/>
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
- 	    <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="3"/>
- 	    <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="4"/>
+        <key button="true" group="bottomrow" id="layer7" label="Navigate" scan_priority="3"/>
+ 	    <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="4"/>
+ 	    <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="5"/>
       </panel>
     
 
@@ -160,7 +161,7 @@
         <key button="true" group="bottomrow" id="layer2" label="123" scan_priority="1"/>
         <key button="true" group="bottomrow" id="layer3" label="@#$" scan_priority="2"/>
         <key button="true" group="bottomrow" id="layer0" label="Main" scan_priority="2"/>
-        <key button="true" group="bottomrow" id="layer5" label="Emotions" scan_priority="2"/>
+        <key button="true" group="bottomrow" id="layer7" label="Navigate" scan_priority="2"/>
         <key button="true" id="gedit" label="Gedit" scan_priority="1" script='gedit' />
         <key button="true" id="firefox" label="Firefox" scan_priority="2" script='firefox' />
         <key button="true" id="cal" label="Calculator" scan_priority="2" script='cal' />
@@ -223,6 +224,12 @@
         <key button="true" id="restart" label="Restart" scan_priority="1" script='restart' />
         <key button="true" id="shutdown" label="Power Off" scan_priority="2" script='shutdown' />
         <key button="true" id="logout" label="Logout" scan_priority="3" script='logout' />
+      </panel>
+      
+      <panel filename="Inputability(Frequently used)-Navigate.svg" layer="navigate" unlatch_layer="false">
+        <key id='TAB' group='misc' keycode='23'  label='⇥ TAB' action='single-stroke'/>
+        <key id="RTRN" group="misc" keycode="36" label="⏎Enter" sticky="false" scan_priority="1"/>
+        <key button="true" group="bottomrow" id="layer4" label="Function" scan_priority="2"/>
       </panel>
     
       
